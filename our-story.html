@@ -1,0 +1,2538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Beauty | Our Story</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+      :root {
+        --primary: #d4af37;
+        --primary-light: #f9f295;
+        --secondary: #b8860b;
+        --secondary-light: #efd87c;
+        --accent: #9e7c16;
+        --text: #2c2c2c;
+        --text-light: #6e6e6e;
+        --light: #ffffff;
+        --light-gray: #fcfaf2;
+        --dark: #1a1200;
+        --sold-out: #888888;
+        --success: #4caf50;
+        --warning: #9e7c16;
+        --border-radius: 16px;
+        --shadow-sm: 0 2px 8px rgba(174, 143, 31, 0.05);
+        --shadow-md: 0 4px 12px rgba(174, 143, 31, 0.08);
+        --shadow-lg: 0 8px 24px rgba(174, 143, 31, 0.12);
+        --shadow-hover: 0 12px 32px rgba(174, 143, 31, 0.2);
+        --gold-gradient: linear-gradient(
+          135deg,
+          #f9f295 0%,
+          #e0c264 50%,
+          #d4af37 100%
+        );
+        --gold-gradient-dark: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: var(--text);
+        background-color: var(--light);
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .section-spacing {
+        padding: 100px 0;
+      }
+
+      /* Global Button Styles */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border: none;
+      }
+
+      .btn-primary {
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(135deg, #e5c646 0%, #d4af37 100%);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-secondary {
+        background-color: var(--light);
+        color: var(--accent);
+        border: 2px solid var(--accent);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary-light);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-icon {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      /* Announcement Bar */
+      .announcement-bar {
+        background-color: var(--dark);
+        color: var(--light);
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .announcement-bar span {
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .announcement-bar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          #f9f295,
+          #d4af37,
+          #b8860b,
+          #d4af37,
+          #f9f295
+        );
+        animation: gradient-shift 3s infinite linear;
+      }
+
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Header */
+      header {
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: var(--shadow-sm);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        transition: all 0.3s ease;
+      }
+
+      header.scrolled {
+        box-shadow: var(--shadow-md);
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary);
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(to right, #d4af37, #b8860b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .logo span {
+        color: var(--text);
+        -webkit-text-fill-color: initial;
+      }
+
+      nav.desktop-nav ul {
+        display: flex;
+        list-style: none;
+        gap: 36px;
+      }
+
+      nav.desktop-nav ul li a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      nav.desktop-nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: var(--accent);
+        transition: width 0.3s ease;
+      }
+
+      nav.desktop-nav ul li a:hover {
+        color: var(--accent);
+      }
+
+      nav.desktop-nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .action-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: var(--text);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .action-btn:hover {
+        background-color: var(--light-gray);
+        color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      .cart-count {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--accent);
+        color: var(--light);
+        font-size: 11px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+
+      .hamburger-menu {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .mobile-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--light);
+        box-shadow: var(--shadow-lg);
+        z-index: 200;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 60px 30px 30px;
+      }
+
+      .mobile-nav.active {
+        right: 0;
+      }
+
+      .mobile-nav .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text);
+      }
+
+      .mobile-nav ul {
+        list-style: none;
+      }
+
+      .mobile-nav ul li {
+        margin-bottom: 20px;
+      }
+
+      .mobile-nav ul li a {
+        text-decoration: none;
+        color: var(--text);
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        display: block;
+        padding: 8px 0;
+      }
+
+      .mobile-nav ul li a:hover {
+        color: var(--accent);
+      }
+
+      .mobile-nav-footer {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+      }
+
+      .mobile-nav-actions {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .mobile-nav-social {
+        display: flex;
+        gap: 16px;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 150;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .overlay.active {
+        display: block;
+        opacity: 1;
+      }
+
+      /* Page Banner */
+      .page-banner {
+        background: var(--gold-gradient);
+        padding: 60px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/api/placeholder/1200/400");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .page-banner-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-title {
+        font-size: 48px;
+        color: var(--dark);
+        margin-bottom: 16px;
+      }
+
+      .breadcrumbs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        color: var(--dark);
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .breadcrumbs a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .breadcrumbs a:hover {
+        color: var(--dark);
+      }
+
+      .breadcrumbs i {
+        color: var(--dark);
+        font-size: 12px;
+      }
+
+      /* Our Story Sections */
+      .story-section {
+        padding: 100px 0;
+      }
+
+      .story-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .story-content {
+        padding-right: 30px;
+      }
+
+      .story-badge {
+        display: inline-block;
+        background-color: var(--primary-light);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 24px;
+      }
+
+      .story-title {
+        font-size: 42px;
+        margin-bottom: 24px;
+        color: var(--text);
+      }
+
+      .story-text {
+        color: var(--text-light);
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+
+      .story-image {
+        position: relative;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
+      }
+
+      .story-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .story-image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 60%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+      }
+
+      /* Reverse layout for alternating sections */
+      .story-reverse .story-container {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .story-reverse .story-content {
+        order: 2;
+        padding-right: 0;
+        padding-left: 30px;
+      }
+
+      .story-reverse .story-image {
+        order: 1;
+      }
+
+      /* Founder Section */
+      .founder-section {
+        padding: 100px 0;
+        background-color: var(--light-gray);
+      }
+
+      .founder-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .founder-content {
+        padding-right: 30px;
+      }
+
+      .founder-badge {
+        display: inline-block;
+        background-color: var(--primary-light);
+        padding: 8px 16px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 24px;
+      }
+
+      .founder-title {
+        font-size: 42px;
+        margin-bottom: 24px;
+        color: var(--text);
+      }
+
+      .founder-subtitle {
+        font-size: 20px;
+        margin-bottom: 16px;
+        color: var(--accent);
+      }
+
+      .founder-text {
+        color: var(--text-light);
+        margin-bottom: 30px;
+        font-size: 16px;
+      }
+
+      .founder-image {
+        position: relative;
+      }
+
+      .founder-img-main {
+        width: 70%;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-lg);
+        z-index: 2;
+        position: relative;
+      }
+
+      .founder-background {
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        background-color: var(--primary-light);
+        border-radius: var(--border-radius);
+        top: 30px;
+        left: 30px;
+        z-index: 1;
+      }
+
+      .founder-quote {
+        background-color: var(--light);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        position: absolute;
+        bottom: 30px;
+        right: 0;
+        max-width: 60%;
+        z-index: 3;
+      }
+
+      .founder-quote-text {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 18px;
+        color: var(--text);
+        margin-bottom: 16px;
+        position: relative;
+      }
+
+      .founder-quote-text::before {
+        content: "";
+        font-size: 60px;
+        color: var(--primary-light);
+        position: absolute;
+        top: -20px;
+        left: -10px;
+        opacity: 0.7;
+      }
+
+      .founder-quote-author {
+        font-weight: 600;
+        color: var(--accent);
+      }
+
+      /* Values Section */
+      .values-section {
+        padding: 100px 0;
+      }
+
+      .values-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .values-badge {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent);
+        margin-bottom: 16px;
+        position: relative;
+      }
+
+      .values-badge::before,
+      .values-badge::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 1px;
+        background-color: var(--accent);
+      }
+
+      .values-badge::before {
+        left: -40px;
+      }
+
+      .values-badge::after {
+        right: -40px;
+      }
+
+      .values-title {
+        font-size: 42px;
+        margin-bottom: 20px;
+        color: var(--text);
+      }
+
+      .values-subtitle {
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 16px;
+      }
+
+      .values-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .value-card {
+        background-color: var(--light);
+        border-radius: var(--border-radius);
+        padding: 40px 30px;
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        text-align: center;
+      }
+
+      .value-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .value-icon {
+        width: 80px;
+        height: 80px;
+        background-color: var(--primary-light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        color: var(--accent);
+        margin: 0 auto 24px;
+      }
+
+      .value-title {
+        font-size: 22px;
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+
+      .value-text {
+        color: var(--text-light);
+        font-size: 15px;
+      }
+
+      /* Timeline Section */
+      .timeline-section {
+        padding: 100px 0;
+        background-color: var(--light-gray);
+        position: relative;
+      }
+
+      .timeline-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .timeline-badge {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent);
+        margin-bottom: 16px;
+      }
+
+      .timeline-title {
+        font-size: 42px;
+        margin-bottom: 20px;
+        color: var(--text);
+      }
+
+      .timeline-subtitle {
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 16px;
+      }
+
+      .timeline {
+        position: relative;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        background-color: var(--primary-light);
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -2px;
+      }
+
+      .timeline-item {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+      }
+
+      .timeline-item:nth-child(odd) {
+        left: 0;
+      }
+
+      .timeline-item:nth-child(even) {
+        left: 50%;
+      }
+
+      .timeline-content {
+        padding: 30px;
+        background-color: var(--light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        position: relative;
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      .timeline-content:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-content::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -10px;
+        top: 25px;
+        background-color: var(--light);
+        transform: rotate(45deg);
+      }
+
+      .timeline-item:nth-child(even) .timeline-content::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        left: -10px;
+        top: 25px;
+        background-color: var(--light);
+        transform: rotate(45deg);
+      }
+
+      .timeline-date {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        font-size: 16px;
+        top: 0;
+        z-index: 1;
+        border: 4px solid var(--light);
+      }
+
+      .timeline-item:nth-child(odd) .timeline-date {
+        right: -40px;
+      }
+
+      .timeline-item:nth-child(even) .timeline-date {
+        left: -40px;
+      }
+
+      .timeline-year {
+        font-size: 20px;
+        margin-bottom: 8px;
+        color: var(--accent);
+        font-weight: 700;
+      }
+
+      .timeline-event {
+        font-size: 20px;
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+
+      .timeline-description {
+        color: var(--text-light);
+        font-size: 15px;
+      }
+
+      /* Testimonials Section */
+      .testimonials {
+        padding: 100px 0;
+      }
+
+      .testimonials-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .testimonials-badge {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent);
+        margin-bottom: 16px;
+        position: relative;
+      }
+
+      .testimonials-badge::before,
+      .testimonials-badge::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 1px;
+        background-color: var(--accent);
+      }
+
+      .testimonials-badge::before {
+        left: -40px;
+      }
+
+      .testimonials-badge::after {
+        right: -40px;
+      }
+
+      .testimonials-title {
+        font-size: 42px;
+        margin-bottom: 20px;
+        color: var(--text);
+      }
+
+      .testimonials-subtitle {
+        color: var(--text-light);
+        max-width: 700px;
+        margin: 0 auto;
+        font-size: 16px;
+      }
+
+      .testimonials-slider {
+        margin-top: 60px;
+        display: flex;
+        gap: 30px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding-bottom: 30px;
+        scroll-snap-type: x mandatory;
+      }
+
+      .testimonials-slider::-webkit-scrollbar {
+        display: none;
+      }
+
+      .testimonial-card {
+        flex: 0 0 400px;
+        scroll-snap-align: start;
+        background-color: var(--light);
+        border-radius: var(--border-radius);
+        padding: 30px;
+        box-shadow: var(--shadow-md);
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .testimonial-rating {
+        color: #ffd700;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      .testimonial-content {
+        font-size: 16px;
+        color: var(--text);
+        margin-bottom: 24px;
+        line-height: 1.7;
+      }
+
+      .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .testimonial-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .testimonial-author-info h4 {
+        font-size: 16px;
+        margin-bottom: 4px;
+        color: var(--text);
+      }
+
+      .testimonial-author-info p {
+        font-size: 14px;
+        color: var(--text-light);
+      }
+
+      .testimonial-nav {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 40px;
+      }
+
+      .testimonial-nav-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid var(--accent);
+        background-color: transparent;
+        color: var(--accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .testimonial-nav-btn:hover {
+        background-color: var(--accent);
+        color: var(--light);
+      }
+
+      /* Call to action */
+      .cta-section {
+        padding: 100px 0;
+        background: var(--gold-gradient);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/api/placeholder/1200/400");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .cta-container {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .cta-title {
+        font-size: 42px;
+        margin-bottom: 24px;
+        color: var(--dark);
+      }
+
+      .cta-text {
+        font-size: 18px;
+        color: var(--text);
+        margin-bottom: 40px;
+      }
+
+      .cta-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      /* Newsletter Section */
+      .newsletter {
+        padding: 80px 0;
+        background: linear-gradient(
+          to right,
+          var(--light-gray),
+          var(--primary-light),
+          var(--light-gray)
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .newsletter::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        top: -250px;
+        right: -200px;
+      }
+
+      .newsletter::after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        bottom: -200px;
+        left: -150px;
+      }
+
+      .newsletter-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .newsletter-content {
+        flex: 1;
+        padding-right: 60px;
+      }
+
+      .newsletter-title {
+        font-size: 36px;
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+
+      .newsletter-description {
+        font-size: 16px;
+        color: var(--text-light);
+        margin-bottom: 30px;
+      }
+
+      .newsletter-perks {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 24px;
+      }
+
+      .newsletter-perk {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .newsletter-perk-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: var(--accent);
+      }
+
+      .newsletter-perk-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text);
+      }
+
+      .newsletter-form {
+        flex: 0 0 50%;
+        background-color: var(--light);
+        border-radius: var(--border-radius);
+        padding: 40px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .newsletter-form-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+        color: var(--text);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 14px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+      }
+
+      .form-input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgba(255, 77, 133, 0.2);
+        outline: none;
+      }
+
+      .subscribe-btn {
+        width: 100%;
+        padding: 14px;
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .subscribe-btn:hover {
+        background: linear-gradient(135deg, #e5c646 0%, #d4af37 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      }
+
+      .form-disclaimer {
+        font-size: 13px;
+        color: var(--text-light);
+        margin-top: 16px;
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark);
+        color: var(--light);
+        padding: 80px 0 30px;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .footer-info .logo {
+        margin-bottom: 20px;
+      }
+
+      .footer-description {
+        margin-bottom: 30px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.7;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 16px;
+      }
+
+      .social-link {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background: var(--gold-gradient-dark);
+        transform: translateY(-3px);
+      }
+
+      .footer-title {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: var(--light);
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 16px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .footer-links a:hover {
+        color: #f9d861;
+        padding-left: 5px;
+      }
+
+      .footer-links a i {
+        font-size: 12px;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f9d861;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+
+      .contact-info {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .copyright {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+      }
+
+      .payment-methods {
+        display: flex;
+        gap: 12px;
+      }
+
+      .payment-method {
+        width: 50px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        font-size: 14px;
+      }
+
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background: linear-gradient(135deg, #e5c646 0%, #d4af37 100%);
+        transform: translateY(-5px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .story-container,
+        .founder-container {
+          gap: 40px;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .footer-info {
+          grid-column: span 3;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .section-spacing {
+          padding: 80px 0;
+        }
+
+        .story-section,
+        .founder-section,
+        .values-section,
+        .timeline-section,
+        .testimonials,
+        .cta-section {
+          padding: 80px 0;
+        }
+
+        .story-container,
+        .founder-container {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .story-content,
+        .founder-content {
+          padding-right: 0;
+          order: 1;
+        }
+
+        .story-image,
+        .founder-image {
+          order: 2;
+        }
+
+        .story-reverse .story-content {
+          padding-left: 0;
+        }
+
+        .values-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .timeline::before {
+          left: 40px;
+        }
+
+        .timeline-item {
+          width: 100%;
+          padding-left: 80px;
+          padding-right: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+          left: 0;
+        }
+
+        .timeline-date {
+          left: 0 !important;
+          right: auto !important;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::after,
+        .timeline-item:nth-child(even) .timeline-content::after {
+          left: -10px;
+          right: auto;
+        }
+
+        .newsletter-container {
+          flex-direction: column;
+        }
+
+        .newsletter-content {
+          padding-right: 0;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+
+        .newsletter-perks {
+          justify-content: center;
+        }
+
+        .newsletter-form {
+          width: 100%;
+        }
+
+        .desktop-nav {
+          display: none;
+        }
+
+        .hamburger-menu {
+          display: block;
+        }
+
+        .mobile-nav {
+          display: block;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .footer-info {
+          grid-column: span 2;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .section-title {
+          font-size: 36px;
+        }
+
+        .page-title {
+          font-size: 36px;
+        }
+
+        .founder-quote {
+          position: relative;
+          max-width: 100%;
+          bottom: auto;
+          right: auto;
+          margin-top: 30px;
+        }
+
+        .values-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .testimonial-card {
+          flex: 0 0 300px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .section-spacing {
+          padding: 60px 0;
+        }
+
+        .story-section,
+        .founder-section,
+        .values-section,
+        .timeline-section,
+        .testimonials,
+        .cta-section {
+          padding: 60px 0;
+        }
+
+        .page-banner {
+          padding: 40px 0;
+        }
+
+        .story-title,
+        .founder-title,
+        .values-title,
+        .timeline-title,
+        .testimonials-title,
+        .cta-title {
+          font-size: 32px;
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .newsletter-perks {
+          flex-direction: column;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .footer-info {
+          grid-column: span 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+      <div class="container">
+        RESTOCK DATE: <span>2/11 @7PM PST</span> | New products will be dropping
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <div class="logo">GLOW<span>Beauty</span></div>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="#shipping">Shipping Policy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="action-btn" id="search-btn" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="action-btn" id="wishlist-btn" aria-label="Wishlist">
+            <i class="fas fa-heart"></i>
+          </button>
+          <button class="action-btn" id="cart-btn" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">3</span>
+          </button>
+          <div class="hamburger-menu" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+      <button class="close-btn" id="close-nav">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="#shipping">Shipping Policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <div class="mobile-nav-actions">
+          <button class="btn-icon btn-secondary">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="btn-icon btn-secondary">
+            <i class="fas fa-heart"></i>
+          </button>
+          <button class="btn-icon btn-secondary">
+            <i class="fas fa-user"></i>
+          </button>
+        </div>
+        <div class="mobile-nav-social">
+          <a href="#" class="social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container page-banner-content">
+        <h1 class="page-title">Our Story</h1>
+        <div class="breadcrumbs">
+          <a href="home.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Our Story</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+      <div class="container story-container">
+        <div class="story-content">
+          <div class="story-badge">Our Journey</div>
+          <h2 class="story-title">HOW IT ALL STARTED</h2>
+          <p class="story-text">
+            It all began in 2018 with a passion for natural skincare and a dream
+            to create products that truly work. Our founder, Emma Thompson,
+            struggled with skin issues for years and couldn't find products that
+            delivered on their promises without harsh chemicals.
+          </p>
+          <p class="story-text">
+            After years of research and testing, Emma created a line of
+            handcrafted skincare that focuses on natural ingredients that
+            actually work. What started as small batches made in her kitchen has
+            grown into a beloved brand with a dedicated following.
+          </p>
+          <p class="story-text">
+            Each product in our collection is carefully formulated to provide
+            real results while keeping your skin healthy and happy. We believe
+            in the power of nature and science working together to create
+            effective skincare solutions.
+          </p>
+          <button class="btn btn-primary">Watch Our Story Video</button>
+        </div>
+        <div class="story-image">
+          <img src="/api/placeholder/600/500" alt="GLOW Beauty beginnings" />
+          <div class="story-image-overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story Section 2 (Reversed) -->
+    <section
+      class="story-section story-reverse"
+      style="background-color: var(--light-gray)"
+    >
+      <div class="container story-container">
+        <div class="story-content">
+          <div class="story-badge">Our Mission</div>
+          <h2 class="story-title">BEAUTY WITH PURPOSE</h2>
+          <p class="story-text">
+            At GLOW Beauty, we believe that skincare shouldn't be complicated or
+            filled with questionable ingredients. Our mission is to create
+            premium, effective products using natural ingredients that are kind
+            to your skin and the environment.
+          </p>
+          <p class="story-text">
+            We're committed to transparency in everything we do – from the
+            ingredients we use to our manufacturing processes. We believe you
+            deserve to know exactly what you're putting on your skin.
+          </p>
+          <p class="story-text">
+            Every product we create is designed with intention and purpose,
+            addressing real skincare concerns while providing a luxurious,
+            sensorial experience that makes your daily routine something to look
+            forward to.
+          </p>
+          <button class="btn btn-primary">Our Ingredients</button>
+        </div>
+        <div class="story-image">
+          <img src="/api/placeholder/600/500" alt="GLOW Beauty mission" />
+          <div class="story-image-overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+      <div class="container founder-container">
+        <div class="founder-content">
+          <div class="founder-badge">Meet Our Founder</div>
+          <h2 class="founder-title">EMMA THOMPSON</h2>
+          <h3 class="founder-subtitle">Founder & CEO</h3>
+          <p class="founder-text">
+            Emma Thompson is a certified dermatological specialist with over 10
+            years of experience in the skincare industry. Her journey into
+            natural skincare began after struggling with her own skin concerns
+            and realizing how many products on the market contained potentially
+            harmful ingredients.
+          </p>
+          <p class="founder-text">
+            Driven by a passion for transparency and efficacy, Emma started
+            formulating her own products in her kitchen, focusing on
+            high-quality natural ingredients with proven benefits. What began as
+            a personal quest quickly evolved into a mission to help others
+            achieve healthy, radiant skin without compromise.
+          </p>
+          <p class="founder-text">
+            Today, Emma leads GLOW Beauty with the same dedication and
+            commitment to excellence. She oversees every aspect of product
+            development, ensuring each formula meets her exacting standards
+            before it reaches your skin.
+          </p>
+          <button class="btn btn-primary">Emma's Skincare Tips</button>
+        </div>
+        <div class="founder-image">
+          <img
+            src="/api/placeholder/500/600"
+            alt="Emma Thompson"
+            class="founder-img-main"
+          />
+          <div class="founder-background"></div>
+          <div class="founder-quote">
+            <p class="founder-quote-text">
+              I believe everyone deserves to feel confident in their skin. My
+              goal is to create products that make that possible, naturally.
+            </p>
+            <p class="founder-quote-author">- Emma Thompson</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values-section">
+      <div class="container">
+        <div class="values-header">
+          <div class="values-badge">What We Stand For</div>
+          <h2 class="values-title">Our Core Values</h2>
+          <p class="values-subtitle">
+            These principles guide everything we do, from product development to
+            customer service.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="value-title">Natural Ingredients</h3>
+            <p class="value-text">
+              We believe in harnessing the power of nature. Our products feature
+              carefully selected natural ingredients that deliver real results
+              without compromising your skin's health.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <h3 class="value-title">Scientific Approach</h3>
+            <p class="value-text">
+              While we love natural ingredients, we also believe in science. Our
+              formulations are backed by research and testing to ensure they're
+              not only safe but truly effective.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="value-title">Cruelty-Free</h3>
+            <p class="value-text">
+              We're proudly cruelty-free. None of our products or ingredients
+              are tested on animals, and we partner only with suppliers who
+              share this commitment.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-recycle"></i>
+            </div>
+            <h3 class="value-title">Sustainability</h3>
+            <p class="value-text">
+              We're committed to reducing our environmental footprint through
+              sustainable sourcing, eco-friendly packaging, and responsible
+              manufacturing practices.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h3 class="value-title">Community Focus</h3>
+            <p class="value-text">
+              We believe in building a community of empowered individuals who
+              celebrate their unique beauty. We listen to our customers and grow
+              with their feedback.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="value-title">Transparency</h3>
+            <p class="value-text">
+              We're open about our ingredients, processes, and practices. We
+              believe you have the right to know exactly what you're putting on
+              your skin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+      <div class="container">
+        <div class="timeline-header">
+          <div class="timeline-badge">Our Journey</div>
+          <h2 class="timeline-title">Key Moments in Our Story</h2>
+          <p class="timeline-subtitle">
+            From kitchen experiments to award-winning skincare, here's how GLOW
+            Beauty grew over the years.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2018</div>
+            <div class="timeline-content">
+              <div class="timeline-year">2018</div>
+              <h3 class="timeline-event">The Beginning</h3>
+              <p class="timeline-description">
+                Emma Thompson started creating her first formulations in her
+                kitchen, focused on solving her own skincare struggles with
+                natural ingredients.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2019</div>
+            <div class="timeline-content">
+              <div class="timeline-year">2019</div>
+              <h3 class="timeline-event">First Product Launch</h3>
+              <p class="timeline-description">
+                After months of testing and refinement, our first three products
+                were launched to friends and family, receiving overwhelming
+                positive feedback.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2020</div>
+            <div class="timeline-content">
+              <div class="timeline-year">2020</div>
+              <h3 class="timeline-event">Online Store Launch</h3>
+              <p class="timeline-description">
+                GLOW Beauty officially launched online with a collection of five
+                signature products, gaining attention on social media for our
+                natural approach.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2021</div>
+            <div class="timeline-content">
+              <div class="timeline-year">2021</div>
+              <h3 class="timeline-event">Expanded Product Line</h3>
+              <p class="timeline-description">
+                We expanded our collection to include targeted solutions for
+                different skin concerns, introducing serums and specialized
+                treatments.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2022</div>
+            <div class="timeline-content">
+              <div class="timeline-year">2022</div>
+              <h3 class="timeline-event">Beauty Award Winner</h3>
+              <p class="timeline-description">
+                Our Golden Hour Body Scrub won "Best Natural Exfoliator" at the
+                Annual Beauty Innovation Awards, putting us on the map
+                nationally.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2023</div>
+            <div class="timeline-content">
+              <div class="timeline-year">2023</div>
+              <h3 class="timeline-event">Retail Partnerships</h3>
+              <p class="timeline-description">
+                GLOW Beauty products became available in select boutique
+                retailers across the country, expanding our reach to new
+                customers.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2024</div>
+            <div class="timeline-content">
+              <div class="timeline-year">2024</div>
+              <h3 class="timeline-event">New Headquarters</h3>
+              <p class="timeline-description">
+                We moved into our new eco-friendly headquarters with an expanded
+                lab and testing facilities to continue innovating our product
+                line.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <div class="timeline-year">2025</div>
+              <h3 class="timeline-event">Today & Beyond</h3>
+              <p class="timeline-description">
+                With a growing team of skincare experts and a devoted community,
+                we continue to create innovative products while staying true to
+                our founding principles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="testimonials-slider">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-content">
+              "I've struggled with sensitive skin for years and tried countless
+              products that either didn't work or irritated my skin. GLOW
+              Beauty's products have been a game-changer. They're gentle but
+              effective, and for the first time in my life, I feel confident in
+              my skin."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="/api/placeholder/100/100"
+                alt="Sarah M."
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-author-info">
+                <h4>Sarah M.</h4>
+                <p>Loyal customer since 2020</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-content">
+              "The Golden Hour scrub is literally the best skincare product I've
+              ever used. It's gentle enough for my sensitive skin but still
+              gives amazing exfoliation. My skin is smoother than it's ever
+              been, and the scent is divine. I'm obsessed!"
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="/api/placeholder/100/100"
+                alt="Michael K."
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-author-info">
+                <h4>Michael K.</h4>
+                <p>Verified purchase</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="testimonial-content">
+              "I appreciate that GLOW Beauty isn't just about looking good—they
+              truly care about skin health. As an esthetician, I'm very
+              particular about what I recommend to clients, and these products
+              are among my top picks. The ingredients are carefully selected and
+              the results speak for themselves."
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="/api/placeholder/100/100"
+                alt="Jennifer L."
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-author-info">
+                <h4>Jennifer L.</h4>
+                <p>Licensed Esthetician</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-content">
+              "Finding skincare that's both natural and effective has always
+              been a challenge. GLOW Beauty delivers on both fronts. My skin has
+              never looked more radiant, and I love knowing exactly what
+              ingredients I'm putting on my face. This brand has earned a
+              customer for life!"
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="/api/placeholder/100/100"
+                alt="David R."
+                class="testimonial-avatar"
+              />
+              <div class="testimonial-author-info">
+                <h4>David R.</h4>
+                <p>Customer since 2022</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-nav">
+          <button class="testimonial-nav-btn" aria-label="Previous testimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="testimonial-nav-btn" aria-label="Next testimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+      <div class="container cta-container">
+        <h2 class="cta-title">Ready to Start Your GLOW Journey?</h2>
+        <p class="cta-text">
+          Join thousands of happy customers who have transformed their skin with
+          our natural, effective products. Experience the GLOW difference today.
+        </p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary">Shop Our Products</button>
+          <button class="btn btn-secondary">Take Our Skin Quiz</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+      <div class="container newsletter-container">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">Join Our GLOW Community</h2>
+          <p class="newsletter-description">
+            Subscribe to our newsletter and be the first to know about restocks,
+            new product launches, exclusive offers, and skincare tips.
+          </p>
+
+          <div class="newsletter-perks">
+            <div class="newsletter-perk">
+              <div class="newsletter-perk-icon">
+                <i class="fas fa-tag"></i>
+              </div>
+              <div class="newsletter-perk-text">Early access to sales</div>
+            </div>
+            <div class="newsletter-perk">
+              <div class="newsletter-perk-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <div class="newsletter-perk-text">Exclusive offers</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="newsletter-form">
+          <h3 class="newsletter-form-title">Subscribe to Our Newsletter</h3>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Your Name" />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-input"
+                placeholder="Your Email Address"
+              />
+            </div>
+            <button type="submit" class="subscribe-btn">Subscribe Now</button>
+            <p class="form-disclaimer">
+              By subscribing, you agree to our Privacy Policy. You can
+              unsubscribe at any time.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-info">
+            <div class="logo">GLOW<span>Beauty</span></div>
+            <p class="footer-description">
+              We create premium skincare products using natural ingredients that
+              help you achieve radiant and healthy skin. Our mission is to make
+              effective skincare accessible to everyone.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Shop</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> All Products</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Bestsellers</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> New Arrivals</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Gift Sets</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Sale Items</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Information</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="our-story.html"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="#shipping"
+                  ><i class="fas fa-chevron-right"></i> Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Refund Policy</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contact Us</h3>
+            <div class="footer-contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-info">
+                123 Beauty Street, Los Angeles, CA 90001, USA
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info">support@glowbeauty.com</div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-info">+1 (800) 123-4567</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            &copy; 2025 GLOW Beauty. All rights reserved.
+          </div>
+          <div class="payment-methods">
+            <div class="payment-method">VISA</div>
+            <div class="payment-method">MC</div>
+            <div class="payment-method">AMEX</div>
+            <div class="payment-method">PP</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+      // JavaScript code here
+      // Wait for DOM to be fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile Navigation
+        const hamburgerMenu = document.getElementById("hamburger-menu");
+        const mobileNav = document.getElementById("mobile-nav");
+        const closeNavBtn = document.getElementById("close-nav");
+        const overlay = document.getElementById("overlay");
+        const mobileNavLinks = document.querySelectorAll(".mobile-nav ul li a");
+
+        // Open mobile menu
+        hamburgerMenu.addEventListener("click", function () {
+          mobileNav.classList.add("active");
+          overlay.classList.add("active");
+          document.body.style.overflow = "hidden"; // Prevent scrolling
+        });
+
+        // Close mobile menu
+        function closeMobileNav() {
+          mobileNav.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.style.overflow = ""; // Re-enable scrolling
+        }
+
+        closeNavBtn.addEventListener("click", closeMobileNav);
+        overlay.addEventListener("click", closeMobileNav);
+
+        // Close menu when clicking on menu links
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", closeMobileNav);
+        });
+
+        // Header scroll effect
+        const header = document.getElementById("header");
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          if (scrollTop > 100) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+
+          lastScrollTop = scrollTop;
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add("visible");
+          } else {
+            backToTopBtn.classList.remove("visible");
+          }
+        });
+
+        backToTopBtn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+        // Testimonial Slider
+        const testimonialSlider = document.querySelector(
+          ".testimonials-slider"
+        );
+        const testimonialPrevBtn = document.querySelector(
+          '.testimonial-nav-btn[aria-label="Previous testimonial"]'
+        );
+        const testimonialNextBtn = document.querySelector(
+          '.testimonial-nav-btn[aria-label="Next testimonial"]'
+        );
+
+        if (testimonialSlider && testimonialPrevBtn && testimonialNextBtn) {
+          let slideWidth =
+            document.querySelector(".testimonial-card").offsetWidth + 30; // Card width + gap
+
+          testimonialNextBtn.addEventListener("click", function () {
+            testimonialSlider.scrollBy({
+              left: slideWidth,
+              behavior: "smooth",
+            });
+          });
+
+          testimonialPrevBtn.addEventListener("click", function () {
+            testimonialSlider.scrollBy({
+              left: -slideWidth,
+              behavior: "smooth",
+            });
+          });
+        }
+
+        // Newsletter Form Validation
+        const newsletterForm = document.querySelector(".newsletter-form form");
+
+        if (newsletterForm) {
+          newsletterForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nameInput = this.querySelector('input[type="text"]');
+            const emailInput = this.querySelector('input[type="email"]');
+
+            // Simple validation
+            if (!nameInput.value.trim()) {
+              showInputError(nameInput, "Please enter your name");
+              return;
+            }
+
+            if (!emailInput.value.trim()) {
+              showInputError(emailInput, "Please enter your email");
+              return;
+            }
+
+            if (!isValidEmail(emailInput.value)) {
+              showInputError(emailInput, "Please enter a valid email");
+              return;
+            }
+
+            // Success - here you would typically submit the form via AJAX
+            this.innerHTML =
+              '<div class="success-message"><i class="fas fa-check-circle"></i><h3>Thank You!</h3><p>You have been successfully subscribed to our newsletter.</p></div>';
+          });
+        }
+
+        // Helper function for form validation
+        function showInputError(input, message) {
+          const formGroup = input.closest(".form-group");
+
+          // Remove any existing error
+          const existingError = formGroup.querySelector(".error-message");
+          if (existingError) {
+            existingError.remove();
+          }
+
+          // Add error class to input
+          input.classList.add("error");
+
+          // Create and append error message
+          const errorMessage = document.createElement("div");
+          errorMessage.className = "error-message";
+          errorMessage.textContent = message;
+          formGroup.appendChild(errorMessage);
+
+          // Focus the input
+          input.focus();
+
+          // Remove error when input changes
+          input.addEventListener(
+            "input",
+            function () {
+              input.classList.remove("error");
+              const error = formGroup.querySelector(".error-message");
+              if (error) {
+                error.remove();
+              }
+            },
+            { once: true }
+          );
+        }
+
+        // Helper function to validate email
+        function isValidEmail(email) {
+          const re =
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(email.toLowerCase());
+        }
+
+        // Animate elements when they come into view
+        const animateElements = document.querySelectorAll(
+          ".page-banner, .story-image, .story-content, .founder-image, .founder-content, .value-card, .timeline-item, .testimonial-card, .cta-container, .newsletter-content, .newsletter-form"
+        );
+
+        // Create intersection observer
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add(
+                  "animate__animated",
+                  "animate__fadeIn"
+                );
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        // Observe each element
+        animateElements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        // Set up smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
