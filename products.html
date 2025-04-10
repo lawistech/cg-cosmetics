@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Beauty | Products</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+      :root {
+        --primary: #d4af37;
+        --primary-light: #f9f295;
+        --secondary: #b8860b;
+        --secondary-light: #efd87c;
+        --accent: #9e7c16;
+        --text: #2c2c2c;
+        --text-light: #6e6e6e;
+        --light: #ffffff;
+        --light-gray: #fcfaf2;
+        --dark: #1a1200;
+        --sold-out: #888888;
+        --success: #4caf50;
+        --warning: #9e7c16;
+        --border-radius: 16px;
+        --shadow-sm: 0 2px 8px rgba(174, 143, 31, 0.05);
+        --shadow-md: 0 4px 12px rgba(174, 143, 31, 0.08);
+        --shadow-lg: 0 8px 24px rgba(174, 143, 31, 0.12);
+        --shadow-hover: 0 12px 32px rgba(174, 143, 31, 0.2);
+        --gold-gradient: linear-gradient(
+          135deg,
+          #f9f295 0%,
+          #e0c264 50%,
+          #d4af37 100%
+        );
+        --gold-gradient-dark: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: var(--text);
+        background-color: var(--light);
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .section-spacing {
+        padding: 100px 0;
+      }
+
+      /* Global Button Styles */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border: none;
+      }
+
+      .btn-primary {
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(135deg, #e5c646 0%, #d4af37 100%);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-secondary {
+        background-color: var(--light);
+        color: var(--accent);
+        border: 2px solid var(--accent);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary-light);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-icon {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      /* Announcement Bar */
+      .announcement-bar {
+        background-color: var(--dark);
+        color: var(--light);
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .announcement-bar span {
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .announcement-bar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          #f9f295,
+          #d4af37,
+          #b8860b,
+          #d4af37,
+          #f9f295
+        );
+        animation: gradient-shift 3s infinite linear;
+      }
+
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Header */
+      header {
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: var(--shadow-sm);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        transition: all 0.3s ease;
+      }
+
+      header.scrolled {
+        box-shadow: var(--shadow-md);
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary);
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(to right, #d4af37, #b8860b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .logo span {
+        color: var(--text);
+        -webkit-text-fill-color: initial;
+      }
+
+      nav.desktop-nav ul {
+        display: flex;
+        list-style: none;
+        gap: 36px;
+      }
+
+      nav.desktop-nav ul li a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      nav.desktop-nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: var(--accent);
+        transition: width 0.3s ease;
+      }
+
+      nav.desktop-nav ul li a:hover {
+        color: var(--accent);
+      }
+
+      nav.desktop-nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .action-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: var(--text);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .action-btn:hover {
+        background-color: var(--light-gray);
+        color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      .cart-count {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--accent);
+        color: var(--light);
+        font-size: 11px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+
+      .hamburger-menu {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .mobile-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--light);
+        box-shadow: var(--shadow-lg);
+        z-index: 200;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 60px 30px 30px;
+      }
+
+      .mobile-nav.active {
+        right: 0;
+      }
+
+      .mobile-nav .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text);
+      }
+
+      .mobile-nav ul {
+        list-style: none;
+      }
+
+      .mobile-nav ul li {
+        margin-bottom: 20px;
+      }
+
+      .mobile-nav ul li a {
+        text-decoration: none;
+        color: var(--text);
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        display: block;
+        padding: 8px 0;
+      }
+
+      .mobile-nav ul li a:hover {
+        color: var(--accent);
+      }
+
+      .mobile-nav-footer {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+      }
+
+      .mobile-nav-actions {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .mobile-nav-social {
+        display: flex;
+        gap: 16px;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 150;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .overlay.active {
+        display: block;
+        opacity: 1;
+      }
+
+      /* Page Banner */
+      .page-banner {
+        background: var(--gold-gradient);
+        padding: 60px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/api/placeholder/1200/400");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .page-banner-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-title {
+        font-size: 48px;
+        color: var(--dark);
+        margin-bottom: 16px;
+      }
+
+      .breadcrumbs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        color: var(--dark);
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .breadcrumbs a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .breadcrumbs a:hover {
+        color: var(--dark);
+      }
+
+      .breadcrumbs i {
+        color: var(--dark);
+        font-size: 12px;
+      }
+
+      /* Product Filters */
+      .product-filters {
+        padding: 50px 0;
+        background-color: var(--light-gray);
+      }
+
+      .filter-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .filter-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .filter-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .filter-label {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .filter-dropdown {
+        position: relative;
+      }
+
+      .filter-select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-color: var(--light);
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 10px 36px 10px 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        min-width: 180px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232c2c2c'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px;
+      }
+
+      .filter-select:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.2);
+      }
+
+      .filter-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .view-options {
+        display: flex;
+        gap: 10px;
+      }
+
+      .view-option {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--light);
+        border: 1px solid #e0e0e0;
+        color: var(--text-light);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .view-option:hover {
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .view-option.active {
+        background-color: var(--primary-light);
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .search-products {
+        position: relative;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 10px 40px 10px 16px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 14px;
+        min-width: 220px;
+      }
+
+      .search-input:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgba(184, 134, 11, 0.2);
+      }
+
+      .search-icon {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--text-light);
+        font-size: 16px;
+      }
+
+      /* Category Filter Chips */
+      .filter-chips {
+        padding: 0 0 40px;
+        background-color: var(--light-gray);
+      }
+
+      .chips-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .filter-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background-color: var(--light);
+        border: 1px solid #e0e0e0;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text);
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .filter-chip:hover {
+        background-color: var(--primary-light);
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .filter-chip.active {
+        background-color: var(--primary-light);
+        border-color: var(--accent);
+        color: var(--accent);
+      }
+
+      .clear-filters {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background-color: var(--light);
+        border: 1px solid #e0e0e0;
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--text-light);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-left: 10px;
+      }
+
+      .clear-filters:hover {
+        background-color: var(--light-gray);
+        color: var(--text);
+      }
+
+      .active-filters {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .active-filter-label {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text);
+      }
+
+      .active-filter {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        background-color: var(--primary-light);
+        border: 1px solid var(--accent);
+        border-radius: 50px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--accent);
+      }
+
+      .remove-filter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: var(--accent);
+        color: var(--light);
+        font-size: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .remove-filter:hover {
+        background-color: var(--text);
+      }
+
+      /* Products Grid */
+      .products-section {
+        padding: 60px 0 100px;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+      }
+
+      .product-card {
+        background-color: var(--light);
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        position: relative;
+      }
+
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-hover);
+      }
+
+      .product-image {
+        height: 280px;
+        background-color: var(--light-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-image img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+        transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      .product-card:hover .product-image img {
+        transform: scale(1.05);
+      }
+
+      .product-tag {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        padding: 6px 12px;
+        border-radius: 50px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        z-index: 1;
+      }
+
+      .tag-new {
+        background-color: var(--secondary-light);
+        color: var(--secondary);
+      }
+
+      .tag-sale {
+        background-color: var(--accent);
+        color: var(--light);
+      }
+
+      .tag-featured {
+        background-color: var(--primary-light);
+        color: var(--accent);
+      }
+
+      .sold-out-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .sold-out-label {
+        background-color: var(--dark);
+        color: var(--light);
+        padding: 8px 20px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .product-actions {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        z-index: 1;
+        transform: translateX(60px);
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+
+      .product-card:hover .product-actions {
+        transform: translateX(0);
+        opacity: 1;
+      }
+
+      .product-action-btn {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: var(--light);
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+      }
+
+      .product-action-btn:hover {
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        transform: scale(1.1);
+      }
+
+      .product-info {
+        padding: 24px;
+      }
+
+      .product-category {
+        font-size: 13px;
+        color: var(--text-light);
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .product-name {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: var(--text);
+        transition: color 0.3s ease;
+      }
+
+      .product-card:hover .product-name {
+        color: var(--accent);
+      }
+
+      .product-price {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .current-price {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--secondary);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      }
+
+      .old-price {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text-light);
+        text-decoration: line-through;
+      }
+
+      .product-rating {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+      }
+
+      .stars {
+        display: flex;
+        gap: 2px;
+        color: #ffc107;
+      }
+
+      .rating-count {
+        font-size: 14px;
+        color: var(--text-light);
+      }
+
+      .add-to-cart {
+        width: 100%;
+        padding: 12px;
+        background-color: var(--primary-light);
+        color: var(--accent);
+        border: 1px solid rgba(184, 134, 11, 0.3);
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .add-to-cart:hover {
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+      }
+
+      .add-to-cart i {
+        font-size: 16px;
+      }
+
+      .sold-out-btn {
+        background-color: var(--light-gray);
+        color: var(--sold-out);
+        cursor: not-allowed;
+      }
+
+      .sold-out-btn:hover {
+        background-color: var(--light-gray);
+        color: var(--sold-out);
+        transform: none;
+      }
+
+      /* Pagination */
+      .pagination {
+        margin-top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .page-item {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        background-color: var(--light);
+        color: var(--text);
+        border: 1px solid #e0e0e0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .page-item:hover {
+        background-color: var(--primary-light);
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .page-item.active {
+        background-color: var(--primary-light);
+        color: var(--accent);
+        border-color: var(--accent);
+      }
+
+      .page-item.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      .page-item.disabled:hover {
+        background-color: var(--light);
+        color: var(--text);
+        border-color: #e0e0e0;
+      }
+
+      /* Newsletter Section */
+      .newsletter {
+        padding: 80px 0;
+        background: linear-gradient(
+          to right,
+          var(--light-gray),
+          var(--primary-light),
+          var(--light-gray)
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .newsletter::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        top: -250px;
+        right: -200px;
+      }
+
+      .newsletter::after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        bottom: -200px;
+        left: -150px;
+      }
+
+      .newsletter-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .newsletter-content {
+        flex: 1;
+        padding-right: 60px;
+      }
+
+      .newsletter-title {
+        font-size: 36px;
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+
+      .newsletter-description {
+        font-size: 16px;
+        color: var(--text-light);
+        margin-bottom: 30px;
+      }
+
+      .newsletter-perks {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 24px;
+      }
+
+      .newsletter-perk {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .newsletter-perk-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: var(--accent);
+      }
+
+      .newsletter-perk-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text);
+      }
+
+      .newsletter-form {
+        flex: 0 0 50%;
+        background-color: var(--light);
+        border-radius: var(--border-radius);
+        padding: 40px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .newsletter-form-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+        color: var(--text);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 14px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+      }
+
+      .form-input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgba(255, 77, 133, 0.2);
+        outline: none;
+      }
+
+      .subscribe-btn {
+        width: 100%;
+        padding: 14px;
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .subscribe-btn:hover {
+        background: linear-gradient(135deg, #e5c646 0%, #d4af37 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      }
+
+      .form-disclaimer {
+        font-size: 13px;
+        color: var(--text-light);
+        margin-top: 16px;
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark);
+        color: var(--light);
+        padding: 80px 0 30px;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .footer-info .logo {
+        margin-bottom: 20px;
+      }
+
+      .footer-description {
+        margin-bottom: 30px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.7;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 16px;
+      }
+
+      .social-link {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background: var(--gold-gradient-dark);
+        transform: translateY(-3px);
+      }
+
+      .footer-title {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: var(--light);
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 16px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .footer-links a:hover {
+        color: #f9d861;
+        padding-left: 5px;
+      }
+
+      .footer-links a i {
+        font-size: 12px;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f9d861;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+
+      .contact-info {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .copyright {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+      }
+
+      .payment-methods {
+        display: flex;
+        gap: 12px;
+      }
+
+      .payment-method {
+        width: 50px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        font-size: 14px;
+      }
+
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background: linear-gradient(135deg, #e5c646 0%, #d4af37 100%);
+        transform: translateY(-5px);
+      }
+
+      /* Quick View Modal */
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+      }
+
+      .modal.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .modal-content {
+        background-color: var(--light);
+        border-radius: var(--border-radius);
+        width: 100%;
+        max-width: 900px;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        transform: translateY(30px);
+        opacity: 0;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .modal.active .modal-content {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--light);
+        box-shadow: var(--shadow-sm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: var(--text);
+        z-index: 1;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .modal-close:hover {
+        background-color: var(--accent);
+        color: var(--light);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .products-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .footer-info {
+          grid-column: span 3;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .section-spacing {
+          padding: 80px 0;
+        }
+
+        .filter-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .filter-right {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .search-products {
+          width: 100%;
+        }
+
+        .newsletter-container {
+          flex-direction: column;
+        }
+
+        .newsletter-content {
+          padding-right: 0;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+
+        .newsletter-perks {
+          justify-content: center;
+        }
+
+        .newsletter-form {
+          width: 100%;
+        }
+
+        .desktop-nav {
+          display: none;
+        }
+
+        .hamburger-menu {
+          display: block;
+        }
+
+        .mobile-nav {
+          display: block;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .footer-info {
+          grid-column: span 2;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 36px;
+        }
+
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about-features {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .section-spacing {
+          padding: 60px 0;
+        }
+
+        .page-banner {
+          padding: 40px 0;
+        }
+
+        .filter-left {
+          flex-direction: column;
+          align-items: flex-start;
+          width: 100%;
+        }
+
+        .filter-group {
+          width: 100%;
+        }
+
+        .filter-select {
+          width: 100%;
+        }
+
+        .filter-right {
+          flex-direction: column;
+        }
+
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .newsletter-perks {
+          flex-direction: column;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .footer-info {
+          grid-column: span 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+      <div class="container">
+        RESTOCK DATE: <span>2/11 @7PM PST</span> | New products will be dropping
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <div class="logo">GLOW<span>Beauty</span></div>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#shipping">Shipping Policy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="action-btn" id="search-btn" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="action-btn" id="wishlist-btn" aria-label="Wishlist">
+            <i class="fas fa-heart"></i>
+          </button>
+          <button class="action-btn" id="cart-btn" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">3</span>
+          </button>
+          <div class="hamburger-menu" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+      <button class="close-btn" id="close-nav">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#shipping">Shipping Policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <div class="mobile-nav-actions">
+          <button class="btn-icon btn-secondary">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="btn-icon btn-secondary">
+            <i class="fas fa-heart"></i>
+          </button>
+          <button class="btn-icon btn-secondary">
+            <i class="fas fa-user"></i>
+          </button>
+        </div>
+        <div class="mobile-nav-social">
+          <a href="#" class="social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container page-banner-content">
+        <h1 class="page-title">Our Products</h1>
+        <div class="breadcrumbs">
+          <a href="home.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Products</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Filters -->
+    <section class="product-filters">
+      <div class="container filter-container">
+        <div class="filter-left">
+          <div class="filter-group">
+            <div class="filter-label">Sort By:</div>
+            <div class="filter-dropdown">
+              <select class="filter-select">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="best-selling">Best Selling</option>
+                <option value="top-rated">Top Rated</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-label">Category:</div>
+            <div class="filter-dropdown">
+              <select class="filter-select">
+                <option value="all">All Categories</option>
+                <option value="cleansers">Cleansers</option>
+                <option value="serums">Serums</option>
+                <option value="scrubs">Scrubs</option>
+                <option value="masks">Masks</option>
+                <option value="accessories">Accessories</option>
+              </select>
+            </div>
+          </div>
+          <div class="filter-group">
+            <div class="filter-label">Price Range:</div>
+            <div class="filter-dropdown">
+              <select class="filter-select">
+                <option value="all">All Prices</option>
+                <option value="0-15">$0 - $15</option>
+                <option value="15-30">$15 - $30</option>
+                <option value="30-50">$30 - $50</option>
+                <option value="50+">$50+</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="filter-right">
+          <div class="view-options">
+            <button class="view-option active" aria-label="Grid view">
+              <i class="fas fa-th"></i>
+            </button>
+            <button class="view-option" aria-label="List view">
+              <i class="fas fa-list"></i>
+            </button>
+          </div>
+          <div class="search-products">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search products..."
+            />
+            <i class="fas fa-search search-icon"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Category Filter Chips -->
+    <section class="filter-chips">
+      <div class="container">
+        <div class="chips-container">
+          <button class="filter-chip active">All Products</button>
+          <button class="filter-chip">Cleansers</button>
+          <button class="filter-chip">Serums</button>
+          <button class="filter-chip">Masks</button>
+          <button class="filter-chip">Scrubs</button>
+          <button class="filter-chip">Body Butters</button>
+          <button class="filter-chip">Oils</button>
+          <button class="filter-chip">Accessories</button>
+          <button class="clear-filters">
+            <i class="fas fa-times"></i> Clear Filters
+          </button>
+        </div>
+        <div class="active-filters">
+          <div class="active-filter-label">Active Filters:</div>
+          <div class="active-filter">
+            Price: $15 - $30
+            <span class="remove-filter"><i class="fas fa-times"></i></span>
+          </div>
+          <div class="active-filter">
+            In Stock
+            <span class="remove-filter"><i class="fas fa-times"></i></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products-section">
+      <div class="container">
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Exfoliating gloves" />
+              <div class="sold-out-overlay">
+                <div class="sold-out-label">SOLD OUT</div>
+              </div>
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Accessories</div>
+              <h3 class="product-name">Exfoliating Gloves</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-count">(24)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$5.99</span>
+              </div>
+              <button class="add-to-cart sold-out-btn">
+                <i class="fas fa-ban"></i> Sold Out
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Juicy Kitty" />
+              <div class="product-tag tag-new">New</div>
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Body Butter</div>
+              <h3 class="product-name">Juicy Kitty</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="rating-count">(56)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$22.99</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Golden Hour" />
+              <div class="product-tag tag-sale">20% Off</div>
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Body Scrub</div>
+              <h3 class="product-name">Golden Hour</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="rating-count">(42)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$25.89</span>
+                <span class="old-price">$32.50</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Glow Serum" />
+              <div class="sold-out-overlay">
+                <div class="sold-out-label">SOLD OUT</div>
+              </div>
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Serum</div>
+              <h3 class="product-name">Glow Serum</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-count">(78)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$19.89</span>
+              </div>
+              <button class="add-to-cart sold-out-btn">
+                <i class="fas fa-ban"></i> Sold Out
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Honey Mask" />
+              <div class="product-tag tag-featured">Featured</div>
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Mask</div>
+              <h3 class="product-name">Honey Mask</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="rating-count">(91)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$18.99</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Facial Cleanser" />
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Cleanser</div>
+              <h3 class="product-name">Facial Cleanser</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="rating-count">(37)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$16.50</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Rose Oil" />
+              <div class="product-tag tag-sale">15% Off</div>
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Oil</div>
+              <h3 class="product-name">Rose Oil</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="rating-count">(63)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$23.79</span>
+                <span class="old-price">$27.99</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Jade Roller" />
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Accessories</div>
+              <h3 class="product-name">Jade Roller</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-count">(48)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$14.99</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 9 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Coffee Scrub" />
+              <div class="product-tag tag-new">New</div>
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Scrub</div>
+              <h3 class="product-name">Coffee Scrub</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="rating-count">(29)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$18.50</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 10 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Vitamin C Serum" />
+              <div class="product-tag tag-featured">Featured</div>
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Serum</div>
+              <h3 class="product-name">Vitamin C Serum</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="rating-count">(86)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$29.99</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 11 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Lip Balm Set" />
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Lip Care</div>
+              <h3 class="product-name">Lip Balm Set</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="rating-count">(51)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$12.99</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 12 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="/api/placeholder/400/320" alt="Night Cream" />
+              <div class="product-tag tag-sale">10% Off</div>
+              <div class="product-actions">
+                <button class="product-action-btn" aria-label="Quick view">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Add to wishlist">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="product-action-btn" aria-label="Compare">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-info">
+              <div class="product-category">Moisturizer</div>
+              <h3 class="product-name">Night Cream</h3>
+              <div class="product-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-count">(74)</span>
+              </div>
+              <div class="product-price">
+                <span class="current-price">$26.99</span>
+                <span class="old-price">$29.99</span>
+              </div>
+              <button class="add-to-cart">
+                <i class="fas fa-shopping-bag"></i> Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="page-item disabled">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="page-item active">1</button>
+          <button class="page-item">2</button>
+          <button class="page-item">3</button>
+          <button class="page-item">4</button>
+          <button class="page-item">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+      <div class="container newsletter-container">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">Join Our GLOW Community</h2>
+          <p class="newsletter-description">
+            Subscribe to our newsletter and be the first to know about restocks,
+            new product launches, exclusive offers, and skincare tips.
+          </p>
+
+          <div class="newsletter-perks">
+            <div class="newsletter-perk">
+              <div class="newsletter-perk-icon">
+                <i class="fas fa-tag"></i>
+              </div>
+              <div class="newsletter-perk-text">Early access to sales</div>
+            </div>
+            <div class="newsletter-perk">
+              <div class="newsletter-perk-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <div class="newsletter-perk-text">Exclusive offers</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="newsletter-form">
+          <h3 class="newsletter-form-title">Subscribe to Our Newsletter</h3>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Your Name" />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-input"
+                placeholder="Your Email Address"
+              />
+            </div>
+            <button type="submit" class="subscribe-btn">Subscribe Now</button>
+            <p class="form-disclaimer">
+              By subscribing, you agree to our Privacy Policy. You can
+              unsubscribe at any time.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-info">
+            <div class="logo">GLOW<span>Beauty</span></div>
+            <p class="footer-description">
+              We create premium skincare products using natural ingredients that
+              help you achieve radiant and healthy skin. Our mission is to make
+              effective skincare accessible to everyone.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Shop</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> All Products</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Bestsellers</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> New Arrivals</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Gift Sets</a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-chevron-right"></i> Sale Items</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Information</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="#about"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="#shipping"
+                  ><i class="fas fa-chevron-right"></i> Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Refund Policy</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contact Us</h3>
+            <div class="footer-contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-info">
+                123 Beauty Street, Los Angeles, CA 90001, USA
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info">support@glowbeauty.com</div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-info">+1 (800) 123-4567</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            &copy; 2025 GLOW Beauty. All rights reserved.
+          </div>
+          <div class="payment-methods">
+            <div class="payment-method">VISA</div>
+            <div class="payment-method">MC</div>
+            <div class="payment-method">AMEX</div>
+            <div class="payment-method">PP</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+      // JavaScript code here
+      // Wait for DOM to be fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile Navigation
+        const hamburgerMenu = document.getElementById("hamburger-menu");
+        const mobileNav = document.getElementById("mobile-nav");
+        const closeNavBtn = document.getElementById("close-nav");
+        const overlay = document.getElementById("overlay");
+        const mobileNavLinks = document.querySelectorAll(".mobile-nav ul li a");
+
+        // Open mobile menu
+        hamburgerMenu.addEventListener("click", function () {
+          mobileNav.classList.add("active");
+          overlay.classList.add("active");
+          document.body.style.overflow = "hidden"; // Prevent scrolling
+        });
+
+        // Close mobile menu
+        function closeMobileNav() {
+          mobileNav.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.style.overflow = ""; // Re-enable scrolling
+        }
+
+        closeNavBtn.addEventListener("click", closeMobileNav);
+        overlay.addEventListener("click", closeMobileNav);
+
+        // Close menu when clicking on menu links
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", closeMobileNav);
+        });
+
+        // Header scroll effect
+        const header = document.getElementById("header");
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          if (scrollTop > 100) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+
+          lastScrollTop = scrollTop;
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add("visible");
+          } else {
+            backToTopBtn.classList.remove("visible");
+          }
+        });
+
+        backToTopBtn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+        // Filter Chips
+        const filterChips = document.querySelectorAll(".filter-chip");
+
+        filterChips.forEach((chip) => {
+          chip.addEventListener("click", function () {
+            // If chip is already active and clicked, we don't deactivate it
+            // because at least one should be active
+            if (!this.classList.contains("active")) {
+              // Remove active class from all chips
+              filterChips.forEach((c) => c.classList.remove("active"));
+              // Add active class to clicked chip
+              this.classList.add("active");
+            }
+          });
+        });
+
+        // Clear filters button
+        const clearFiltersBtn = document.querySelector(".clear-filters");
+        const activeFilters = document.querySelectorAll(".active-filter");
+
+        if (clearFiltersBtn) {
+          clearFiltersBtn.addEventListener("click", function () {
+            // Reset all filter dropdowns to first option
+            document.querySelectorAll(".filter-select").forEach((select) => {
+              select.selectedIndex = 0;
+            });
+
+            // Remove all active filters
+            document.querySelector(".active-filters").innerHTML =
+              '<div class="active-filter-label">Active Filters:</div>';
+
+            // Set "All Products" chip as active
+            filterChips.forEach((chip) => {
+              if (chip.textContent.trim() === "All Products") {
+                chip.classList.add("active");
+              } else {
+                chip.classList.remove("active");
+              }
+            });
+          });
+        }
+
+        // Individual remove filter buttons
+        const removeFilterBtns = document.querySelectorAll(".remove-filter");
+
+        removeFilterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            this.closest(".active-filter").remove();
+          });
+        });
+
+        // View Options (Grid/List)
+        const viewOptions = document.querySelectorAll(".view-option");
+        const productsGrid = document.querySelector(".products-grid");
+
+        viewOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            // Remove active class from all options
+            viewOptions.forEach((opt) => opt.classList.remove("active"));
+            // Add active class to clicked option
+            this.classList.add("active");
+
+            // Change view based on icon
+            if (this.querySelector("i").classList.contains("fa-list")) {
+              productsGrid.classList.add("list-view");
+            } else {
+              productsGrid.classList.remove("list-view");
+            }
+          });
+        });
+
+        // Pagination
+        const pageItems = document.querySelectorAll(
+          ".page-item:not(.disabled)"
+        );
+
+        pageItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            if (!this.classList.contains("disabled")) {
+              // Remove active class from all items
+              pageItems.forEach((page) => page.classList.remove("active"));
+              // Add active class to clicked item
+              this.classList.add("active");
+
+              // Here you would typically load new products
+              // For demonstration, we just scroll to top of products
+              document.querySelector(".products-section").scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+
+        // Product Quick View
+        const quickViewBtns = document.querySelectorAll(
+          '.product-action-btn[aria-label="Quick view"]'
+        );
+
+        quickViewBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            const productCard = this.closest(".product-card");
+            const productName =
+              productCard.querySelector(".product-name").textContent;
+            const productPrice =
+              productCard.querySelector(".current-price").textContent;
+            const productImage =
+              productCard.querySelector(".product-image img").src;
+
+            // Here you would typically show a modal with product details
+            alert(`Quick View: ${productName} - ${productPrice}`);
+
+            // This is where you would populate and show a modal
+            // For a complete implementation, you would create a modal in HTML
+            // and populate it with the product details
+          });
+        });
+
+        // Add to Cart buttons
+        const addToCartBtns = document.querySelectorAll(
+          ".add-to-cart:not(.sold-out-btn)"
+        );
+
+        addToCartBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Get current cart count
+            const cartCount = document.querySelector(".cart-count");
+            let count = parseInt(cartCount.textContent);
+
+            // Update cart count
+            cartCount.textContent = count + 1;
+
+            // Animation effect
+            this.innerHTML = '<i class="fas fa-check"></i> Added to Cart';
+            this.classList.add("animate__animated", "animate__pulse");
+
+            setTimeout(() => {
+              this.innerHTML =
+                '<i class="fas fa-shopping-bag"></i> Add to Cart';
+              this.classList.remove("animate__animated", "animate__pulse");
+            }, 1500);
+          });
+        });
+
+        // Wishlist functionality
+        const wishlistBtns = document.querySelectorAll(
+          '.product-action-btn[aria-label="Add to wishlist"]'
+        );
+
+        wishlistBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            this.classList.toggle("active");
+            if (this.classList.contains("active")) {
+              this.innerHTML = '<i class="fas fa-heart"></i>';
+              this.style.color = "#d4af37";
+              this.style.backgroundColor = "#fff";
+            } else {
+              this.innerHTML = '<i class="far fa-heart"></i>';
+              this.style.color = "";
+              this.style.backgroundColor = "";
+            }
+          });
+        });
+
+        // Newsletter Form Validation
+        const newsletterForm = document.querySelector(".newsletter-form form");
+
+        if (newsletterForm) {
+          newsletterForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nameInput = this.querySelector('input[type="text"]');
+            const emailInput = this.querySelector('input[type="email"]');
+
+            // Simple validation
+            if (!nameInput.value.trim()) {
+              showInputError(nameInput, "Please enter your name");
+              return;
+            }
+
+            if (!emailInput.value.trim()) {
+              showInputError(emailInput, "Please enter your email");
+              return;
+            }
+
+            if (!isValidEmail(emailInput.value)) {
+              showInputError(emailInput, "Please enter a valid email");
+              return;
+            }
+
+            // Success - here you would typically submit the form via AJAX
+            this.innerHTML =
+              '<div class="success-message"><i class="fas fa-check-circle"></i><h3>Thank You!</h3><p>You have been successfully subscribed to our newsletter.</p></div>';
+          });
+        }
+
+        // Helper function for form validation
+        function showInputError(input, message) {
+          const formGroup = input.closest(".form-group");
+
+          // Remove any existing error
+          const existingError = formGroup.querySelector(".error-message");
+          if (existingError) {
+            existingError.remove();
+          }
+
+          // Add error class to input
+          input.classList.add("error");
+
+          // Create and append error message
+          const errorMessage = document.createElement("div");
+          errorMessage.className = "error-message";
+          errorMessage.textContent = message;
+          formGroup.appendChild(errorMessage);
+
+          // Focus the input
+          input.focus();
+
+          // Remove error when input changes
+          input.addEventListener(
+            "input",
+            function () {
+              input.classList.remove("error");
+              const error = formGroup.querySelector(".error-message");
+              if (error) {
+                error.remove();
+              }
+            },
+            { once: true }
+          );
+        }
+
+        // Helper function to validate email
+        function isValidEmail(email) {
+          const re =
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(email.toLowerCase());
+        }
+
+        // Search functionality
+        const searchInput = document.querySelector(".search-input");
+
+        if (searchInput) {
+          searchInput.addEventListener("keyup", function (e) {
+            if (e.key === "Enter") {
+              const searchTerm = this.value.trim().toLowerCase();
+
+              if (searchTerm.length > 0) {
+                // In a real implementation, you would filter products or redirect to search results
+                alert(`Searching for: ${searchTerm}`);
+
+                // Add search term as an active filter
+                const activeFiltersContainer =
+                  document.querySelector(".active-filters");
+                const searchFilter = document.createElement("div");
+                searchFilter.className = "active-filter";
+                searchFilter.innerHTML = `
+                    Search: ${searchTerm}
+                    <span class="remove-filter"><i class="fas fa-times"></i></span>
+                  `;
+
+                // Add after the label
+                activeFiltersContainer.appendChild(searchFilter);
+
+                // Add event listener to the remove button
+                searchFilter
+                  .querySelector(".remove-filter")
+                  .addEventListener("click", function () {
+                    searchFilter.remove();
+                    searchInput.value = "";
+                  });
+              }
+            }
+          });
+        }
+
+        // Animate elements when they come into view
+        const animateElements = document.querySelectorAll(
+          ".page-banner, .product-card, .newsletter-content, .newsletter-form"
+        );
+
+        // Create intersection observer
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add(
+                  "animate__animated",
+                  "animate__fadeIn"
+                );
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        // Observe each element
+        animateElements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        // Set up smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
