@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Beauty | Shipping & Refund Policy</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap");
+
+      :root {
+        --primary: #d4af37;
+        --primary-light: #f9f295;
+        --secondary: #b8860b;
+        --secondary-light: #efd87c;
+        --accent: #9e7c16;
+        --text: #2c2c2c;
+        --text-light: #6e6e6e;
+        --light: #ffffff;
+        --light-gray: #fcfaf2;
+        --dark: #1a1200;
+        --sold-out: #888888;
+        --success: #4caf50;
+        --warning: #9e7c16;
+        --border-radius: 16px;
+        --shadow-sm: 0 2px 8px rgba(174, 143, 31, 0.05);
+        --shadow-md: 0 4px 12px rgba(174, 143, 31, 0.08);
+        --shadow-lg: 0 8px 24px rgba(174, 143, 31, 0.12);
+        --shadow-hover: 0 12px 32px rgba(174, 143, 31, 0.2);
+        --gold-gradient: linear-gradient(
+          135deg,
+          #f9f295 0%,
+          #e0c264 50%,
+          #d4af37 100%
+        );
+        --gold-gradient-dark: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        color: var(--text);
+        background-color: var(--light);
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        letter-spacing: -0.5px;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .section-spacing {
+        padding: 100px 0;
+      }
+
+      /* Global Button Styles */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        border: none;
+      }
+
+      .btn-primary {
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      .btn-primary:hover {
+        background: linear-gradient(135deg, #e5c646 0%, #d4af37 100%);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-secondary {
+        background-color: var(--light);
+        color: var(--accent);
+        border: 2px solid var(--accent);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--primary-light);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .btn-icon {
+        width: 42px;
+        height: 42px;
+        padding: 0;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+
+      /* Announcement Bar */
+      .announcement-bar {
+        background-color: var(--dark);
+        color: var(--light);
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .announcement-bar span {
+        color: var(--primary);
+        font-weight: 700;
+      }
+
+      .announcement-bar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          to right,
+          #f9f295,
+          #d4af37,
+          #b8860b,
+          #d4af37,
+          #f9f295
+        );
+        animation: gradient-shift 3s infinite linear;
+      }
+
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      /* Header */
+      header {
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        box-shadow: var(--shadow-sm);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        transition: all 0.3s ease;
+      }
+
+      header.scrolled {
+        box-shadow: var(--shadow-md);
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+      }
+
+      .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary);
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(to right, #d4af37, #b8860b);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .logo span {
+        color: var(--text);
+        -webkit-text-fill-color: initial;
+      }
+
+      nav.desktop-nav ul {
+        display: flex;
+        list-style: none;
+        gap: 36px;
+      }
+
+      nav.desktop-nav ul li a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      nav.desktop-nav ul li a::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background-color: var(--accent);
+        transition: width 0.3s ease;
+      }
+
+      nav.desktop-nav ul li a:hover {
+        color: var(--accent);
+      }
+
+      nav.desktop-nav ul li a:hover::after {
+        width: 100%;
+      }
+
+      .header-actions {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .action-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        color: var(--text);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .action-btn:hover {
+        background-color: var(--light-gray);
+        color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      .cart-count {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: var(--accent);
+        color: var(--light);
+        font-size: 11px;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+      }
+
+      .hamburger-menu {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .mobile-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--light);
+        box-shadow: var(--shadow-lg);
+        z-index: 200;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 60px 30px 30px;
+      }
+
+      .mobile-nav.active {
+        right: 0;
+      }
+
+      .mobile-nav .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text);
+      }
+
+      .mobile-nav ul {
+        list-style: none;
+      }
+
+      .mobile-nav ul li {
+        margin-bottom: 20px;
+      }
+
+      .mobile-nav ul li a {
+        text-decoration: none;
+        color: var(--text);
+        font-size: 18px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        display: block;
+        padding: 8px 0;
+      }
+
+      .mobile-nav ul li a:hover {
+        color: var(--accent);
+      }
+
+      .mobile-nav-footer {
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        right: 30px;
+      }
+
+      .mobile-nav-actions {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .mobile-nav-social {
+        display: flex;
+        gap: 16px;
+      }
+
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 150;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .overlay.active {
+        display: block;
+        opacity: 1;
+      }
+
+      /* Page Banner */
+      .page-banner {
+        background: var(--gold-gradient);
+        padding: 60px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .page-banner::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/api/placeholder/1200/400");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.1;
+        z-index: 0;
+      }
+
+      .page-banner-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .page-title {
+        font-size: 48px;
+        color: var(--dark);
+        margin-bottom: 16px;
+      }
+
+      .breadcrumbs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        color: var(--dark);
+        font-size: 15px;
+        font-weight: 500;
+      }
+
+      .breadcrumbs a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .breadcrumbs a:hover {
+        color: var(--dark);
+      }
+
+      .breadcrumbs i {
+        color: var(--dark);
+        font-size: 12px;
+      }
+
+      /* Shipping Policy Content */
+      .policy-section {
+        padding: 80px 0;
+      }
+
+      .policy-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: var(--light);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        padding: 50px;
+      }
+
+      .policy-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .policy-title {
+        font-size: 32px;
+        color: var(--text);
+        margin-bottom: 16px;
+      }
+
+      .policy-subtitle {
+        color: var(--text-light);
+        font-size: 16px;
+      }
+
+      .policy-content h2 {
+        font-size: 24px;
+        color: var(--accent);
+        margin-bottom: 16px;
+        margin-top: 40px;
+      }
+
+      .policy-content h3 {
+        font-size: 20px;
+        color: var(--text);
+        margin-bottom: 12px;
+        margin-top: 24px;
+      }
+
+      .policy-content p {
+        margin-bottom: 16px;
+        color: var(--text-light);
+      }
+
+      .policy-content ul {
+        margin-bottom: 24px;
+        padding-left: 20px;
+      }
+
+      .policy-content li {
+        margin-bottom: 8px;
+        color: var(--text-light);
+      }
+
+      .policy-content strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .policy-content .highlight {
+        background-color: var(--primary-light);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        margin: 30px 0;
+      }
+
+      .policy-content .highlight p {
+        color: var(--accent);
+        font-weight: 500;
+        margin-bottom: 0;
+      }
+
+      .policy-content .note {
+        border-left: 4px solid var(--primary);
+        padding-left: 20px;
+        margin: 20px 0;
+      }
+
+      .policy-contact {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      .policy-contact p {
+        margin-bottom: 20px;
+      }
+
+      /* Newsletter Section */
+      .newsletter {
+        padding: 80px 0;
+        background: linear-gradient(
+          to right,
+          var(--light-gray),
+          var(--primary-light),
+          var(--light-gray)
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .newsletter::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        top: -250px;
+        right: -200px;
+      }
+
+      .newsletter::after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        bottom: -200px;
+        left: -150px;
+      }
+
+      .newsletter-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .newsletter-content {
+        flex: 1;
+        padding-right: 60px;
+      }
+
+      .newsletter-title {
+        font-size: 36px;
+        margin-bottom: 16px;
+        color: var(--text);
+      }
+
+      .newsletter-description {
+        font-size: 16px;
+        color: var(--text-light);
+        margin-bottom: 30px;
+      }
+
+      .newsletter-perks {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 24px;
+      }
+
+      .newsletter-perk {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .newsletter-perk-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: var(--light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: var(--accent);
+      }
+
+      .newsletter-perk-text {
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--text);
+      }
+
+      .newsletter-form {
+        flex: 0 0 50%;
+        background-color: var(--light);
+        border-radius: var(--border-radius);
+        padding: 40px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .newsletter-form-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+        color: var(--text);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 14px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 15px;
+        transition: all 0.3s ease;
+      }
+
+      .form-input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 2px rgba(255, 77, 133, 0.2);
+        outline: none;
+      }
+
+      .subscribe-btn {
+        width: 100%;
+        padding: 14px;
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .subscribe-btn:hover {
+        background: linear-gradient(135deg, #e5c646 0%, #d4af37 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      }
+
+      .form-disclaimer {
+        font-size: 13px;
+        color: var(--text-light);
+        margin-top: 16px;
+        text-align: center;
+      }
+
+      /* Footer */
+      footer {
+        background-color: var(--dark);
+        color: var(--light);
+        padding: 80px 0 30px;
+      }
+
+      .footer-top {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 60px;
+        padding-bottom: 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+      }
+
+      .footer-info .logo {
+        margin-bottom: 20px;
+      }
+
+      .footer-description {
+        margin-bottom: 30px;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.7;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 16px;
+      }
+
+      .social-link {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        font-size: 16px;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background: var(--gold-gradient-dark);
+        transform: translateY(-3px);
+      }
+
+      .footer-title {
+        font-size: 18px;
+        margin-bottom: 30px;
+        color: var(--light);
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 16px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .footer-links a:hover {
+        color: #f9d861;
+        padding-left: 5px;
+      }
+
+      .footer-links a i {
+        font-size: 12px;
+      }
+
+      .footer-contact-item {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #f9d861;
+        font-size: 16px;
+        flex-shrink: 0;
+      }
+
+      .contact-info {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .copyright {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 14px;
+      }
+
+      .payment-methods {
+        display: flex;
+        gap: 12px;
+      }
+
+      .payment-method {
+        width: 50px;
+        height: 30px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--light);
+        font-size: 14px;
+      }
+
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background: var(--gold-gradient-dark);
+        color: var(--light);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        z-index: 99;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .back-to-top:hover {
+        background: linear-gradient(135deg, #e5c646 0%, #d4af37 100%);
+        transform: translateY(-5px);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1200px) {
+        .footer-top {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .footer-info {
+          grid-column: span 3;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .section-spacing {
+          padding: 80px 0;
+        }
+
+        .policy-container {
+          padding: 30px;
+        }
+
+        .newsletter-container {
+          flex-direction: column;
+        }
+
+        .newsletter-content {
+          padding-right: 0;
+          margin-bottom: 40px;
+          text-align: center;
+        }
+
+        .newsletter-perks {
+          justify-content: center;
+        }
+
+        .newsletter-form {
+          width: 100%;
+        }
+
+        .desktop-nav {
+          display: none;
+        }
+
+        .hamburger-menu {
+          display: block;
+        }
+
+        .mobile-nav {
+          display: block;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .footer-info {
+          grid-column: span 2;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 36px;
+        }
+
+        .policy-title {
+          font-size: 28px;
+        }
+
+        .policy-content h2 {
+          font-size: 22px;
+        }
+
+        .policy-content h3 {
+          font-size: 18px;
+        }
+
+        .footer-bottom {
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .section-spacing {
+          padding: 60px 0;
+        }
+
+        .page-banner {
+          padding: 40px 0;
+        }
+
+        .policy-container {
+          padding: 20px;
+        }
+
+        .policy-title {
+          font-size: 24px;
+        }
+
+        .newsletter-perks {
+          flex-direction: column;
+        }
+
+        .footer-top {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .footer-info {
+          grid-column: span 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+      <div class="container">
+        RESTOCK DATE: <span>2/11 @7PM PST</span> | New products will be dropping
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+      <div class="container header-container">
+        <div class="logo">GLOW<span>Beauty</span></div>
+        <nav class="desktop-nav">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="our-story.html">Our Story</a></li>
+            <li><a href="shipping-policy.html">Shipping Policy</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <button class="action-btn" id="search-btn" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="action-btn" id="wishlist-btn" aria-label="Wishlist">
+            <i class="fas fa-heart"></i>
+          </button>
+          <button class="action-btn" id="cart-btn" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">3</span>
+          </button>
+          <div class="hamburger-menu" id="hamburger-menu">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobile-nav">
+      <button class="close-btn" id="close-nav">
+        <i class="fas fa-times"></i>
+      </button>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="shipping-policy.html">Shipping Policy</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <div class="mobile-nav-actions">
+          <button class="btn-icon btn-secondary">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="btn-icon btn-secondary">
+            <i class="fas fa-heart"></i>
+          </button>
+          <button class="btn-icon btn-secondary">
+            <i class="fas fa-user"></i>
+          </button>
+        </div>
+        <div class="mobile-nav-social">
+          <a href="#" class="social-link">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+      <div class="container page-banner-content">
+        <h1 class="page-title">Shipping & Refund Policy</h1>
+        <div class="breadcrumbs">
+          <a href="home.html">Home</a>
+          <i class="fas fa-chevron-right"></i>
+          <span>Shipping & Refund Policy</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Policy Content Section -->
+    <section class="policy-section">
+      <div class="container">
+        <div class="policy-container">
+          <div class="policy-header">
+            <h2 class="policy-title">Shipping & Refund Policy</h2>
+            <p class="policy-subtitle">
+              Please review our policies before making a purchase
+            </p>
+          </div>
+
+          <div class="policy-content">
+            <h2>SHIPPING + PROCESSING TIME</h2>
+
+            <h3>1. How long is processing, shipping, and handling?</h3>
+            <p>
+              <strong>PLEASE ALLOW 7-14 BUSINESS DAYS</strong> FOR US TO PROCESS
+              YOUR ORDER. AFTER THAT, SHIPPING IS BASED ON THE ONE YOU SELECTED.
+              (business days do not include weekends and or holidays)
+            </p>
+            <ul>
+              <li>
+                Shipping time does NOT start until your order has been processed
+              </li>
+              <li>
+                Once your order is ready to ship you will receive a tracking
+                email. After receiving the tracking email, tracking activity
+                will become available after 24-72 hours.
+              </li>
+              <li>
+                Please keep in mind that shipping may take longer than usual due
+                to COVID-19
+              </li>
+            </ul>
+
+            <h3>
+              2. What happens if my package is damaged or lost in transit?
+            </h3>
+            <p>
+              GLOW Beauty is not responsible for lost and or damaged packages.
+              Please contact USPS and file a claim on their website.
+            </p>
+
+            <h3>3. What happens if you entered the wrong address?</h3>
+            <p>
+              If the customer fails to provide the correct address at the time
+              of purchase, GLOW Beauty will not be held liable or required to
+              issue a refund for lost packages. Please make sure you enter the
+              correct address before hitting 'submit'.
+            </p>
+
+            <div class="highlight">
+              <p>
+                PLEASE NOTE THAT ONCE YOUR ORDER IS SHIPPED OUT, WE ARE NOT
+                RESPONSIBLE FOR DAMAGED OR LOST PACKAGES
+              </p>
+            </div>
+
+            <div class="note">
+              <p>
+                <strong
+                  >IF YOU NOTICED YOU ENTERED THE WRONG ADDRESS, PLEASE CONTACT
+                  US IMMEDIATELY</strong
+                >
+              </p>
+            </div>
+
+            <h3>4. Are sample products available?</h3>
+            <p>No</p>
+
+            <h3>5. Refunds</h3>
+            <p>
+              All sales are FINAL, no refunds or exchanges. Please note that
+              once you place your order there are no changes.
+            </p>
+
+            <h3>6. Cancellations</h3>
+            <p>
+              We do not accept order cancellations once processed. If we approve
+              a cancellation, you will be charged a 40% re-stocking fee plus the
+              cost of all shipping. All orders are made to your order.
+            </p>
+
+            <h3>
+              7. Insufficient address - What happens if my order got sent back?
+            </h3>
+            <p>
+              If your order got sent back to sender please notify us. You will
+              be refunded for the cost of your items minus shipping and a 20%
+              restocking fee. If you would like for us to re-ship out your
+              package, you will be responsible of re-paying for shipping.
+              Shipping for all packages that got sent back is $10.
+            </p>
+
+            <h3>8. Return</h3>
+            <p>
+              DUE TO THE NATURE OF OUR PRODUCTS WE DO NOT ACCEPT ANY REFUNDS OR
+              EXCHANGES. (ALL SALES FINAL)
+            </p>
+            <p>
+              PRIOR TO MAKING YOUR PURCHASE, PLEASE GO OVER WHICH ITEM IS BEST
+              FOR YOU! IF YOU NEED ANY HELP DON'T HESITATE TO
+              <a href="#contact">CONTACT</a> US!
+            </p>
+
+            <div class="note">
+              <p>
+                Once packages are dropped off at post office, we no longer have
+                control, please contact mail carrier for further details once
+                you receive tracking number.
+              </p>
+            </div>
+
+            <h2>INTERNATIONAL ORDERS</h2>
+            <p>
+              <strong>IMPORTANT REMINDER</strong>: Once we ship out your order,
+              it is YOUR responsibility to take care of any customs fees &
+              charges. If you do not pay the fees, your package will be shipped
+              back to us and we will initiate a partial refund (excluding
+              shipping charges) back to you once we have received the package in
+              good condition. We are not responsible for any damages or stolen
+              items during the shipping process.
+            </p>
+
+            <p>
+              We strive to ensure that our customer's are satisfied with their
+              purchase. If there is an issue with your order, please be sure to
+              email support@glowbeauty.com within two days of delivery. We do
+              not provide returns/exchange beyond two days.
+            </p>
+
+            <div class="policy-contact">
+              <p>
+                IF YOU HAVE ANY QUESTIONS, PLEASE
+                <a href="#contact">CONTACT</a> US!
+              </p>
+              <a href="products.html" class="btn btn-primary"
+                >Continue Shopping</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+      <div class="container newsletter-container">
+        <div class="newsletter-content">
+          <h2 class="newsletter-title">Join Our GLOW Community</h2>
+          <p class="newsletter-description">
+            Subscribe to our newsletter and be the first to know about restocks,
+            new product launches, exclusive offers, and skincare tips.
+          </p>
+
+          <div class="newsletter-perks">
+            <div class="newsletter-perk">
+              <div class="newsletter-perk-icon">
+                <i class="fas fa-tag"></i>
+              </div>
+              <div class="newsletter-perk-text">Early access to sales</div>
+            </div>
+            <div class="newsletter-perk">
+              <div class="newsletter-perk-icon">
+                <i class="fas fa-gift"></i>
+              </div>
+              <div class="newsletter-perk-text">Exclusive offers</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="newsletter-form">
+          <h3 class="newsletter-form-title">Subscribe to Our Newsletter</h3>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-input" placeholder="Your Name" />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-input"
+                placeholder="Your Email Address"
+              />
+            </div>
+            <button type="submit" class="subscribe-btn">Subscribe Now</button>
+            <p class="form-disclaimer">
+              By subscribing, you agree to our Privacy Policy. You can
+              unsubscribe at any time.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-info">
+            <div class="logo">GLOW<span>Beauty</span></div>
+            <p class="footer-description">
+              We create premium skincare products using natural ingredients that
+              help you achieve radiant and healthy skin. Our mission is to make
+              effective skincare accessible to everyone.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Shop</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> All Products</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> Bestsellers</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> New Arrivals</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> Gift Sets</a
+                >
+              </li>
+              <li>
+                <a href="products.html"
+                  ><i class="fas fa-chevron-right"></i> Sale Items</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Information</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="our-story.html"
+                  ><i class="fas fa-chevron-right"></i> About Us</a
+                >
+              </li>
+              <li>
+                <a href="shipping-policy.html"
+                  ><i class="fas fa-chevron-right"></i> Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a href="shipping-policy.html"
+                  ><i class="fas fa-chevron-right"></i> Refund Policy</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fas fa-chevron-right"></i> Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h3 class="footer-title">Contact Us</h3>
+            <div class="footer-contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-info">
+                123 Beauty Street, Los Angeles, CA 90001, USA
+              </div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-info">support@glowbeauty.com</div>
+            </div>
+            <div class="footer-contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-info">+1 (800) 123-4567</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">
+            &copy; 2025 GLOW Beauty. All rights reserved.
+          </div>
+          <div class="payment-methods">
+            <div class="payment-method">VISA</div>
+            <div class="payment-method">MC</div>
+            <div class="payment-method">AMEX</div>
+            <div class="payment-method">PP</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+      // JavaScript code here
+      // Wait for DOM to be fully loaded
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile Navigation
+        const hamburgerMenu = document.getElementById("hamburger-menu");
+        const mobileNav = document.getElementById("mobile-nav");
+        const closeNavBtn = document.getElementById("close-nav");
+        const overlay = document.getElementById("overlay");
+        const mobileNavLinks = document.querySelectorAll(".mobile-nav ul li a");
+
+        // Open mobile menu
+        hamburgerMenu.addEventListener("click", function () {
+          mobileNav.classList.add("active");
+          overlay.classList.add("active");
+          document.body.style.overflow = "hidden"; // Prevent scrolling
+        });
+
+        // Close mobile menu
+        function closeMobileNav() {
+          mobileNav.classList.remove("active");
+          overlay.classList.remove("active");
+          document.body.style.overflow = ""; // Re-enable scrolling
+        }
+
+        closeNavBtn.addEventListener("click", closeMobileNav);
+        overlay.addEventListener("click", closeMobileNav);
+
+        // Close menu when clicking on menu links
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", closeMobileNav);
+        });
+
+        // Header scroll effect
+        const header = document.getElementById("header");
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+          let scrollTop =
+            window.pageYOffset || document.documentElement.scrollTop;
+
+          if (scrollTop > 100) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+
+          lastScrollTop = scrollTop;
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById("backToTop");
+
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add("visible");
+          } else {
+            backToTopBtn.classList.remove("visible");
+          }
+        });
+
+        backToTopBtn.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+
+        // Newsletter Form Validation
+        const newsletterForm = document.querySelector(".newsletter-form form");
+
+        if (newsletterForm) {
+          newsletterForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const nameInput = this.querySelector('input[type="text"]');
+            const emailInput = this.querySelector('input[type="email"]');
+
+            // Simple validation
+            if (!nameInput.value.trim()) {
+              showInputError(nameInput, "Please enter your name");
+              return;
+            }
+
+            if (!emailInput.value.trim()) {
+              showInputError(emailInput, "Please enter your email");
+              return;
+            }
+
+            if (!isValidEmail(emailInput.value)) {
+              showInputError(emailInput, "Please enter a valid email");
+              return;
+            }
+
+            // Success - here you would typically submit the form via AJAX
+            this.innerHTML =
+              '<div class="success-message"><i class="fas fa-check-circle"></i><h3>Thank You!</h3><p>You have been successfully subscribed to our newsletter.</p></div>';
+          });
+        }
+
+        // Helper function for form validation
+        function showInputError(input, message) {
+          const formGroup = input.closest(".form-group");
+
+          // Remove any existing error
+          const existingError = formGroup.querySelector(".error-message");
+          if (existingError) {
+            existingError.remove();
+          }
+
+          // Add error class to input
+          input.classList.add("error");
+
+          // Create and append error message
+          const errorMessage = document.createElement("div");
+          errorMessage.className = "error-message";
+          errorMessage.textContent = message;
+          formGroup.appendChild(errorMessage);
+
+          // Focus the input
+          input.focus();
+
+          // Remove error when input changes
+          input.addEventListener(
+            "input",
+            function () {
+              input.classList.remove("error");
+              const error = formGroup.querySelector(".error-message");
+              if (error) {
+                error.remove();
+              }
+            },
+            { once: true }
+          );
+        }
+
+        // Helper function to validate email
+        function isValidEmail(email) {
+          const re =
+            /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(email.toLowerCase());
+        }
+
+        // Animate elements when they come into view
+        const animateElements = document.querySelectorAll(
+          ".page-banner, .policy-container, .newsletter-content, .newsletter-form"
+        );
+
+        // Create intersection observer
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add(
+                  "animate__animated",
+                  "animate__fadeIn"
+                );
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        // Observe each element
+        animateElements.forEach((element) => {
+          observer.observe(element);
+        });
+
+        // Set up smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
