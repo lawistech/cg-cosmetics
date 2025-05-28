@@ -45,8 +45,7 @@
         <i class="fas fa-times"></i>
       </button>
       <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
+        <li><a href="#products">Products</a></li>
         <li><a href="#about">Our Story</a></li>
         <li><a href="#shipping">Shipping Policy</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -81,196 +80,75 @@
     </div>
     <div class="overlay" id="overlay"></div>
 
-    <!-- Page Banner -->
-    <section class="page-banner">
-      <div class="container page-banner-content">
-        <h1 class="page-title">Our Products</h1>
-        <div class="breadcrumbs">
-          <a href="home.html">Home</a>
-          <i class="fas fa-chevron-right"></i>
-          <span>Products</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Product Filters -->
-    <section class="product-filters">
-      <div class="container filter-container">
-        <div class="filter-left">
-          <div class="filter-group">
-            <div class="filter-label">Sort By:</div>
-            <div class="filter-dropdown">
-              <select class="filter-select">
-                <option value="featured">Featured</option>
-                <option value="newest">Newest</option>
-                <option value="price-low">Price: Low to High</option>
-                <option value="price-high">Price: High to Low</option>
-                <option value="best-selling">Best Selling</option>
-                <option value="top-rated">Top Rated</option>
-              </select>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-sparkles"></i> Handcrafted with Love
           </div>
-          <div class="filter-group">
-            <div class="filter-label">Category:</div>
-            <div class="filter-dropdown">
-              <select class="filter-select">
-                <option value="all">All Categories</option>
-                <option value="cleansers">Cleansers</option>
-                <option value="serums">Serums</option>
-                <option value="scrubs">Scrubs</option>
-                <option value="masks">Masks</option>
-                <option value="accessories">Accessories</option>
-              </select>
-            </div>
-          </div>
-          <div class="filter-group">
-            <div class="filter-label">Price Range:</div>
-            <div class="filter-dropdown">
-              <select class="filter-select">
-                <option value="all">All Prices</option>
-                <option value="0-15">$0 - $15</option>
-                <option value="15-30">$15 - $30</option>
-                <option value="30-50">$30 - $50</option>
-                <option value="50+">$50+</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="filter-right">
-          <div class="view-options">
-            <button class="view-option active" aria-label="Grid view">
-              <i class="fas fa-th"></i>
+          <h1>Radiant Skin Starts with Natural Ingredients</h1>
+          <p>
+            Discover our premium skincare collection made with carefully
+            selected natural ingredients that nourish your skin and enhance your
+            natural beauty.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary">
+              Shop New Arrivals <i class="fas fa-arrow-right"></i>
             </button>
-            <button class="view-option" aria-label="List view">
-              <i class="fas fa-list"></i>
-            </button>
+            <button class="btn btn-secondary">Best Sellers</button>
           </div>
-          <div class="search-products">
-            <input
-              type="text"
-              class="search-input"
-              placeholder="Search products..."
-            />
-            <i class="fas fa-search search-icon"></i>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Natural skincare products with botanical ingredients" />
+          <div class="hero-float hero-float-1">
+            <div class="hero-float-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="hero-float-text">
+              <h4>100% Natural</h4>
+              <p>No harmful chemicals</p>
+            </div>
+          </div>
+          <div class="hero-float hero-float-2">
+            <div class="hero-float-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <div class="hero-float-text">
+              <h4>Cruelty Free</h4>
+              <p>Never tested on animals</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Category Filter Chips -->
-    <section class="filter-chips">
+    <!-- Featured Products -->
+    <section class="featured-products section-spacing" id="products">
       <div class="container">
-        <div class="chips-container">
-          <button class="filter-chip active">All Products</button>
-          <button class="filter-chip">Cleansers</button>
-          <button class="filter-chip">Serums</button>
-          <button class="filter-chip">Masks</button>
-          <button class="filter-chip">Scrubs</button>
-          <button class="filter-chip">Body Butters</button>
-          <button class="filter-chip">Oils</button>
-          <button class="filter-chip">Accessories</button>
-          <button class="clear-filters">
-            <i class="fas fa-times"></i> Clear Filters
-          </button>
+        <div class="section-header">
+          <div class="section-subheading">Our Collection</div>
+          <h2 class="section-heading">Featured Products</h2>
+          <p class="section-description">
+            Explore our bestselling skincare products loved by thousands of
+            customers for their amazing results.
+          </p>
         </div>
-        <div class="active-filters">
-          <div class="active-filter-label">Active Filters:</div>
-          <div class="active-filter">
-            Price: $15 - $30
-            <span class="remove-filter"><i class="fas fa-times"></i></span>
-          </div>
-          <div class="active-filter">
-            In Stock
-            <span class="remove-filter"><i class="fas fa-times"></i></span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Products -->
-    <section class="products-section">
-      <div class="container">
+        <div class="products-filter">
+          <button class="filter-btn active">All</button>
+          <button class="filter-btn">Cleansers</button>
+          <button class="filter-btn">Scrubs</button>
+          <button class="filter-btn">Serums</button>
+          <button class="filter-btn">Accessories</button>
+        </div>
+
         <div class="products-grid">
           <!-- Product 1 -->
           <div class="product-card">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Exfoliating gloves" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
-                  <i class="fas fa-eye"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
-                  <i class="fas fa-heart"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Compare">
-                  <i class="fas fa-exchange-alt"></i>
-                </button>
-              </div>
-            </div>
-            <div class="product-info">
-              <div class="product-category">Accessories</div>
-              <h3 class="product-name">Exfoliating gloves</h3>
-              <div class="product-rating">
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span class="rating-count">(24)</span>
-              </div>
-              <div class="product-price">
-                <span class="current-price">$5.99</span>
-              </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
-              </button>
-            </div>
-          </div>
-
-          <!-- Product 2 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Juicy kitty | sex with me |" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
-                  <i class="fas fa-eye"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
-                  <i class="fas fa-heart"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Compare">
-                  <i class="fas fa-exchange-alt"></i>
-                </button>
-              </div>
-            </div>
-            <div class="product-info">
-              <div class="product-category">Body Butter</div>
-              <h3 class="product-name">Juicy kitty | sex with me |</h3>
-              <div class="product-rating">
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <span class="rating-count">(56)</span>
-              </div>
-              <div class="product-price">
-                <span class="current-price">$25.99</span>
-              </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
-              </button>
-            </div>
-          </div>
-
-          <!-- Product 3 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Juicy Kitty Icy Edition" />
+              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9" alt="Exfoliating gloves" />
               <div class="sold-out-overlay">
                 <div class="sold-out-label">SOLD OUT</div>
               </div>
@@ -287,20 +165,20 @@
               </div>
             </div>
             <div class="product-info">
-              <div class="product-category">Body Butter</div>
-              <h3 class="product-name">Juicy Kitty Icy Edition</h3>
+              <div class="product-category">Accessories</div>
+              <h3 class="product-name">Exfoliating Gloves</h3>
               <div class="product-rating">
                 <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
                 </div>
-                <span class="rating-count">(42)</span>
+                <span class="rating-count">(24)</span>
               </div>
               <div class="product-price">
-                <span class="current-price">$22.99</span>
+                <span class="current-price">$5.99</span>
               </div>
               <button class="add-to-cart sold-out-btn">
                 <i class="fas fa-ban"></i> Sold Out
@@ -308,11 +186,11 @@
             </div>
           </div>
 
-          <!-- Product 4 -->
+          <!-- Product 2 -->
           <div class="product-card">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Juicy kitty" />
-              <div class="product-tag tag-sale">On Sale</div>
+              <img src="https://images.unsplash.com/photo-1585232351009-aa87416fca90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Juicy Kitty" />
+              <div class="product-tag tag-new">New</div>
               <div class="product-actions">
                 <button class="product-action-btn" aria-label="Quick view">
                   <i class="fas fa-eye"></i>
@@ -327,7 +205,7 @@
             </div>
             <div class="product-info">
               <div class="product-category">Body Butter</div>
-              <h3 class="product-name">Juicy kitty</h3>
+              <h3 class="product-name">Juicy Kitty</h3>
               <div class="product-rating">
                 <div class="stars">
                   <i class="fas fa-star"></i>
@@ -336,11 +214,10 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                 </div>
-                <span class="rating-count">(78)</span>
+                <span class="rating-count">(56)</span>
               </div>
               <div class="product-price">
                 <span class="current-price">$22.99</span>
-                <span class="old-price">$25.99</span>
               </div>
               <button class="add-to-cart">
                 <i class="fas fa-shopping-bag"></i> Add to Cart
@@ -348,52 +225,11 @@
             </div>
           </div>
 
-          <!-- Product 5 -->
+          <!-- Product 3 -->
           <div class="product-card">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1631730359585-38a4935cbec4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Mask Brush" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
-                  <i class="fas fa-eye"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
-                  <i class="fas fa-heart"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Compare">
-                  <i class="fas fa-exchange-alt"></i>
-                </button>
-              </div>
-            </div>
-            <div class="product-info">
-              <div class="product-category">Accessories</div>
-              <h3 class="product-name">Mask Brush</h3>
-              <div class="product-rating">
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <span class="rating-count">(37)</span>
-              </div>
-              <div class="product-price">
-                <span class="current-price">$5.99</span>
-              </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
-              </button>
-            </div>
-          </div>
-
-          <!-- Product 8 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80"
-                alt="Tropical Paradise Foaming Body Scrub"
-              />
-              <div class="product-tag tag-sale">On Sale</div>
+              <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Golden Hour" />
+              <div class="product-tag tag-sale">20% Off</div>
               <div class="product-actions">
                 <button class="product-action-btn" aria-label="Quick view">
                   <i class="fas fa-eye"></i>
@@ -408,20 +244,20 @@
             </div>
             <div class="product-info">
               <div class="product-category">Body Scrub</div>
-              <h3 class="product-name">Tropical Paradise Foaming Body Scrub</h3>
+              <h3 class="product-name">Golden Hour</h3>
               <div class="product-rating">
                 <div class="stars">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
+                  <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
                 </div>
-                <span class="rating-count">(51)</span>
+                <span class="rating-count">(42)</span>
               </div>
               <div class="product-price">
-                <span class="current-price">$14.99</span>
-                <span class="old-price">$19.99</span>
+                <span class="current-price">$25.89</span>
+                <span class="old-price">$32.50</span>
               </div>
               <button class="add-to-cart">
                 <i class="fas fa-shopping-bag"></i> Add to Cart
@@ -429,10 +265,13 @@
             </div>
           </div>
 
-          <!-- Product 9 -->
+          <!-- Product 4 -->
           <div class="product-card">
             <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Glow serum" />
+              <img src="https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Glow Serum" />
+              <div class="sold-out-overlay">
+                <div class="sold-out-label">SOLD OUT</div>
+              </div>
               <div class="product-actions">
                 <button class="product-action-btn" aria-label="Quick view">
                   <i class="fas fa-eye"></i>
@@ -447,7 +286,7 @@
             </div>
             <div class="product-info">
               <div class="product-category">Serum</div>
-              <h3 class="product-name">Glow serum</h3>
+              <h3 class="product-name">Glow Serum</h3>
               <div class="product-rating">
                 <div class="stars">
                   <i class="fas fa-star"></i>
@@ -456,57 +295,94 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                 </div>
-                <span class="rating-count">(74)</span>
+                <span class="rating-count">(78)</span>
               </div>
               <div class="product-price">
                 <span class="current-price">$19.89</span>
               </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
+              <button class="add-to-cart sold-out-btn">
+                <i class="fas fa-ban"></i> Sold Out
               </button>
             </div>
           </div>
 
-          <!-- Product 10 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6"
-                alt="Turmeric Brightening Scrub"
-              />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
-                  <i class="fas fa-eye"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
-                  <i class="fas fa-heart"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Compare">
-                  <i class="fas fa-exchange-alt"></i>
-                </button>
+          <!-- More products would continue here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section section-spacing" id="about">
+      <div class="container about-container">
+        <div class="about-images">
+          <div class="about-pattern"></div>
+          <img
+            src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9"
+            alt="Our founder"
+            class="about-img-main"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc"
+            alt="Our products"
+            class="about-img-secondary"
+          />
+        </div>
+        <div class="about-content">
+          <div class="about-badge">Our Story</div>
+          <h2 class="about-title">HOW IT ALL STARTED</h2>
+          <p class="about-text">
+            It all began with a passion for natural skincare and a dream to
+            create products that truly work. Our founder struggled with skin
+            issues for years and couldn't find products that delivered on their
+            promises without harsh chemicals.
+          </p>
+          <p class="about-text">
+            After years of research and testing, we created a line of
+            handcrafted skincare that focuses on natural ingredients that
+            actually work. Each product is carefully formulated to provide real
+            results while keeping your skin healthy and happy.
+          </p>
+
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="about-feature-content">
+                <h4>Natural Ingredients</h4>
+                <p>Sourced from trusted suppliers</p>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Scrub</div>
-              <h3 class="product-name">Turmeric Brightening Scrub</h3>
-              <div class="product-rating">
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                <span class="rating-count">(86)</span>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <i class="fas fa-flask"></i>
               </div>
-              <div class="product-price">
-                <span class="current-price">$24.98</span>
+              <div class="about-feature-content">
+                <h4>Expertly Formulated</h4>
+                <p>Dermatologist approved</p>
               </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
-              </button>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="about-feature-content">
+                <h4>Cruelty Free</h4>
+                <p>Never tested on animals</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <i class="fas fa-recycle"></i>
+              </div>
+              <div class="about-feature-content">
+                <h4>Eco-Friendly</h4>
+                <p>Sustainable packaging</p>
+              </div>
             </div>
           </div>
+
+          <button class="btn btn-primary">Read Our Full Story</button>
         </div>
       </div>
     </section>
@@ -755,97 +631,94 @@
           });
         });
 
-        // Filter Chips
-        const filterChips = document.querySelectorAll(".filter-chip");
+        // Product Filtering
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const productCards = document.querySelectorAll(".product-card");
 
-        filterChips.forEach((chip) => {
-          chip.addEventListener("click", function () {
-            // If chip is already active and clicked, we don't deactivate it
-            // because at least one should be active
-            if (!this.classList.contains("active")) {
-              // Remove active class from all chips
-              filterChips.forEach((c) => c.classList.remove("active"));
-              // Add active class to clicked chip
-              this.classList.add("active");
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterBtns.forEach((btn) => btn.classList.remove("active"));
+
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            const filter = this.textContent.trim().toLowerCase();
+
+            // If "All" is selected, show all products
+            if (filter === "all") {
+              productCards.forEach((card) => {
+                card.style.display = "block";
+                // Add animation
+                card.classList.add("animate__animated", "animate__fadeIn");
+                setTimeout(() => {
+                  card.classList.remove("animate__animated", "animate__fadeIn");
+                }, 500);
+              });
+              return;
             }
-          });
-        });
 
-        // Clear filters button
-        const clearFiltersBtn = document.querySelector(".clear-filters");
-        const activeFilters = document.querySelectorAll(".active-filter");
+            // Filter products based on their category
+            productCards.forEach((card) => {
+              const category = card
+                .querySelector(".product-category")
+                .textContent.trim()
+                .toLowerCase();
 
-        if (clearFiltersBtn) {
-          clearFiltersBtn.addEventListener("click", function () {
-            // Reset all filter dropdowns to first option
-            document.querySelectorAll(".filter-select").forEach((select) => {
-              select.selectedIndex = 0;
-            });
-
-            // Remove all active filters
-            document.querySelector(".active-filters").innerHTML =
-              '<div class="active-filter-label">Active Filters:</div>';
-
-            // Set "All Products" chip as active
-            filterChips.forEach((chip) => {
-              if (chip.textContent.trim() === "All Products") {
-                chip.classList.add("active");
+              if (category.includes(filter)) {
+                card.style.display = "block";
+                // Add animation
+                card.classList.add("animate__animated", "animate__fadeIn");
+                setTimeout(() => {
+                  card.classList.remove("animate__animated", "animate__fadeIn");
+                }, 500);
               } else {
-                chip.classList.remove("active");
+                card.style.display = "none";
               }
             });
           });
-        }
-
-        // Individual remove filter buttons
-        const removeFilterBtns = document.querySelectorAll(".remove-filter");
-
-        removeFilterBtns.forEach((btn) => {
-          btn.addEventListener("click", function () {
-            this.closest(".active-filter").remove();
-          });
         });
 
-        // View Options (Grid/List)
-        const viewOptions = document.querySelectorAll(".view-option");
-        const productsGrid = document.querySelector(".products-grid");
-
-        viewOptions.forEach((option) => {
-          option.addEventListener("click", function () {
-            // Remove active class from all options
-            viewOptions.forEach((opt) => opt.classList.remove("active"));
-            // Add active class to clicked option
-            this.classList.add("active");
-
-            // Change view based on icon
-            if (this.querySelector("i").classList.contains("fa-list")) {
-              productsGrid.classList.add("list-view");
-            } else {
-              productsGrid.classList.remove("list-view");
-            }
-          });
-        });
-
-        // Pagination
-        const pageItems = document.querySelectorAll(
-          ".page-item:not(.disabled)"
+        // Quick Add to Cart
+        const addToCartBtns = document.querySelectorAll(
+          ".add-to-cart:not(.sold-out-btn)"
         );
 
-        pageItems.forEach((item) => {
-          item.addEventListener("click", function () {
-            if (!this.classList.contains("disabled")) {
-              // Remove active class from all items
-              pageItems.forEach((page) => page.classList.remove("active"));
-              // Add active class to clicked item
-              this.classList.add("active");
+        addToCartBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Get current cart count
+            const cartCount = document.querySelector(".cart-count");
+            let count = parseInt(cartCount.textContent);
 
-              // Here you would typically load new products
-              // For demonstration, we just scroll to top of products
-              document.querySelector(".products-section").scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }
+            // Update cart count
+            cartCount.textContent = count + 1;
+
+            // Animation effect
+            this.innerHTML = '<i class="fas fa-check"></i> Added to Cart';
+            this.classList.add("animate__animated", "animate__pulse");
+
+            setTimeout(() => {
+              this.innerHTML =
+                '<i class="fas fa-shopping-bag"></i> Add to Cart';
+              this.classList.remove("animate__animated", "animate__pulse");
+            }, 1500);
+
+            // Show mini-cart notification (could be expanded)
+            const notification = document.createElement("div");
+            notification.className = "notification";
+            notification.textContent = "Item added to cart!";
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+              notification.classList.add("show");
+            }, 10);
+
+            setTimeout(() => {
+              notification.classList.remove("show");
+              setTimeout(() => {
+                document.body.removeChild(notification);
+              }, 300);
+            }, 2000);
           });
         });
 
@@ -870,32 +743,6 @@
             // This is where you would populate and show a modal
             // For a complete implementation, you would create a modal in HTML
             // and populate it with the product details
-          });
-        });
-
-        // Add to Cart buttons
-        const addToCartBtns = document.querySelectorAll(
-          ".add-to-cart:not(.sold-out-btn)"
-        );
-
-        addToCartBtns.forEach((btn) => {
-          btn.addEventListener("click", function () {
-            // Get current cart count
-            const cartCount = document.querySelector(".cart-count");
-            let count = parseInt(cartCount.textContent);
-
-            // Update cart count
-            cartCount.textContent = count + 1;
-
-            // Animation effect
-            this.innerHTML = '<i class="fas fa-check"></i> Added to Cart';
-            this.classList.add("animate__animated", "animate__pulse");
-
-            setTimeout(() => {
-              this.innerHTML =
-                '<i class="fas fa-shopping-bag"></i> Add to Cart';
-              this.classList.remove("animate__animated", "animate__pulse");
-            }, 1500);
           });
         });
 
@@ -994,46 +841,9 @@
           return re.test(email.toLowerCase());
         }
 
-        // Search functionality
-        const searchInput = document.querySelector(".search-input");
-
-        if (searchInput) {
-          searchInput.addEventListener("keyup", function (e) {
-            if (e.key === "Enter") {
-              const searchTerm = this.value.trim().toLowerCase();
-
-              if (searchTerm.length > 0) {
-                // In a real implementation, you would filter products or redirect to search results
-                alert(`Searching for: ${searchTerm}`);
-
-                // Add search term as an active filter
-                const activeFiltersContainer =
-                  document.querySelector(".active-filters");
-                const searchFilter = document.createElement("div");
-                searchFilter.className = "active-filter";
-                searchFilter.innerHTML = `
-                    Search: ${searchTerm}
-                    <span class="remove-filter"><i class="fas fa-times"></i></span>
-                  `;
-
-                // Add after the label
-                activeFiltersContainer.appendChild(searchFilter);
-
-                // Add event listener to the remove button
-                searchFilter
-                  .querySelector(".remove-filter")
-                  .addEventListener("click", function () {
-                    searchFilter.remove();
-                    searchInput.value = "";
-                  });
-              }
-            }
-          });
-        }
-
         // Animate elements when they come into view
         const animateElements = document.querySelectorAll(
-          ".page-banner, .product-card, .newsletter-content, .newsletter-form"
+          ".hero-content, .hero-image, .section-header, .about-content, .about-images, .newsletter-content, .newsletter-form"
         );
 
         // Create intersection observer
@@ -1056,6 +866,9 @@
         animateElements.forEach((element) => {
           observer.observe(element);
         });
+
+        // Initialize any image sliders if needed
+        // This would depend on whether you're using a library like Swiper
 
         // Set up smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
