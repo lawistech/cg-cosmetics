@@ -1,106 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - GLOW Beauty | Natural Skincare Products</title>
+  <meta name="description" content="Browse our complete collection of natural skincare products. From cleansers to serums, find the perfect products for your skincare routine.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'glow-pink': '#f8b4cb',
+            'glow-rose': '#f1a7c1',
+            'glow-purple': '#d8b4fe',
+            'glow-gold': '#fbbf24',
+          },
+          fontFamily: {
+            'display': ['Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
     <!-- Announcement Bar -->
-    <div class="announcement-bar">
-      <div class="container">
-        RESTOCK DATE: <span>2/11 @7PM PST</span> | New products will be dropping
+    <div class="bg-gradient-to-r from-glow-pink to-glow-purple text-white text-center py-2 px-4 text-sm font-medium">
+      <div class="max-w-7xl mx-auto">
+        RESTOCK DATE: <span class="font-bold text-glow-gold">2/11 @7PM PST</span> | New products will be dropping
       </div>
     </div>
 
     <!-- Header -->
-    <header id="header">
-      <div class="container header-container">
-        <div class="logo">GLOW<span>Beauty</span></div>
-        <nav class="desktop-nav">
-          <ul>
-            <li><a href="https://coldglowcosmetics.com">Home</a></li>
-            <li><a href="https://coldglowcosmetics.com/products/">Products</a></li>
-            <li><a href="https://coldglowcosmetics.com/our-story/">Our Story</a></li>
-            <li><a href="https://coldglowcosmetics.com/shipping-policy/">Shipping Policy</a></li>
-            <li><a href="https://coldglowcosmetics.com/contact/">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="header-actions">
-          <button class="action-btn" id="search-btn" aria-label="Search">
-            <i class="fas fa-search"></i>
-          </button>
-          <button class="action-btn" id="wishlist-btn" aria-label="Wishlist">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button class="action-btn" id="cart-btn" aria-label="Cart">
-            <i class="fas fa-shopping-bag"></i>
-            <span class="cart-count">3</span>
-          </button>
-          <div class="hamburger-menu" id="hamburger-menu">
-            <i class="fas fa-bars"></i>
+    <header id="header" class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <div class="text-2xl lg:text-3xl font-display font-bold text-gray-900">
+              GLOW<span class="text-glow-pink">Beauty</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex space-x-8">
+            <a href="https://coldglowcosmetics.com" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Home</a>
+            <a href="https://coldglowcosmetics.com/products/" class="text-glow-pink font-medium">Products</a>
+            <a href="https://coldglowcosmetics.com/our-story/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Our Story</a>
+            <a href="https://coldglowcosmetics.com/shipping-policy/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Shipping Policy</a>
+            <a href="https://coldglowcosmetics.com/contact/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Contact</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="flex items-center space-x-3">
+            <button id="search-btn" aria-label="Search" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+              <i class="fas fa-search text-lg"></i>
+            </button>
+            <button id="wishlist-btn" aria-label="Wishlist" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+              <i class="fas fa-heart text-lg"></i>
+            </button>
+            <button id="cart-btn" aria-label="Cart" class="relative p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+              <i class="fas fa-shopping-bag text-lg"></i>
+              <span class="absolute -top-1 -right-1 bg-glow-pink text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">3</span>
+            </button>
+            <!-- Mobile menu button -->
+            <button id="hamburger-menu" class="lg:hidden p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+              <i class="fas fa-bars text-lg"></i>
+            </button>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-nav" id="mobile-nav">
-      <button class="close-btn" id="close-nav">
-        <i class="fas fa-times"></i>
-      </button>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="#about">Our Story</a></li>
-        <li><a href="#shipping">Shipping Policy</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="mobile-nav-footer">
-        <div class="mobile-nav-actions">
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-search"></i>
-          </button>
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-user"></i>
+    <div id="mobile-nav" class="fixed inset-y-0 right-0 z-50 w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+      <div class="flex flex-col h-full">
+        <!-- Mobile nav header -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <div class="text-xl font-display font-bold text-gray-900">
+            GLOW<span class="text-glow-pink">Beauty</span>
+          </div>
+          <button id="close-nav" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+            <i class="fas fa-times text-lg"></i>
           </button>
         </div>
-        <div class="mobile-nav-social">
-          <a href="#" class="social-link">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-tiktok"></i>
-          </a>
+
+        <!-- Mobile nav links -->
+        <nav class="flex-1 px-6 py-6">
+          <ul class="space-y-4">
+            <li><a href="index.html" class="block py-3 text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200 border-b border-gray-100">Home</a></li>
+            <li><a href="products.html" class="block py-3 text-lg font-medium text-glow-pink border-b border-gray-100">Products</a></li>
+            <li><a href="our-story.html" class="block py-3 text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200 border-b border-gray-100">Our Story</a></li>
+            <li><a href="shipping.html" class="block py-3 text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200 border-b border-gray-100">Shipping Policy</a></li>
+            <li><a href="contact.html" class="block py-3 text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200 border-b border-gray-100">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile nav footer -->
+        <div class="p-6 border-t border-gray-200">
+          <!-- Action buttons -->
+          <div class="flex justify-center space-x-4 mb-6">
+            <button class="p-3 bg-gray-100 text-gray-600 hover:bg-glow-pink hover:text-white transition-all duration-200 rounded-full">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="p-3 bg-gray-100 text-gray-600 hover:bg-glow-pink hover:text-white transition-all duration-200 rounded-full">
+              <i class="fas fa-heart"></i>
+            </button>
+            <button class="p-3 bg-gray-100 text-gray-600 hover:bg-glow-pink hover:text-white transition-all duration-200 rounded-full">
+              <i class="fas fa-user"></i>
+            </button>
+          </div>
+
+          <!-- Social links -->
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-facebook-f text-lg"></i>
+            </a>
+            <a href="#" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <a href="#" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-twitter text-lg"></i>
+            </a>
+            <a href="#" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-tiktok text-lg"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="overlay" id="overlay"></div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
 
     <!-- Page Banner -->
-    <section class="page-banner">
-      <div class="container page-banner-content">
-        <h1 class="page-title">Our Products</h1>
-        <div class="breadcrumbs">
-          <a href="home.html">Home</a>
-          <i class="fas fa-chevron-right"></i>
-          <span>Products</span>
+    <section class="bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 py-12 lg:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 mb-4">Our Products</h1>
+        <div class="flex items-center justify-center space-x-2 text-gray-600">
+          <a href="index.html" class="hover:text-glow-pink transition-colors duration-200">Home</a>
+          <i class="fas fa-chevron-right text-sm text-glow-pink"></i>
+          <span class="text-glow-pink font-medium">Products</span>
         </div>
       </div>
     </section>
 
     <!-- Product Filters -->
-    <section class="product-filters">
-      <div class="container filter-container">
-        <div class="filter-left">
-          <div class="filter-group">
-            <div class="filter-label">Sort By:</div>
-            <div class="filter-dropdown">
-              <select class="filter-select">
+    <section class="bg-white py-6 border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
+          <!-- Left Filters -->
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+            <div class="flex items-center space-x-3">
+              <label class="text-sm font-medium text-gray-700">Sort By:</label>
+              <select class="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent text-sm bg-white">
                 <option value="featured">Featured</option>
                 <option value="newest">Newest</option>
                 <option value="price-low">Price: Low to High</option>
@@ -109,11 +170,9 @@
                 <option value="top-rated">Top Rated</option>
               </select>
             </div>
-          </div>
-          <div class="filter-group">
-            <div class="filter-label">Category:</div>
-            <div class="filter-dropdown">
-              <select class="filter-select">
+            <div class="flex items-center space-x-3">
+              <label class="text-sm font-medium text-gray-700">Category:</label>
+              <select class="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent text-sm bg-white">
                 <option value="all">All Categories</option>
                 <option value="cleansers">Cleansers</option>
                 <option value="serums">Serums</option>
@@ -122,11 +181,9 @@
                 <option value="accessories">Accessories</option>
               </select>
             </div>
-          </div>
-          <div class="filter-group">
-            <div class="filter-label">Price Range:</div>
-            <div class="filter-dropdown">
-              <select class="filter-select">
+            <div class="flex items-center space-x-3">
+              <label class="text-sm font-medium text-gray-700">Price Range:</label>
+              <select class="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent text-sm bg-white">
                 <option value="all">All Prices</option>
                 <option value="0-15">$0 - $15</option>
                 <option value="15-30">$15 - $30</option>
@@ -135,375 +192,468 @@
               </select>
             </div>
           </div>
-        </div>
-        <div class="filter-right">
-          <div class="view-options">
-            <button class="view-option active" aria-label="Grid view">
-              <i class="fas fa-th"></i>
-            </button>
-            <button class="view-option" aria-label="List view">
-              <i class="fas fa-list"></i>
-            </button>
-          </div>
-          <div class="search-products">
-            <input
-              type="text"
-              class="search-input"
-              placeholder="Search products..."
-            />
-            <i class="fas fa-search search-icon"></i>
+
+          <!-- Right Controls -->
+          <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-2">
+              <button class="p-2 bg-glow-pink text-white rounded-lg hover:bg-glow-rose transition-colors duration-200" aria-label="Grid view">
+                <i class="fas fa-th"></i>
+              </button>
+              <button class="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 transition-colors duration-200" aria-label="List view">
+                <i class="fas fa-list"></i>
+              </button>
+            </div>
+            <div class="relative">
+              <input
+                type="text"
+                class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent text-sm w-64"
+                placeholder="Search products..."
+              />
+              <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Category Filter Chips -->
-    <section class="filter-chips">
-      <div class="container">
-        <div class="chips-container">
-          <button class="filter-chip active">All Products</button>
-          <button class="filter-chip">Cleansers</button>
-          <button class="filter-chip">Serums</button>
-          <button class="filter-chip">Masks</button>
-          <button class="filter-chip">Scrubs</button>
-          <button class="filter-chip">Body Butters</button>
-          <button class="filter-chip">Oils</button>
-          <button class="filter-chip">Accessories</button>
-          <button class="clear-filters">
-            <i class="fas fa-times"></i> Clear Filters
+    <section class="bg-gray-50 py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap gap-3 mb-6">
+          <button class="px-6 py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-medium rounded-full transition-all duration-200 shadow-lg">
+            All Products
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200 border border-gray-200">
+            Cleansers
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200 border border-gray-200">
+            Serums
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200 border border-gray-200">
+            Masks
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200 border border-gray-200">
+            Scrubs
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200 border border-gray-200">
+            Body Butters
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200 border border-gray-200">
+            Oils
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200 border border-gray-200">
+            Accessories
+          </button>
+          <button class="px-4 py-3 bg-red-100 text-red-600 font-medium rounded-full hover:bg-red-200 transition-all duration-200 border border-red-200">
+            <i class="fas fa-times mr-2"></i> Clear Filters
           </button>
         </div>
-        <div class="active-filters">
-          <div class="active-filter-label">Active Filters:</div>
-          <div class="active-filter">
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="text-sm font-medium text-gray-700">Active Filters:</div>
+          <div class="flex items-center px-3 py-1 bg-glow-pink/10 text-glow-pink rounded-full text-sm border border-glow-pink/20">
             Price: $15 - $30
-            <span class="remove-filter"><i class="fas fa-times"></i></span>
+            <button class="ml-2 hover:text-glow-rose transition-colors duration-200">
+              <i class="fas fa-times"></i>
+            </button>
           </div>
-          <div class="active-filter">
+          <div class="flex items-center px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm border border-green-200">
             In Stock
-            <span class="remove-filter"><i class="fas fa-times"></i></span>
+            <button class="ml-2 hover:text-green-700 transition-colors duration-200">
+              <i class="fas fa-times"></i>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Products -->
-    <section class="products-section">
-      <div class="container">
-        <div class="products-grid">
+    <section class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           <!-- Product 1 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Exfoliating gloves" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1580870069867-74c57ee1bb07?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80"
+                   alt="Exfoliating gloves"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Accessories</div>
-              <h3 class="product-name">Exfoliating gloves</h3>
-              <div class="product-rating">
-                <div class="stars">
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Accessories</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Exfoliating gloves</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                 </div>
-                <span class="rating-count">(24)</span>
+                <span class="text-sm text-gray-500">(24)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$5.99</span>
-              </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
+
+              <div class="text-xl font-bold text-gray-900 mb-4">$5.99</div>
+
+              <button class="w-full py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                <i class="fas fa-shopping-bag mr-2"></i>Add to Cart
               </button>
             </div>
           </div>
 
           <!-- Product 2 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Juicy kitty | sex with me |" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80"
+                   alt="Juicy Kitty"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- New Tag -->
+              <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                New
+              </div>
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Body Butter</div>
-              <h3 class="product-name">Juicy kitty | sex with me |</h3>
-              <div class="product-rating">
-                <div class="stars">
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Body Butter</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Juicy Kitty</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                 </div>
-                <span class="rating-count">(56)</span>
+                <span class="text-sm text-gray-500">(56)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$25.99</span>
-              </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
+
+              <div class="text-xl font-bold text-gray-900 mb-4">$25.99</div>
+
+              <button class="w-full py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                <i class="fas fa-shopping-bag mr-2"></i>Add to Cart
               </button>
             </div>
           </div>
 
           <!-- Product 3 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Juicy Kitty Icy Edition" />
-              <div class="sold-out-overlay">
-                <div class="sold-out-label">SOLD OUT</div>
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1599305090598-fe179d501227?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80"
+                   alt="Juicy Kitty Icy Edition"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- Sold Out Overlay -->
+              <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                <div class="bg-red-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                  SOLD OUT
+                </div>
               </div>
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Body Butter</div>
-              <h3 class="product-name">Juicy Kitty Icy Edition</h3>
-              <div class="product-rating">
-                <div class="stars">
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Body Butter</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Juicy Kitty Icy Edition</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                 </div>
-                <span class="rating-count">(42)</span>
+                <span class="text-sm text-gray-500">(42)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$22.99</span>
-              </div>
-              <button class="add-to-cart sold-out-btn">
-                <i class="fas fa-ban"></i> Sold Out
+
+              <div class="text-xl font-bold text-gray-900 mb-4">$22.99</div>
+
+              <button disabled class="w-full py-3 bg-gray-300 text-gray-500 font-semibold rounded-full cursor-not-allowed">
+                <i class="fas fa-ban mr-2"></i>Sold Out
               </button>
             </div>
           </div>
 
           <!-- Product 4 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Juicy kitty" />
-              <div class="product-tag tag-sale">On Sale</div>
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80"
+                   alt="Juicy kitty"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- Sale Tag -->
+              <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                On Sale
+              </div>
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Body Butter</div>
-              <h3 class="product-name">Juicy kitty</h3>
-              <div class="product-rating">
-                <div class="stars">
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Body Butter</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Juicy kitty</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                 </div>
-                <span class="rating-count">(78)</span>
+                <span class="text-sm text-gray-500">(78)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$22.99</span>
-                <span class="old-price">$25.99</span>
+
+              <div class="flex items-center space-x-2 mb-4">
+                <span class="text-xl font-bold text-gray-900">$22.99</span>
+                <span class="text-sm text-gray-500 line-through">$25.99</span>
               </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
+
+              <button class="w-full py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                <i class="fas fa-shopping-bag mr-2"></i>Add to Cart
               </button>
             </div>
           </div>
 
           <!-- Product 5 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1631730359585-38a4935cbec4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Mask Brush" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1631730359585-38a4935cbec4?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80"
+                   alt="Mask Brush"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Accessories</div>
-              <h3 class="product-name">Mask Brush</h3>
-              <div class="product-rating">
-                <div class="stars">
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Accessories</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Mask Brush</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
                 </div>
-                <span class="rating-count">(37)</span>
+                <span class="text-sm text-gray-500">(37)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$5.99</span>
+
+              <div class="text-xl font-bold text-gray-900 mb-4">$5.99</div>
+
+              <button class="w-full py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                <i class="fas fa-shopping-bag mr-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80"
+                   alt="Tropical Paradise Foaming Body Scrub"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- Sale Tag -->
+              <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                On Sale
               </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Body Scrub</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Tropical Paradise Foaming Body Scrub</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500">(51)</span>
+              </div>
+
+              <div class="flex items-center space-x-2 mb-4">
+                <span class="text-xl font-bold text-gray-900">$14.99</span>
+                <span class="text-sm text-gray-500 line-through">$19.99</span>
+              </div>
+
+              <button class="w-full py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                <i class="fas fa-shopping-bag mr-2"></i>Add to Cart
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80"
+                   alt="Glow serum"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
+                  <i class="fas fa-exchange-alt"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Serum</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Glow serum</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500">(74)</span>
+              </div>
+
+              <div class="text-xl font-bold text-gray-900 mb-4">$19.89</div>
+
+              <button class="w-full py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                <i class="fas fa-shopping-bag mr-2"></i>Add to Cart
               </button>
             </div>
           </div>
 
           <!-- Product 8 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80"
-                alt="Tropical Paradise Foaming Body Scrub"
-              />
-              <div class="product-tag tag-sale">On Sale</div>
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
-                  <i class="fas fa-eye"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
-                  <i class="fas fa-heart"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Compare">
-                  <i class="fas fa-exchange-alt"></i>
-                </button>
-              </div>
-            </div>
-            <div class="product-info">
-              <div class="product-category">Body Scrub</div>
-              <h3 class="product-name">Tropical Paradise Foaming Body Scrub</h3>
-              <div class="product-rating">
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                  <i class="far fa-star"></i>
-                </div>
-                <span class="rating-count">(51)</span>
-              </div>
-              <div class="product-price">
-                <span class="current-price">$14.99</span>
-                <span class="old-price">$19.99</span>
-              </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
-              </button>
-            </div>
-          </div>
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6"
+                   alt="Turmeric Brightening Scrub"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
 
-          <!-- Product 9 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1615397349754-cfa2066a298e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=320&q=80" alt="Glow serum" />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Serum</div>
-              <h3 class="product-name">Glow serum</h3>
-              <div class="product-rating">
-                <div class="stars">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star-half-alt"></i>
-                </div>
-                <span class="rating-count">(74)</span>
-              </div>
-              <div class="product-price">
-                <span class="current-price">$19.89</span>
-              </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
-              </button>
-            </div>
-          </div>
 
-          <!-- Product 10 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img
-                src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6"
-                alt="Turmeric Brightening Scrub"
-              />
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
-                  <i class="fas fa-eye"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
-                  <i class="fas fa-heart"></i>
-                </button>
-                <button class="product-action-btn" aria-label="Compare">
-                  <i class="fas fa-exchange-alt"></i>
-                </button>
-              </div>
-            </div>
-            <div class="product-info">
-              <div class="product-category">Scrub</div>
-              <h3 class="product-name">Turmeric Brightening Scrub</h3>
-              <div class="product-rating">
-                <div class="stars">
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Scrub</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Turmeric Brightening Scrub</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                 </div>
-                <span class="rating-count">(86)</span>
+                <span class="text-sm text-gray-500">(86)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$24.98</span>
-              </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
+
+              <div class="text-xl font-bold text-gray-900 mb-4">$24.98</div>
+
+              <button class="w-full py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                <i class="fas fa-shopping-bag mr-2"></i>Add to Cart
               </button>
             </div>
           </div>
@@ -512,178 +662,225 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter" id="newsletter">
-      <div class="container newsletter-container">
-        <div class="newsletter-content">
-          <h2 class="newsletter-title">Join Our GLOW Community</h2>
-          <p class="newsletter-description">
-            Subscribe to our newsletter and be the first to know about restocks,
-            new product launches, exclusive offers, and skincare tips.
-          </p>
+    <section id="newsletter" class="py-16 lg:py-24 bg-gradient-to-r from-glow-pink to-glow-purple">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Newsletter Content -->
+          <div class="text-white">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
+              Join Our GLOW Community
+            </h2>
+            <p class="text-lg lg:text-xl mb-8 text-white/90 leading-relaxed">
+              Subscribe to our newsletter and be the first to know about restocks,
+              new product launches, exclusive offers, and skincare tips.
+            </p>
 
-          <div class="newsletter-perks">
-            <div class="newsletter-perk">
-              <div class="newsletter-perk-icon">
-                <i class="fas fa-tag"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="flex items-center space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <i class="fas fa-tag text-white"></i>
+                </div>
+                <div class="text-white/90">Early access to sales</div>
               </div>
-              <div class="newsletter-perk-text">Early access to sales</div>
-            </div>
-            <div class="newsletter-perk">
-              <div class="newsletter-perk-icon">
-                <i class="fas fa-gift"></i>
+              <div class="flex items-center space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <i class="fas fa-gift text-white"></i>
+                </div>
+                <div class="text-white/90">Exclusive offers</div>
               </div>
-              <div class="newsletter-perk-text">Exclusive offers</div>
             </div>
           </div>
-        </div>
 
-        <div class="newsletter-form">
-          <h3 class="newsletter-form-title">Subscribe to Our Newsletter</h3>
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-input" placeholder="Your Name" />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                class="form-input"
-                placeholder="Your Email Address"
-              />
-            </div>
-            <button type="submit" class="subscribe-btn">Subscribe Now</button>
-            <p class="form-disclaimer">
-              By subscribing, you agree to our Privacy Policy. You can
-              unsubscribe at any time.
-            </p>
-          </form>
+          <!-- Newsletter Form -->
+          <div class="bg-white rounded-3xl p-8 shadow-2xl">
+            <h3 class="text-2xl font-display font-bold text-gray-900 mb-6 text-center">
+              Subscribe to Our Newsletter
+            </h3>
+            <form class="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Your Email Address"
+                  class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full py-4 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200"
+              >
+                Subscribe Now
+              </button>
+              <p class="text-sm text-gray-600 text-center leading-relaxed">
+                By subscribing, you agree to our Privacy Policy. You can
+                unsubscribe at any time.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-info">
-            <div class="logo">GLOW<span>Beauty</span></div>
-            <p class="footer-description">
+    <footer id="contact" class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <!-- Company Info -->
+          <div class="lg:col-span-1">
+            <div class="text-2xl lg:text-3xl font-display font-bold mb-4">
+              GLOW<span class="text-glow-pink">Beauty</span>
+            </div>
+            <p class="text-gray-300 mb-6 leading-relaxed">
               We create premium skincare products using natural ingredients that
               help you achieve radiant and healthy skin. Our mission is to make
               effective skincare accessible to everyone.
             </p>
-            <div class="footer-social">
-              <a href="#" class="social-link">
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-tiktok"></i>
               </a>
             </div>
           </div>
 
-          <div class="footer-column">
-            <h3 class="footer-title">Shop</h3>
-            <ul class="footer-links">
+          <!-- Shop Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6 text-glow-pink">Shop</h3>
+            <ul class="space-y-3">
               <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> All Products</a
-                >
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  All Products
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-chevron-right"></i> Bestsellers</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Bestsellers
+                </a>
               </li>
               <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> New Arrivals</a
-                >
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  New Arrivals
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-chevron-right"></i> Gift Sets</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Gift Sets
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-chevron-right"></i> Sale Items</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3 class="footer-title">Information</h3>
-            <ul class="footer-links">
-              <li>
-                <a href="#about"
-                  ><i class="fas fa-chevron-right"></i> About Us</a
-                >
-              </li>
-              <li>
-                <a href="#shipping"
-                  ><i class="fas fa-chevron-right"></i> Shipping Policy</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> Refund Policy</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> Terms of Service</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> Privacy Policy</a
-                >
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Sale Items
+                </a>
               </li>
             </ul>
           </div>
 
-          <div class="footer-column">
-            <h3 class="footer-title">Contact Us</h3>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
+          <!-- Information Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6 text-glow-pink">Information</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="our-story.html" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="shipping.html" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Shipping Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Refund Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Privacy Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6 text-glow-pink">Contact Us</h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <div class="flex-shrink-0 w-5 h-5 text-glow-pink mt-1">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="text-gray-300">
+                  123 Beauty Street, Los Angeles, CA 90001, USA
+                </div>
               </div>
-              <div class="contact-info">
-                123 Beauty Street, Los Angeles, CA 90001, USA
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0 w-5 h-5 text-glow-pink">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="text-gray-300">support@glowbeauty.com</div>
               </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0 w-5 h-5 text-glow-pink">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="text-gray-300">+1 (800) 123-4567</div>
               </div>
-              <div class="contact-info">support@glowbeauty.com</div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="contact-info">+1 (800) 123-4567</div>
             </div>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <div class="copyright">
-            &copy; 2025 GLOW Beauty. All rights reserved.
-          </div>
-          <div class="payment-methods">
-            <div class="payment-method">VISA</div>
-            <div class="payment-method">MC</div>
-            <div class="payment-method">AMEX</div>
-            <div class="payment-method">PP</div>
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2025 GLOW Beauty. All rights reserved.
+            </div>
+            <div class="flex items-center space-x-4">
+              <span class="text-gray-400 text-sm mr-2">We accept:</span>
+              <div class="flex space-x-2">
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-semibold text-gray-300">VISA</div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-semibold text-gray-300">MC</div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-semibold text-gray-300">AMEX</div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-semibold text-gray-300">PP</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-glow-pink to-glow-purple text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 z-50 opacity-0 pointer-events-none">
       <i class="fas fa-chevron-up"></i>
     </button>
 

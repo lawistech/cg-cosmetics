@@ -1,297 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story - GLOW Beauty | How It All Started</title>
+  <meta name="description" content="Discover the inspiring story behind GLOW Beauty. Learn how our founder's personal skincare journey led to creating effective, natural products for everyone.">
 
-  <body>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'glow-pink': '#f8b4cb',
+            'glow-rose': '#f1a7c1',
+            'glow-purple': '#d8b4fe',
+            'glow-gold': '#fbbf24',
+          },
+          fontFamily: {
+            'display': ['Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
     <!-- Announcement Bar -->
-    <div class="announcement-bar">
-      <div class="container">
-        100% MONEY BACK GUARANTEE | <span>SHOP NOW</span>
+    <div class="bg-gradient-to-r from-glow-pink to-glow-purple text-white text-center py-2 px-4 text-sm font-medium">
+      <div class="max-w-7xl mx-auto">
+        100% MONEY BACK GUARANTEE | <span class="font-bold text-glow-gold">SHOP NOW</span>
       </div>
     </div>
 
     <!-- Header -->
-    <header id="header">
-      <div class="container header-container">
-        <div class="logo">coldglow<span>cosmetics</span></div>
-        <nav class="desktop-nav">
-          <ul>
-            <li><a href="https://coldglowcosmetics.com">Home</a></li>
-            <li><a href="https://coldglowcosmetics.com/products/">Products</a></li>
-            <li><a href="https://coldglowcosmetics.com/our-story/">Our Story</a></li>
-            <li><a href="https://coldglowcosmetics.com/shipping-policy/">Shipping Policy</a></li>
-            <li><a href="https://coldglowcosmetics.com/contact/">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="header-actions">
-          <button class="action-btn" id="search-btn" aria-label="Search">
-            <i class="fas fa-search"></i>
-          </button>
-          <button class="action-btn" id="wishlist-btn" aria-label="Wishlist">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button class="action-btn" id="cart-btn" aria-label="Cart">
-            <i class="fas fa-shopping-bag"></i>
-            <span class="cart-count">3</span>
-          </button>
-          <div class="hamburger-menu" id="hamburger-menu">
-            <i class="fas fa-bars"></i>
+    <header id="header" class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <div class="text-2xl lg:text-3xl font-display font-bold text-gray-900">
+              GLOW<span class="text-glow-pink">Beauty</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex space-x-8">
+            <a href="https://coldglowcosmetics.com" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Home</a>
+            <a href="https://coldglowcosmetics.com/products/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Products</a>
+            <a href="https://coldglowcosmetics.com/our-story/" class="text-glow-pink font-medium">Our Story</a>
+            <a href="https://coldglowcosmetics.com/shipping-policy/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Shipping Policy</a>
+            <a href="https://coldglowcosmetics.com/contact/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Contact</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="flex items-center space-x-4">
+            <button class="hidden lg:flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200" id="search-btn" aria-label="Search">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="hidden lg:flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200" id="wishlist-btn" aria-label="Wishlist">
+              <i class="fas fa-heart"></i>
+            </button>
+            <button class="hidden lg:flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200 relative" id="cart-btn" aria-label="Cart">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="absolute -top-2 -right-2 bg-glow-pink text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">3</span>
+            </button>
+            <button class="lg:hidden flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200" id="hamburger-menu">
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-nav" id="mobile-nav">
-      <button class="close-btn" id="close-nav">
-        <i class="fas fa-times"></i>
-      </button>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="products.html">Shop</a></li>
-        <li><a href="all-products.html">All products</a></li>
-        <li><a href="moisturizers.html">Moisturizers</a></li>
-        <li><a href="body.html">Body</a></li>
-        <li><a href="our-story.html">HOW IT ALL STARTED</a></li>
-        <li><a href="shipping-policy.html">SHIPPING + REFUND POLICY</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="mobile-nav-footer">
-        <div class="mobile-nav-actions">
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-search"></i>
-          </button>
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-user"></i>
+    <div class="fixed inset-y-0 right-0 z-50 w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden" id="mobile-nav">
+      <div class="flex flex-col h-full">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <div class="text-xl font-display font-bold text-gray-900">
+            GLOW<span class="text-glow-pink">Beauty</span>
+          </div>
+          <button class="flex items-center justify-center w-8 h-8 text-gray-600 hover:text-glow-pink transition-colors duration-200" id="close-nav">
+            <i class="fas fa-times"></i>
           </button>
         </div>
-        <div class="mobile-nav-social">
-          <a href="#" class="social-link">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-tiktok"></i>
-          </a>
+
+        <nav class="flex-1 px-6 py-8">
+          <ul class="space-y-6">
+            <li><a href="index.html" class="block text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200">Home</a></li>
+            <li><a href="products.html" class="block text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200">Products</a></li>
+            <li><a href="our-story.html" class="block text-lg font-medium text-glow-pink">Our Story</a></li>
+            <li><a href="shipping.html" class="block text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200">Shipping Policy</a></li>
+            <li><a href="contact.html" class="block text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="p-6 border-t border-gray-200">
+          <div class="flex items-center justify-center space-x-4 mb-6">
+            <button class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+              <i class="fas fa-heart"></i>
+            </button>
+            <button class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+              <i class="fas fa-user"></i>
+            </button>
+          </div>
+          <div class="flex items-center justify-center space-x-4">
+            <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="overlay" id="overlay"></div>
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out lg:hidden" id="overlay"></div>
 
     <!-- Page Banner -->
-    <section class="page-banner">
-      <div class="container page-banner-content">
-        <h1 class="page-title">HOW IT ALL STARTED</h1>
-        <div class="breadcrumbs">
-          <a href="home.html">Home</a>
-          <i class="fas fa-chevron-right"></i>
-          <span>How It All Started</span>
+    <section class="bg-gradient-to-r from-glow-pink to-glow-purple py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-white mb-4">HOW IT ALL STARTED</h1>
+        <div class="flex items-center justify-center space-x-2 text-white/90">
+          <a href="index.html" class="hover:text-white transition-colors duration-200">Home</a>
+          <i class="fas fa-chevron-right text-sm"></i>
+          <span class="text-glow-gold font-medium">How It All Started</span>
         </div>
       </div>
     </section>
 
     <!-- Story Section -->
-    <section class="story-section">
-      <div class="container story-container">
-        <div class="story-content">
-          <div class="story-badge">My Journey</div>
-          <h2 class="story-title">HOW IT ALL STARTED</h2>
-          <p class="story-text">
-            I've always found skincare very fascinating since childhood.
-            Watching Youtube videos and seeing the way girls' skin would glow
-            from using face products tempted me to save every buck I had and
-            walk to the nearest Target or Walmart to buy a face mask, face wash,
-            or acne treatment. I would run home and quickly indulge my skin in
-            the products. It was so exhilarating to have what I thought was a
-            luxurious product on my skin.
-          </p>
-          <p class="story-text">
-            The products gave a tingling sensation making me feel like my skin
-            was undergoing a magical spell to reveal flawless skin that shimmers
-            with dewy radiance like the girls I saw on Youtube.
-          </p>
-          <p class="story-text">Oh, was I wrong.</p>
-          <p class="story-text">
-            My skin became far from flawless. My cheeks were suffused with
-            blemishes and painful, inflamed red-ringed pustules.
-          </p>
-          <button class="btn btn-primary">Discover Our Products</button>
-        </div>
-        <div class="story-image">
-          <img
-            src="https://images.unsplash.com/photo-1603400521630-9f2de124b33b"
-            alt="Cold Glow Cosmetics beginnings"
-          />
-          <div class="story-image-overlay"></div>
+    <section class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="inline-block bg-glow-pink/10 text-glow-pink px-4 py-2 rounded-full text-sm font-medium mb-6">
+              My Journey
+            </div>
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-6">
+              HOW IT ALL STARTED
+            </h2>
+            <div class="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                I've always found skincare very fascinating since childhood.
+                Watching Youtube videos and seeing the way girls' skin would glow
+                from using face products tempted me to save every buck I had and
+                walk to the nearest Target or Walmart to buy a face mask, face wash,
+                or acne treatment. I would run home and quickly indulge my skin in
+                the products. It was so exhilarating to have what I thought was a
+                luxurious product on my skin.
+              </p>
+              <p>
+                The products gave a tingling sensation making me feel like my skin
+                was undergoing a magical spell to reveal flawless skin that shimmers
+                with dewy radiance like the girls I saw on Youtube.
+              </p>
+              <p class="font-medium text-gray-900">Oh, was I wrong.</p>
+              <p>
+                My skin became far from flawless. My cheeks were suffused with
+                blemishes and painful, inflamed red-ringed pustules.
+              </p>
+            </div>
+            <button class="mt-8 bg-gradient-to-r from-glow-pink to-glow-purple text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              Discover Our Products
+            </button>
+          </div>
+          <div class="order-1 lg:order-2 relative">
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1603400521630-9f2de124b33b"
+                alt="Cold Glow Cosmetics beginnings"
+                class="w-full h-96 lg:h-[500px] object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Story Section 2 (Reversed) -->
-    <section
-      class="story-section story-reverse"
-      style="background-color: var(--light-gray)"
-    >
-      <div class="container story-container">
-        <div class="story-content">
-          <div class="story-badge">Personal Experience</div>
-          <h2 class="story-title">MY SKINCARE JOURNEY</h2>
-          <p class="story-text">
-            Growing up as a person of color with very dry skin and severe acne,
-            there weren't many products on the shelves that could tackle my skin
-            issues. The few products that were on the shelves or that
-            dermatologists recommended to me had no beneficial impact on my
-            face.
-          </p>
-          <p class="story-text">
-            I lost all hope of improving my skin and my self confidence
-            worsened. The humiliation and dirty looks from other people was
-            unbearable. The fear that boys would not be interested in me until
-            the Gusher-like bumps on my face popped pushed me to take initiative
-            to intensively research.
-          </p>
-          <p class="story-text">
-            I made products that helped me cure & restore my skin. Not only did
-            it restore my skin, but it restored my happiness and gave me back my
-            confidence!
-          </p>
-          <button class="btn btn-primary">Our Natural Ingredients</button>
-        </div>
-        <div class="story-image">
-          <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66" alt="Skincare transformation" />
-          <div class="story-image-overlay"></div>
+    <section class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="relative">
+            <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1507842217343-583bb7270b66"
+                alt="Skincare transformation"
+                class="w-full h-96 lg:h-[500px] object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+          </div>
+          <div>
+            <div class="inline-block bg-glow-purple/10 text-glow-purple px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Personal Experience
+            </div>
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-6">
+              MY SKINCARE JOURNEY
+            </h2>
+            <div class="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                Growing up as a person of color with very dry skin and severe acne,
+                there weren't many products on the shelves that could tackle my skin
+                issues. The few products that were on the shelves or that
+                dermatologists recommended to me had no beneficial impact on my
+                face.
+              </p>
+              <p>
+                I lost all hope of improving my skin and my self confidence
+                worsened. The humiliation and dirty looks from other people was
+                unbearable. The fear that boys would not be interested in me until
+                the Gusher-like bumps on my face popped pushed me to take initiative
+                to intensively research.
+              </p>
+              <p>
+                I made products that helped me cure & restore my skin. Not only did
+                it restore my skin, but it restored my happiness and gave me back my
+                confidence!
+              </p>
+            </div>
+            <button class="mt-8 bg-gradient-to-r from-glow-pink to-glow-purple text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              Our Natural Ingredients
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Founder Section -->
-    <section class="founder-section">
-      <div class="container founder-container">
-        <div class="founder-content">
-          <div class="founder-badge">Our Mission</div>
-          <h2 class="founder-title">WELCOME TO COLDGLOWCOSMETICS!</h2>
-          <h3 class="founder-subtitle">YOUR SKIN'S BEST FRIEND</h3>
-          <p class="founder-text">
-            I wanted to help others who were also going through skin problems
-            and had hard times finding products that actually worked for them!
-          </p>
-          <p class="founder-text">
-            At Cold Glow Cosmetics, we believe everyone deserves to feel
-            confident in their skin. Our products are specially formulated to
-            address the unique challenges of people with dry skin, acne-prone
-            skin, and people of color.
-          </p>
-          <p class="founder-text">
-            Each formula is the result of intensive research and personal
-            experience, created to deliver real results without harmful
-            ingredients or false promises.
-          </p>
-          <button class="btn btn-primary">Shop Now</button>
-        </div>
-        <div class="founder-image">
-          <img
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d"
-            alt="Cold Glow Cosmetics Founder"
-            class="founder-img-main"
-          />
-          <div class="founder-background"></div>
-          <div class="founder-quote">
-            <p class="founder-quote-text">
-              Not only did it restore my skin, but it restored my happiness and
-              gave me back my confidence!
-            </p>
-            <p class="founder-quote-author">- Founder, Cold Glow Cosmetics</p>
+    <section class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="inline-block bg-glow-gold/10 text-glow-gold px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Our Mission
+            </div>
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
+              WELCOME TO COLDGLOWCOSMETICS!
+            </h2>
+            <h3 class="text-xl lg:text-2xl font-display font-semibold text-glow-pink mb-6">
+              YOUR SKIN'S BEST FRIEND
+            </h3>
+            <div class="space-y-4 text-gray-600 leading-relaxed">
+              <p>
+                I wanted to help others who were also going through skin problems
+                and had hard times finding products that actually worked for them!
+              </p>
+              <p>
+                At Cold Glow Cosmetics, we believe everyone deserves to feel
+                confident in their skin. Our products are specially formulated to
+                address the unique challenges of people with dry skin, acne-prone
+                skin, and people of color.
+              </p>
+              <p>
+                Each formula is the result of intensive research and personal
+                experience, created to deliver real results without harmful
+                ingredients or false promises.
+              </p>
+            </div>
+            <button class="mt-8 bg-gradient-to-r from-glow-pink to-glow-purple text-white px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+              Shop Now
+            </button>
+          </div>
+          <div class="order-1 lg:order-2 relative">
+            <div class="relative">
+              <!-- Main founder image -->
+              <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d"
+                  alt="Cold Glow Cosmetics Founder"
+                  class="w-full h-96 lg:h-[500px] object-cover"
+                />
+              </div>
+
+              <!-- Decorative background element -->
+              <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-glow-pink to-glow-purple rounded-full opacity-20 -z-10"></div>
+              <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-glow-purple to-glow-gold rounded-full opacity-20 -z-10"></div>
+
+              <!-- Quote overlay -->
+              <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl max-w-xs">
+                <p class="text-gray-700 italic text-sm mb-3">
+                  "Not only did it restore my skin, but it restored my happiness and
+                  gave me back my confidence!"
+                </p>
+                <p class="text-glow-pink font-medium text-sm">- Founder, Cold Glow Cosmetics</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Core Values Section -->
-    <section class="values-section">
-      <div class="container">
-        <div class="values-header">
-          <div class="values-badge">What We Stand For</div>
-          <h2 class="values-title">Our Core Values</h2>
-          <p class="values-subtitle">
+    <section class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="inline-block bg-glow-pink/10 text-glow-pink px-4 py-2 rounded-full text-sm font-medium mb-6">
+            What We Stand For
+          </div>
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
+            Our Core Values
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
             These principles guide everything we do, from product development to
             customer service.
           </p>
         </div>
 
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-leaf"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-leaf text-white text-2xl"></i>
             </div>
-            <h3 class="value-title">Natural Ingredients</h3>
-            <p class="value-text">
+            <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Natural Ingredients</h3>
+            <p class="text-gray-600 leading-relaxed">
               We believe in harnessing the power of nature. Our products feature
               carefully selected natural ingredients that deliver real results
               without compromising your skin's health.
             </p>
           </div>
 
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-flask"></i>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-flask text-white text-2xl"></i>
             </div>
-            <h3 class="value-title">Scientific Approach</h3>
-            <p class="value-text">
+            <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Scientific Approach</h3>
+            <p class="text-gray-600 leading-relaxed">
               While we love natural ingredients, we also believe in science. Our
               formulations are backed by research and testing to ensure they're
               not only safe but truly effective.
             </p>
           </div>
 
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-heart"></i>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-gradient-to-br from-glow-pink to-glow-purple rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-heart text-white text-2xl"></i>
             </div>
-            <h3 class="value-title">Cruelty-Free</h3>
-            <p class="value-text">
+            <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Cruelty-Free</h3>
+            <p class="text-gray-600 leading-relaxed">
               We're proudly cruelty-free. None of our products or ingredients
               are tested on animals, and we partner only with suppliers who
               share this commitment.
             </p>
           </div>
 
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-recycle"></i>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-recycle text-white text-2xl"></i>
             </div>
-            <h3 class="value-title">Sustainability</h3>
-            <p class="value-text">
+            <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Sustainability</h3>
+            <p class="text-gray-600 leading-relaxed">
               We're committed to reducing our environmental footprint through
               sustainable sourcing, eco-friendly packaging, and responsible
               manufacturing practices.
             </p>
           </div>
 
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-users"></i>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-users text-white text-2xl"></i>
             </div>
-            <h3 class="value-title">Community Focus</h3>
-            <p class="value-text">
+            <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Community Focus</h3>
+            <p class="text-gray-600 leading-relaxed">
               We believe in building a community of empowered individuals who
               celebrate their unique beauty. We listen to our customers and grow
               with their feedback.
             </p>
           </div>
 
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fas fa-shield-alt"></i>
+          <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="w-16 h-16 bg-gradient-to-br from-glow-gold to-yellow-500 rounded-2xl flex items-center justify-center mb-6">
+              <i class="fas fa-shield-alt text-white text-2xl"></i>
             </div>
-            <h3 class="value-title">Transparency</h3>
-            <p class="value-text">
+            <h3 class="text-xl font-display font-bold text-gray-900 mb-4">Transparency</h3>
+            <p class="text-gray-600 leading-relaxed">
               We're open about our ingredients, processes, and practices. We
               believe you have the right to know exactly what you're putting on
               your skin.
@@ -302,119 +401,176 @@
     </section>
 
     <!-- Timeline Section -->
-    <section class="timeline-section">
-      <div class="container">
-        <div class="timeline-header">
-          <div class="timeline-badge">Our Journey</div>
-          <h2 class="timeline-title">Key Moments in Our Story</h2>
-          <p class="timeline-subtitle">
+    <section class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="inline-block bg-glow-purple/10 text-glow-purple px-4 py-2 rounded-full text-sm font-medium mb-6">
+            Our Journey
+          </div>
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
+            Key Moments in Our Story
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
             From kitchen experiments to award-winning skincare, here's how GLOW
             Beauty grew over the years.
           </p>
         </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">2018</div>
-            <div class="timeline-content">
-              <div class="timeline-year">2018</div>
-              <h3 class="timeline-event">The Beginning</h3>
-              <p class="timeline-description">
-                Emma Thompson started creating her first formulations in her
-                kitchen, focused on solving her own skincare struggles with
-                natural ingredients.
-              </p>
-            </div>
-          </div>
+        <div class="relative">
+          <!-- Timeline line -->
+          <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-glow-pink to-glow-purple hidden lg:block"></div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">2019</div>
-            <div class="timeline-content">
-              <div class="timeline-year">2019</div>
-              <h3 class="timeline-event">First Product Launch</h3>
-              <p class="timeline-description">
-                After months of testing and refinement, our first three products
-                were launched to friends and family, receiving overwhelming
-                positive feedback.
-              </p>
+          <div class="space-y-12">
+            <!-- Timeline Item 2018 -->
+            <div class="relative flex items-center lg:justify-start">
+              <div class="lg:w-1/2 lg:pr-8 lg:text-right">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                  <div class="inline-block bg-glow-pink text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+                    2018
+                  </div>
+                  <h3 class="text-xl font-display font-bold text-gray-900 mb-3">The Beginning</h3>
+                  <p class="text-gray-600">
+                    Emma Thompson started creating her first formulations in her
+                    kitchen, focused on solving her own skincare struggles with
+                    natural ingredients.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-glow-pink rounded-full border-4 border-white shadow-lg hidden lg:block"></div>
+              <div class="lg:w-1/2 lg:pl-8"></div>
             </div>
-          </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">2020</div>
-            <div class="timeline-content">
-              <div class="timeline-year">2020</div>
-              <h3 class="timeline-event">Online Store Launch</h3>
-              <p class="timeline-description">
-                GLOW Beauty officially launched online with a collection of five
-                signature products, gaining attention on social media for our
-                natural approach.
-              </p>
+            <!-- Timeline Item 2019 -->
+            <div class="relative flex items-center lg:justify-end">
+              <div class="lg:w-1/2 lg:pr-8"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-glow-purple rounded-full border-4 border-white shadow-lg hidden lg:block"></div>
+              <div class="lg:w-1/2 lg:pl-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                  <div class="inline-block bg-glow-purple text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+                    2019
+                  </div>
+                  <h3 class="text-xl font-display font-bold text-gray-900 mb-3">First Product Launch</h3>
+                  <p class="text-gray-600">
+                    After months of testing and refinement, our first three products
+                    were launched to friends and family, receiving overwhelming
+                    positive feedback.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">2021</div>
-            <div class="timeline-content">
-              <div class="timeline-year">2021</div>
-              <h3 class="timeline-event">Expanded Product Line</h3>
-              <p class="timeline-description">
-                We expanded our collection to include targeted solutions for
-                different skin concerns, introducing serums and specialized
-                treatments.
-              </p>
+            <!-- Timeline Item 2020 -->
+            <div class="relative flex items-center lg:justify-start">
+              <div class="lg:w-1/2 lg:pr-8 lg:text-right">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                  <div class="inline-block bg-glow-gold text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+                    2020
+                  </div>
+                  <h3 class="text-xl font-display font-bold text-gray-900 mb-3">Online Store Launch</h3>
+                  <p class="text-gray-600">
+                    GLOW Beauty officially launched online with a collection of five
+                    signature products, gaining attention on social media for our
+                    natural approach.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-glow-gold rounded-full border-4 border-white shadow-lg hidden lg:block"></div>
+              <div class="lg:w-1/2 lg:pl-8"></div>
             </div>
-          </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">2022</div>
-            <div class="timeline-content">
-              <div class="timeline-year">2022</div>
-              <h3 class="timeline-event">Beauty Award Winner</h3>
-              <p class="timeline-description">
-                Our Golden Hour Body Scrub won "Best Natural Exfoliator" at the
-                Annual Beauty Innovation Awards, putting us on the map
-                nationally.
-              </p>
+            <!-- Timeline Item 2021 -->
+            <div class="relative flex items-center lg:justify-end">
+              <div class="lg:w-1/2 lg:pr-8"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-glow-pink rounded-full border-4 border-white shadow-lg hidden lg:block"></div>
+              <div class="lg:w-1/2 lg:pl-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                  <div class="inline-block bg-glow-pink text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+                    2021
+                  </div>
+                  <h3 class="text-xl font-display font-bold text-gray-900 mb-3">Expanded Product Line</h3>
+                  <p class="text-gray-600">
+                    We expanded our collection to include targeted solutions for
+                    different skin concerns, introducing serums and specialized
+                    treatments.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">2023</div>
-            <div class="timeline-content">
-              <div class="timeline-year">2023</div>
-              <h3 class="timeline-event">Retail Partnerships</h3>
-              <p class="timeline-description">
-                GLOW Beauty products became available in select boutique
-                retailers across the country, expanding our reach to new
-                customers.
-              </p>
+            <!-- Timeline Item 2022 -->
+            <div class="relative flex items-center lg:justify-start">
+              <div class="lg:w-1/2 lg:pr-8 lg:text-right">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                  <div class="inline-block bg-glow-purple text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+                    2022
+                  </div>
+                  <h3 class="text-xl font-display font-bold text-gray-900 mb-3">Beauty Award Winner</h3>
+                  <p class="text-gray-600">
+                    Our Golden Hour Body Scrub won "Best Natural Exfoliator" at the
+                    Annual Beauty Innovation Awards, putting us on the map
+                    nationally.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-glow-purple rounded-full border-4 border-white shadow-lg hidden lg:block"></div>
+              <div class="lg:w-1/2 lg:pl-8"></div>
             </div>
-          </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">2024</div>
-            <div class="timeline-content">
-              <div class="timeline-year">2024</div>
-              <h3 class="timeline-event">New Headquarters</h3>
-              <p class="timeline-description">
-                We moved into our new eco-friendly headquarters with an expanded
-                lab and testing facilities to continue innovating our product
-                line.
-              </p>
+            <!-- Timeline Item 2023 -->
+            <div class="relative flex items-center lg:justify-end">
+              <div class="lg:w-1/2 lg:pr-8"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-glow-gold rounded-full border-4 border-white shadow-lg hidden lg:block"></div>
+              <div class="lg:w-1/2 lg:pl-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                  <div class="inline-block bg-glow-gold text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+                    2023
+                  </div>
+                  <h3 class="text-xl font-display font-bold text-gray-900 mb-3">Retail Partnerships</h3>
+                  <p class="text-gray-600">
+                    GLOW Beauty products became available in select boutique
+                    retailers across the country, expanding our reach to new
+                    customers.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="timeline-item">
-            <div class="timeline-date">2025</div>
-            <div class="timeline-content">
-              <div class="timeline-year">2025</div>
-              <h3 class="timeline-event">Today & Beyond</h3>
-              <p class="timeline-description">
-                With a growing team of skincare experts and a devoted community,
-                we continue to create innovative products while staying true to
-                our founding principles.
-              </p>
+            <!-- Timeline Item 2024 -->
+            <div class="relative flex items-center lg:justify-start">
+              <div class="lg:w-1/2 lg:pr-8 lg:text-right">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                  <div class="inline-block bg-glow-pink text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+                    2024
+                  </div>
+                  <h3 class="text-xl font-display font-bold text-gray-900 mb-3">New Headquarters</h3>
+                  <p class="text-gray-600">
+                    We moved into our new eco-friendly headquarters with an expanded
+                    lab and testing facilities to continue innovating our product
+                    line.
+                  </p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-glow-pink rounded-full border-4 border-white shadow-lg hidden lg:block"></div>
+              <div class="lg:w-1/2 lg:pl-8"></div>
+            </div>
+
+            <!-- Timeline Item 2025 -->
+            <div class="relative flex items-center lg:justify-end">
+              <div class="lg:w-1/2 lg:pr-8"></div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-glow-purple rounded-full border-4 border-white shadow-lg hidden lg:block"></div>
+              <div class="lg:w-1/2 lg:pl-8">
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+                  <div class="inline-block bg-glow-purple text-white px-3 py-1 rounded-full text-sm font-medium mb-3">
+                    2025
+                  </div>
+                  <h3 class="text-xl font-display font-bold text-gray-900 mb-3">Today & Beyond</h3>
+                  <p class="text-gray-600">
+                    With a growing team of skincare experts and a devoted community,
+                    we continue to create innovative products while staying true to
+                    our founding principles.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -422,336 +578,386 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="testimonials">
-      <div class="container">
-      <div class="testimonials-header">
-        <div class="testimonials-badge">Customer Stories</div>
-        <h2 class="testimonials-title">What Our Customers Say</h2>
-        <p class="testimonials-subtitle">
-        Real experiences from people who've transformed their skin with Cold Glow Cosmetics.
-        </p>
-      </div>
-      
-      <div class="testimonials-slider">
-        <div class="testimonial-card">
-        <div class="testimonial-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-content">
-          "I've struggled with sensitive skin for years and tried countless
-          products that either didn't work or irritated my skin. GLOW
-          Beauty's products have been a game-changer. They're gentle but
-          effective, and for the first time in my life, I feel confident in
-          my skin."
-        </p>
-        <div class="testimonial-author">
-          <img
-          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
-          alt="Sarah M."
-          class="testimonial-avatar"
-          />
-          <div class="testimonial-author-info">
-          <h4>Sarah M.</h4>
-          <p>Loyal customer since 2020</p>
+    <section class="py-16 lg:py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <div class="inline-block bg-glow-gold/10 text-glow-gold px-4 py-2 rounded-full text-sm font-medium mb-6">
+            Customer Stories
           </div>
-        </div>
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">
+            What Our Customers Say
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Real experiences from people who've transformed their skin with Cold Glow Cosmetics.
+          </p>
         </div>
 
-        <div class="testimonial-card">
-        <div class="testimonial-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-content">
-          "The Golden Hour scrub is literally the best skincare product I've
-          ever used. It's gentle enough for my sensitive skin but still
-          gives amazing exfoliation. My skin is smoother than it's ever
-          been, and the scent is divine. I'm obsessed!"
-        </p>
-        <div class="testimonial-author">
-          <img
-          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
-          alt="Michael K."
-          class="testimonial-avatar"
-          />
-          <div class="testimonial-author-info">
-          <h4>Michael K.</h4>
-          <p>Verified purchase</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+          <!-- Testimonial 1 -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div class="flex text-glow-gold">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              "I've struggled with sensitive skin for years and tried countless
+              products that either didn't work or irritated my skin. GLOW
+              Beauty's products have been a game-changer. They're gentle but
+              effective, and for the first time in my life, I feel confident in
+              my skin."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+                alt="Sarah M."
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">Sarah M.</h4>
+                <p class="text-sm text-gray-600">Loyal customer since 2020</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div class="flex text-glow-gold">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              "The Golden Hour scrub is literally the best skincare product I've
+              ever used. It's gentle enough for my sensitive skin but still
+              gives amazing exfoliation. My skin is smoother than it's ever
+              been, and the scent is divine. I'm obsessed!"
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+                alt="Michael K."
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">Michael K.</h4>
+                <p class="text-sm text-gray-600">Verified purchase</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div class="flex text-glow-gold">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              "I appreciate that GLOW Beauty isn't just about looking good—they
+              truly care about skin health. As an esthetician, I'm very
+              particular about what I recommend to clients, and these products
+              are among my top picks. The ingredients are carefully selected and
+              the results speak for themselves."
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce"
+                alt="Jennifer L."
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">Jennifer L.</h4>
+                <p class="text-sm text-gray-600">Licensed Esthetician</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center mb-4">
+              <div class="flex text-glow-gold">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="text-gray-700 mb-6 leading-relaxed">
+              "Finding skincare that's both natural and effective has always
+              been a challenge. GLOW Beauty delivers on both fronts. My skin has
+              never looked more radiant, and I love knowing exactly what
+              ingredients I'm putting on my face. This brand has earned a
+              customer for life!"
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
+                alt="David R."
+                class="w-12 h-12 rounded-full object-cover mr-4"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-900">David R.</h4>
+                <p class="text-sm text-gray-600">Customer since 2022</p>
+              </div>
+            </div>
           </div>
         </div>
-        </div>
 
-        <div class="testimonial-card">
-        <div class="testimonial-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star-half-alt"></i>
+        <!-- Navigation buttons for potential slider functionality -->
+        <div class="flex justify-center space-x-4">
+          <button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-glow-pink hover:bg-glow-pink/5 transition-all duration-200" aria-label="Previous testimonial">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-600 hover:text-glow-pink hover:bg-glow-pink/5 transition-all duration-200" aria-label="Next testimonial">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
-        <p class="testimonial-content">
-          "I appreciate that GLOW Beauty isn't just about looking good—they
-          truly care about skin health. As an esthetician, I'm very
-          particular about what I recommend to clients, and these products
-          are among my top picks. The ingredients are carefully selected and
-          the results speak for themselves."
-        </p>
-        <div class="testimonial-author">
-          <img
-          src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce"
-          alt="Jennifer L."
-          class="testimonial-avatar"
-          />
-          <div class="testimonial-author-info">
-          <h4>Jennifer L.</h4>
-          <p>Licensed Esthetician</p>
-          </div>
-        </div>
-        </div>
-
-        <div class="testimonial-card">
-        <div class="testimonial-rating">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-        </div>
-        <p class="testimonial-content">
-          "Finding skincare that's both natural and effective has always
-          been a challenge. GLOW Beauty delivers on both fronts. My skin has
-          never looked more radiant, and I love knowing exactly what
-          ingredients I'm putting on my face. This brand has earned a
-          customer for life!"
-        </p>
-        <div class="testimonial-author">
-          <img
-          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e"
-          alt="David R."
-          class="testimonial-avatar"
-          />
-          <div class="testimonial-author-info">
-          <h4>David R.</h4>
-          <p>Customer since 2022</p>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <div class="testimonial-nav">
-        <button class="testimonial-nav-btn" aria-label="Previous testimonial">
-        <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="testimonial-nav-btn" aria-label="Next testimonial">
-        <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
       </div>
     </section>
 
     <!-- Call to Action Section -->
-    <section class="cta-section">
-      <div class="container cta-container">
-        <h2 class="cta-title">Ready to Transform Your Skin?</h2>
-        <p class="cta-text">
+    <section class="py-16 lg:py-24 bg-gradient-to-r from-glow-pink to-glow-purple">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl lg:text-4xl font-display font-bold text-white mb-6">
+          Ready to Transform Your Skin?
+        </h2>
+        <p class="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
           Experience the Cold Glow difference with our 100% Money Back
           Guarantee. Your skin's best friend is just a click away.
         </p>
-        <div class="cta-buttons">
-          <button class="btn btn-primary">Shop Our Products</button>
-          <button class="btn btn-secondary">Contact Us</button>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button class="bg-white text-glow-pink px-8 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            Shop Our Products
+          </button>
+          <button class="border-2 border-white text-white px-8 py-3 rounded-full font-medium hover:bg-white hover:text-glow-pink transition-all duration-300">
+            Contact Us
+          </button>
         </div>
       </div>
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter" id="newsletter">
-      <div class="container newsletter-container">
-        <div class="newsletter-content">
-          <h2 class="newsletter-title">Join Our GLOW Community</h2>
-          <p class="newsletter-description">
-            Subscribe to our newsletter and be the first to know about restocks,
-            new product launches, exclusive offers, and skincare tips.
-          </p>
+    <section class="py-16 lg:py-24 bg-white" id="newsletter">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-6">
+              Join Our GLOW Community
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Subscribe to our newsletter and be the first to know about restocks,
+              new product launches, exclusive offers, and skincare tips.
+            </p>
 
-          <div class="newsletter-perks">
-            <div class="newsletter-perk">
-              <div class="newsletter-perk-icon">
-                <i class="fas fa-tag"></i>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-glow-pink/10 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-tag text-glow-pink"></i>
+                </div>
+                <div class="text-gray-700 font-medium">Early access to sales</div>
               </div>
-              <div class="newsletter-perk-text">Early access to sales</div>
-            </div>
-            <div class="newsletter-perk">
-              <div class="newsletter-perk-icon">
-                <i class="fas fa-gift"></i>
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-glow-purple/10 rounded-full flex items-center justify-center mr-4">
+                  <i class="fas fa-gift text-glow-purple"></i>
+                </div>
+                <div class="text-gray-700 font-medium">Exclusive offers</div>
               </div>
-              <div class="newsletter-perk-text">Exclusive offers</div>
             </div>
           </div>
-        </div>
 
-        <div class="newsletter-form">
-          <h3 class="newsletter-form-title">Subscribe to Our Newsletter</h3>
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-input" placeholder="Your Name" />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                class="form-input"
-                placeholder="Your Email Address"
-              />
-            </div>
-            <button type="submit" class="subscribe-btn">Subscribe Now</button>
-            <p class="form-disclaimer">
-              By subscribing, you agree to our Privacy Policy. You can
-              unsubscribe at any time.
-            </p>
-          </form>
+          <div class="bg-gray-50 p-8 rounded-2xl">
+            <h3 class="text-xl font-display font-bold text-gray-900 mb-6">
+              Subscribe to Our Newsletter
+            </h3>
+            <form class="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent outline-none transition-all duration-200"
+                  placeholder="Your Name"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent outline-none transition-all duration-200"
+                  placeholder="Your Email Address"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-gradient-to-r from-glow-pink to-glow-purple text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
+              >
+                Subscribe Now
+              </button>
+              <p class="text-sm text-gray-600 text-center">
+                By subscribing, you agree to our Privacy Policy. You can
+                unsubscribe at any time.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-info">
-            <div class="logo">coldglow<span>cosmetics</span></div>
-            <p class="footer-description">
-              We create effective skincare products that help restore confidence
-              through healthy, glowing skin. Our mission is to provide solutions
-              for those struggling to find products that actually work for their
-              unique skin concerns.
-            </p>
-            <div class="footer-social">
-              <a href="#" class="social-link">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-tiktok"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="footer-column">
-            <h3 class="footer-title">Shop</h3>
-            <ul class="footer-links">
-              <li>
-                <a href="all-products.html"
-                  ><i class="fas fa-chevron-right"></i> All Products</a
-                >
-              </li>
-              <li>
-                <a href="moisturizers.html"
-                  ><i class="fas fa-chevron-right"></i> Moisturizers</a
-                >
-              </li>
-              <li>
-                <a href="body.html"
-                  ><i class="fas fa-chevron-right"></i> Body</a
-                >
-              </li>
-              <li>
-                <a href="new-arrivals.html"
-                  ><i class="fas fa-chevron-right"></i> New Arrivals</a
-                >
-              </li>
-              <li>
-                <a href="sale.html"
-                  ><i class="fas fa-chevron-right"></i> Sale Items</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3 class="footer-title">Information</h3>
-            <ul class="footer-links">
-              <li>
-                <a href="our-story.html"
-                  ><i class="fas fa-chevron-right"></i> How It All Started</a
-                >
-              </li>
-              <li>
-                <a href="shipping-policy.html"
-                  ><i class="fas fa-chevron-right"></i> Shipping + Refund
-                  Policy</a
-                >
-              </li>
-              <li>
-                <a href="guarantee.html"
-                  ><i class="fas fa-chevron-right"></i> Money Back Guarantee</a
-                >
-              </li>
-              <li>
-                <a href="terms.html"
-                  ><i class="fas fa-chevron-right"></i> Terms of Service</a
-                >
-              </li>
-              <li>
-                <a href="privacy.html"
-                  ><i class="fas fa-chevron-right"></i> Privacy Policy</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3 class="footer-title">Contact Us</h3>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
+    <footer class="bg-gray-900 text-white" id="contact">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="py-16 lg:py-20">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <!-- Company Info -->
+            <div class="lg:col-span-1">
+              <div class="text-2xl font-display font-bold mb-4">
+                coldglow<span class="text-glow-pink">cosmetics</span>
               </div>
-              <div class="contact-info">
-                123 Beauty Street, Los Angeles, CA 90001, USA
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                We create effective skincare products that help restore confidence
+                through healthy, glowing skin. Our mission is to provide solutions
+                for those struggling to find products that actually work for their
+                unique skin concerns.
+              </p>
+              <div class="flex space-x-4">
+                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
+                  <i class="fab fa-tiktok"></i>
+                </a>
               </div>
             </div>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-info">support@glowbeauty.com</div>
+
+            <!-- Shop Links -->
+            <div>
+              <h3 class="text-lg font-display font-bold mb-6">Shop</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="all-products.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> All Products
+                  </a>
+                </li>
+                <li>
+                  <a href="moisturizers.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> Moisturizers
+                  </a>
+                </li>
+                <li>
+                  <a href="body.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> Body
+                  </a>
+                </li>
+                <li>
+                  <a href="new-arrivals.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> New Arrivals
+                  </a>
+                </li>
+                <li>
+                  <a href="sale.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> Sale Items
+                  </a>
+                </li>
+              </ul>
             </div>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone-alt"></i>
+
+            <!-- Information Links -->
+            <div>
+              <h3 class="text-lg font-display font-bold mb-6">Information</h3>
+              <ul class="space-y-3">
+                <li>
+                  <a href="our-story.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> How It All Started
+                  </a>
+                </li>
+                <li>
+                  <a href="shipping-policy.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> Shipping + Refund Policy
+                  </a>
+                </li>
+                <li>
+                  <a href="guarantee.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> Money Back Guarantee
+                  </a>
+                </li>
+                <li>
+                  <a href="terms.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> Terms of Service
+                  </a>
+                </li>
+                <li>
+                  <a href="privacy.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                    <i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div>
+              <h3 class="text-lg font-display font-bold mb-6">Contact Us</h3>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div class="w-5 h-5 text-glow-pink mt-1 mr-3">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="text-gray-300">
+                    123 Beauty Street, Los Angeles, CA 90001, USA
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-5 h-5 text-glow-pink mr-3">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="text-gray-300">support@glowbeauty.com</div>
+                </div>
+                <div class="flex items-center">
+                  <div class="w-5 h-5 text-glow-pink mr-3">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div class="text-gray-300">+1 (800) 123-4567</div>
+                </div>
               </div>
-              <div class="contact-info">+1 (800) 123-4567</div>
             </div>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <div class="copyright">
-            &copy; 2024 Cold Glow Cosmetics. All rights reserved.
-          </div>
-          <div class="payment-methods">
-            <div class="payment-method">VISA</div>
-            <div class="payment-method">MC</div>
-            <div class="payment-method">AMEX</div>
-            <div class="payment-method">PP</div>
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 py-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-gray-400 mb-4 md:mb-0">
+              &copy; 2024 Cold Glow Cosmetics. All rights reserved.
+            </div>
+            <div class="flex space-x-4">
+              <div class="bg-gray-800 px-3 py-1 rounded text-sm text-gray-300">VISA</div>
+              <div class="bg-gray-800 px-3 py-1 rounded text-sm text-gray-300">MC</div>
+              <div class="bg-gray-800 px-3 py-1 rounded text-sm text-gray-300">AMEX</div>
+              <div class="bg-gray-800 px-3 py-1 rounded text-sm text-gray-300">PP</div>
+            </div>
           </div>
         </div>
       </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
+    <button class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-glow-pink to-glow-purple text-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 z-50" id="backToTop">
       <i class="fas fa-chevron-up"></i>
     </button>
   </body>

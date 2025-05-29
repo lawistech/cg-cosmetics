@@ -1,123 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLOW Beauty - Natural Skincare Products</title>
+  <meta name="description" content="Discover premium skincare collection made with natural ingredients. Handcrafted products for radiant, healthy skin.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'glow-pink': '#f8b4cb',
+            'glow-rose': '#f1a7c1',
+            'glow-purple': '#d8b4fe',
+            'glow-gold': '#fbbf24',
+          },
+          fontFamily: {
+            'display': ['Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
     <!-- Announcement Bar -->
-    <div class="announcement-bar">
-      <div class="container">
-        RESTOCK DATE: <span>2/11 @7PM PST</span> | New products will be dropping
+    <div class="bg-gradient-to-r from-glow-pink to-glow-purple text-white text-center py-2 px-4 text-sm font-medium">
+      <div class="max-w-7xl mx-auto">
+        RESTOCK DATE: <span class="font-bold text-glow-gold">2/11 @7PM PST</span> | New products will be dropping
       </div>
     </div>
 
     <!-- Header -->
-    <header id="header">
-      <div class="container header-container">
-        <div class="logo">GLOW<span>Beauty</span></div>
-        <nav class="desktop-nav">
-          <ul>
-            <li><a href="https://coldglowcosmetics.com">Home</a></li>
-            <li><a href="https://coldglowcosmetics.com/products/">Products</a></li>
-            <li><a href="https://coldglowcosmetics.com/our-story/">Our Story</a></li>
-            <li><a href="https://coldglowcosmetics.com/shipping-policy/">Shipping Policy</a></li>
-            <li><a href="https://coldglowcosmetics.com/contact/">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="header-actions">
-          <button class="action-btn" id="search-btn" aria-label="Search">
-            <i class="fas fa-search"></i>
-          </button>
-          <button class="action-btn" id="wishlist-btn" aria-label="Wishlist">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button class="action-btn" id="cart-btn" aria-label="Cart">
-            <i class="fas fa-shopping-bag"></i>
-            <span class="cart-count">3</span>
-          </button>
-          <div class="hamburger-menu" id="hamburger-menu">
-            <i class="fas fa-bars"></i>
+    <header id="header" class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <div class="text-2xl lg:text-3xl font-display font-bold text-gray-900">
+              GLOW<span class="text-glow-pink">Beauty</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex space-x-8">
+            <a href="https://coldglowcosmetics.com" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Home</a>
+            <a href="https://coldglowcosmetics.com/products/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Products</a>
+            <a href="https://coldglowcosmetics.com/our-story/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Our Story</a>
+            <a href="https://coldglowcosmetics.com/shipping-policy/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Shipping Policy</a>
+            <a href="https://coldglowcosmetics.com/contact/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Contact</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="flex items-center space-x-3">
+            <button id="search-btn" aria-label="Search" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+              <i class="fas fa-search text-lg"></i>
+            </button>
+            <button id="wishlist-btn" aria-label="Wishlist" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+              <i class="fas fa-heart text-lg"></i>
+            </button>
+            <button id="cart-btn" aria-label="Cart" class="relative p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+              <i class="fas fa-shopping-bag text-lg"></i>
+              <span class="absolute -top-1 -right-1 bg-glow-pink text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">3</span>
+            </button>
+            <!-- Mobile menu button -->
+            <button id="hamburger-menu" class="lg:hidden p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+              <i class="fas fa-bars text-lg"></i>
+            </button>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-nav" id="mobile-nav">
-      <button class="close-btn" id="close-nav">
-        <i class="fas fa-times"></i>
-      </button>
-      <ul>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#about">Our Story</a></li>
-        <li><a href="#shipping">Shipping Policy</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="mobile-nav-footer">
-        <div class="mobile-nav-actions">
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-search"></i>
-          </button>
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-user"></i>
+    <div id="mobile-nav" class="fixed inset-y-0 right-0 z-50 w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden">
+      <div class="flex flex-col h-full">
+        <!-- Mobile nav header -->
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <div class="text-xl font-display font-bold text-gray-900">
+            GLOW<span class="text-glow-pink">Beauty</span>
+          </div>
+          <button id="close-nav" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200 hover:bg-gray-100 rounded-full">
+            <i class="fas fa-times text-lg"></i>
           </button>
         </div>
-        <div class="mobile-nav-social">
-          <a href="#" class="social-link">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-tiktok"></i>
-          </a>
+
+        <!-- Mobile nav links -->
+        <nav class="flex-1 px-6 py-6">
+          <ul class="space-y-4">
+            <li><a href="#products" class="block py-3 text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200 border-b border-gray-100">Products</a></li>
+            <li><a href="#about" class="block py-3 text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200 border-b border-gray-100">Our Story</a></li>
+            <li><a href="#shipping" class="block py-3 text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200 border-b border-gray-100">Shipping Policy</a></li>
+            <li><a href="#contact" class="block py-3 text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200 border-b border-gray-100">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile nav footer -->
+        <div class="p-6 border-t border-gray-200">
+          <!-- Action buttons -->
+          <div class="flex justify-center space-x-4 mb-6">
+            <button class="p-3 bg-gray-100 text-gray-600 hover:bg-glow-pink hover:text-white transition-all duration-200 rounded-full">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="p-3 bg-gray-100 text-gray-600 hover:bg-glow-pink hover:text-white transition-all duration-200 rounded-full">
+              <i class="fas fa-heart"></i>
+            </button>
+            <button class="p-3 bg-gray-100 text-gray-600 hover:bg-glow-pink hover:text-white transition-all duration-200 rounded-full">
+              <i class="fas fa-user"></i>
+            </button>
+          </div>
+
+          <!-- Social links -->
+          <div class="flex justify-center space-x-4">
+            <a href="#" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-facebook-f text-lg"></i>
+            </a>
+            <a href="#" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <a href="#" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-twitter text-lg"></i>
+            </a>
+            <a href="#" class="p-2 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-tiktok text-lg"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="overlay" id="overlay"></div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden lg:hidden"></div>
 
     <!-- Hero Section -->
-    <section class="hero">
-      <div class="container hero-container">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <i class="fas fa-sparkles"></i> Handcrafted with Love
-          </div>
-          <h1>Radiant Skin Starts with Natural Ingredients</h1>
-          <p>
-            Discover our premium skincare collection made with carefully
-            selected natural ingredients that nourish your skin and enhance your
-            natural beauty.
-          </p>
-          <div class="hero-buttons">
-            <button class="btn btn-primary">
-              Shop New Arrivals <i class="fas fa-arrow-right"></i>
-            </button>
-            <button class="btn btn-secondary">Best Sellers</button>
-          </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Natural skincare products with botanical ingredients" />
-          <div class="hero-float hero-float-1">
-            <div class="hero-float-icon">
-              <i class="fas fa-leaf"></i>
+    <section class="relative bg-gradient-to-br from-pink-50 via-purple-50 to-indigo-50 py-16 lg:py-24 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Hero Content -->
+          <div class="text-center lg:text-left">
+            <!-- Badge -->
+            <div class="inline-flex items-center px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full text-glow-pink font-medium text-sm mb-6 shadow-lg">
+              <i class="fas fa-sparkles mr-2"></i>
+              Handcrafted with Love
             </div>
-            <div class="hero-float-text">
-              <h4>100% Natural</h4>
-              <p>No harmful chemicals</p>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-gray-900 leading-tight mb-6">
+              Radiant Skin Starts with
+              <span class="text-transparent bg-clip-text bg-gradient-to-r from-glow-pink to-glow-purple">Natural Ingredients</span>
+            </h1>
+
+            <!-- Description -->
+            <p class="text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Discover our premium skincare collection made with carefully
+              selected natural ingredients that nourish your skin and enhance your
+              natural beauty.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <button class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                Shop New Arrivals
+                <i class="fas fa-arrow-right ml-2"></i>
+              </button>
+              <button class="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-semibold rounded-full border-2 border-gray-200 hover:border-glow-pink hover:text-glow-pink transition-all duration-200">
+                Best Sellers
+              </button>
             </div>
           </div>
-          <div class="hero-float hero-float-2">
-            <div class="hero-float-icon">
-              <i class="fas fa-heart"></i>
+
+          <!-- Hero Image -->
+          <div class="relative">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+                   alt="Natural skincare products with botanical ingredients"
+                   class="w-full h-96 lg:h-[500px] object-cover" />
             </div>
-            <div class="hero-float-text">
-              <h4>Cruelty Free</h4>
-              <p>Never tested on animals</p>
+
+            <!-- Floating Cards -->
+            <div class="absolute -top-4 -left-4 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs">
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                  <i class="fas fa-leaf text-green-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">100% Natural</h4>
+                  <p class="text-sm text-gray-600">No harmful chemicals</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -bottom-4 -right-4 bg-white rounded-2xl p-4 shadow-xl border border-gray-100 max-w-xs">
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0 w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center">
+                  <i class="fas fa-heart text-pink-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900">Cruelty Free</h4>
+                  <p class="text-sm text-gray-600">Never tested on animals</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -125,441 +215,577 @@
     </section>
 
     <!-- Featured Products -->
-    <section class="featured-products section-spacing" id="products">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-subheading">Our Collection</div>
-          <h2 class="section-heading">Featured Products</h2>
-          <p class="section-description">
+    <section id="products" class="py-16 lg:py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Section Header -->
+        <div class="text-center mb-12 lg:mb-16">
+          <div class="inline-flex items-center px-4 py-2 bg-glow-pink/10 rounded-full text-glow-pink font-medium text-sm mb-4">
+            Our Collection
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+            Featured Products
+          </h2>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Explore our bestselling skincare products loved by thousands of
             customers for their amazing results.
           </p>
         </div>
 
-        <div class="products-filter">
-          <button class="filter-btn active">All</button>
-          <button class="filter-btn">Cleansers</button>
-          <button class="filter-btn">Scrubs</button>
-          <button class="filter-btn">Serums</button>
-          <button class="filter-btn">Accessories</button>
+        <!-- Product Filter -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12">
+          <button class="px-6 py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-medium rounded-full transition-all duration-200 shadow-lg">
+            All
+          </button>
+          <button class="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+            Cleansers
+          </button>
+          <button class="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+            Scrubs
+          </button>
+          <button class="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+            Serums
+          </button>
+          <button class="px-6 py-3 bg-gray-100 text-gray-700 font-medium rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+            Accessories
+          </button>
         </div>
 
-        <div class="products-grid">
+        <!-- Products Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           <!-- Product 1 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9" alt="Exfoliating gloves" />
-              <div class="sold-out-overlay">
-                <div class="sold-out-label">SOLD OUT</div>
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9"
+                   alt="Exfoliating gloves"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- Sold Out Overlay -->
+              <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                <div class="bg-red-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                  SOLD OUT
+                </div>
               </div>
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Accessories</div>
-              <h3 class="product-name">Exfoliating Gloves</h3>
-              <div class="product-rating">
-                <div class="stars">
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Accessories</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Exfoliating Gloves</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                 </div>
-                <span class="rating-count">(24)</span>
+                <span class="text-sm text-gray-500">(24)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$5.99</span>
-              </div>
-              <button class="add-to-cart sold-out-btn">
-                <i class="fas fa-ban"></i> Sold Out
+
+              <div class="text-xl font-bold text-gray-900 mb-4">$5.99</div>
+
+              <button disabled class="w-full py-3 bg-gray-300 text-gray-500 font-semibold rounded-full cursor-not-allowed">
+                <i class="fas fa-ban mr-2"></i>Sold Out
               </button>
             </div>
           </div>
 
           <!-- Product 2 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1585232351009-aa87416fca90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Juicy Kitty" />
-              <div class="product-tag tag-new">New</div>
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1585232351009-aa87416fca90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                   alt="Juicy Kitty"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- New Tag -->
+              <div class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                New
+              </div>
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Body Butter</div>
-              <h3 class="product-name">Juicy Kitty</h3>
-              <div class="product-rating">
-                <div class="stars">
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Body Butter</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Juicy Kitty</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                 </div>
-                <span class="rating-count">(56)</span>
+                <span class="text-sm text-gray-500">(56)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$22.99</span>
-              </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
+
+              <div class="text-xl font-bold text-gray-900 mb-4">$22.99</div>
+
+              <button class="w-full py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                <i class="fas fa-shopping-bag mr-2"></i>Add to Cart
               </button>
             </div>
           </div>
 
           <!-- Product 3 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Golden Hour" />
-              <div class="product-tag tag-sale">20% Off</div>
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                   alt="Golden Hour"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- Sale Tag -->
+              <div class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                20% Off
+              </div>
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Body Scrub</div>
-              <h3 class="product-name">Golden Hour</h3>
-              <div class="product-rating">
-                <div class="stars">
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Body Scrub</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Golden Hour</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="far fa-star"></i>
                 </div>
-                <span class="rating-count">(42)</span>
+                <span class="text-sm text-gray-500">(42)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$25.89</span>
-                <span class="old-price">$32.50</span>
+
+              <div class="flex items-center space-x-2 mb-4">
+                <span class="text-xl font-bold text-gray-900">$25.89</span>
+                <span class="text-sm text-gray-500 line-through">$32.50</span>
               </div>
-              <button class="add-to-cart">
-                <i class="fas fa-shopping-bag"></i> Add to Cart
+
+              <button class="w-full py-3 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                <i class="fas fa-shopping-bag mr-2"></i>Add to Cart
               </button>
             </div>
           </div>
 
           <!-- Product 4 -->
-          <div class="product-card">
-            <div class="product-image">
-              <img src="https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Glow Serum" />
-              <div class="sold-out-overlay">
-                <div class="sold-out-label">SOLD OUT</div>
+          <div class="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1600612253971-422e7f7faeb6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
+                   alt="Glow Serum"
+                   class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300" />
+
+              <!-- Sold Out Overlay -->
+              <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+                <div class="bg-red-500 text-white px-4 py-2 rounded-full font-semibold text-sm">
+                  SOLD OUT
+                </div>
               </div>
-              <div class="product-actions">
-                <button class="product-action-btn" aria-label="Quick view">
+
+              <!-- Product Actions -->
+              <div class="absolute top-4 right-4 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button aria-label="Quick view" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-eye"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Add to wishlist">
+                <button aria-label="Add to wishlist" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-red-500 transition-colors duration-200 shadow-lg">
                   <i class="fas fa-heart"></i>
                 </button>
-                <button class="product-action-btn" aria-label="Compare">
+                <button aria-label="Compare" class="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-700 hover:text-glow-pink transition-colors duration-200 shadow-lg">
                   <i class="fas fa-exchange-alt"></i>
                 </button>
               </div>
             </div>
-            <div class="product-info">
-              <div class="product-category">Serum</div>
-              <h3 class="product-name">Glow Serum</h3>
-              <div class="product-rating">
-                <div class="stars">
+
+            <div class="p-6">
+              <div class="text-sm text-glow-pink font-medium mb-2">Serum</div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-3">Glow Serum</h3>
+
+              <!-- Rating -->
+              <div class="flex items-center space-x-2 mb-4">
+                <div class="flex text-yellow-400">
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star-half-alt"></i>
                 </div>
-                <span class="rating-count">(78)</span>
+                <span class="text-sm text-gray-500">(78)</span>
               </div>
-              <div class="product-price">
-                <span class="current-price">$19.89</span>
-              </div>
-              <button class="add-to-cart sold-out-btn">
-                <i class="fas fa-ban"></i> Sold Out
+
+              <div class="text-xl font-bold text-gray-900 mb-4">$19.89</div>
+
+              <button disabled class="w-full py-3 bg-gray-300 text-gray-500 font-semibold rounded-full cursor-not-allowed">
+                <i class="fas fa-ban mr-2"></i>Sold Out
               </button>
             </div>
           </div>
-
-          <!-- More products would continue here -->
         </div>
       </div>
     </section>
 
     <!-- About Section -->
-    <section class="about-section section-spacing" id="about">
-      <div class="container about-container">
-        <div class="about-images">
-          <div class="about-pattern"></div>
-          <img
-            src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9"
-            alt="Our founder"
-            class="about-img-main"
-          />
-          <img
-            src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc"
-            alt="Our products"
-            class="about-img-secondary"
-          />
-        </div>
-        <div class="about-content">
-          <div class="about-badge">Our Story</div>
-          <h2 class="about-title">HOW IT ALL STARTED</h2>
-          <p class="about-text">
-            It all began with a passion for natural skincare and a dream to
-            create products that truly work. Our founder struggled with skin
-            issues for years and couldn't find products that delivered on their
-            promises without harsh chemicals.
-          </p>
-          <p class="about-text">
-            After years of research and testing, we created a line of
-            handcrafted skincare that focuses on natural ingredients that
-            actually work. Each product is carefully formulated to provide real
-            results while keeping your skin healthy and happy.
-          </p>
-
-          <div class="about-features">
-            <div class="about-feature">
-              <div class="about-feature-icon">
-                <i class="fas fa-leaf"></i>
+    <section id="about" class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-pink-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Images -->
+          <div class="relative">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4">
+                <img
+                  src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9"
+                  alt="Our founder"
+                  class="w-full h-64 object-cover rounded-2xl shadow-lg"
+                />
+                <div class="bg-glow-pink/20 rounded-2xl p-6 text-center">
+                  <div class="text-2xl font-bold text-glow-pink mb-2">10K+</div>
+                  <div class="text-sm text-gray-600">Happy Customers</div>
+                </div>
               </div>
-              <div class="about-feature-content">
-                <h4>Natural Ingredients</h4>
-                <p>Sourced from trusted suppliers</p>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">
-                <i class="fas fa-flask"></i>
-              </div>
-              <div class="about-feature-content">
-                <h4>Expertly Formulated</h4>
-                <p>Dermatologist approved</p>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">
-                <i class="fas fa-heart"></i>
-              </div>
-              <div class="about-feature-content">
-                <h4>Cruelty Free</h4>
-                <p>Never tested on animals</p>
-              </div>
-            </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">
-                <i class="fas fa-recycle"></i>
-              </div>
-              <div class="about-feature-content">
-                <h4>Eco-Friendly</h4>
-                <p>Sustainable packaging</p>
+              <div class="pt-8">
+                <img
+                  src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc"
+                  alt="Our products"
+                  class="w-full h-80 object-cover rounded-2xl shadow-lg"
+                />
               </div>
             </div>
           </div>
 
-          <button class="btn btn-primary">Read Our Full Story</button>
+          <!-- Content -->
+          <div>
+            <div class="inline-flex items-center px-4 py-2 bg-glow-pink/10 rounded-full text-glow-pink font-medium text-sm mb-6">
+              Our Story
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-6">
+              HOW IT ALL STARTED
+            </h2>
+
+            <div class="space-y-4 text-gray-600 leading-relaxed mb-8">
+              <p>
+                It all began with a passion for natural skincare and a dream to
+                create products that truly work. Our founder struggled with skin
+                issues for years and couldn't find products that delivered on their
+                promises without harsh chemicals.
+              </p>
+              <p>
+                After years of research and testing, we created a line of
+                handcrafted skincare that focuses on natural ingredients that
+                actually work. Each product is carefully formulated to provide real
+                results while keeping your skin healthy and happy.
+              </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-2 gap-4 mb-8">
+              <div class="flex items-start space-x-3 p-4 bg-white rounded-xl shadow-sm">
+                <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <i class="fas fa-leaf text-green-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 text-sm">Natural Ingredients</h4>
+                  <p class="text-xs text-gray-600">Sourced from trusted suppliers</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3 p-4 bg-white rounded-xl shadow-sm">
+                <div class="flex-shrink-0 w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                  <i class="fas fa-flask text-blue-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 text-sm">Expertly Formulated</h4>
+                  <p class="text-xs text-gray-600">Dermatologist approved</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3 p-4 bg-white rounded-xl shadow-sm">
+                <div class="flex-shrink-0 w-10 h-10 bg-pink-100 rounded-full flex items-center justify-center">
+                  <i class="fas fa-heart text-pink-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 text-sm">Cruelty Free</h4>
+                  <p class="text-xs text-gray-600">Never tested on animals</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3 p-4 bg-white rounded-xl shadow-sm">
+                <div class="flex-shrink-0 w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <i class="fas fa-recycle text-green-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 text-sm">Eco-Friendly</h4>
+                  <p class="text-xs text-gray-600">Sustainable packaging</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-full hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+              Read Our Full Story
+            </button>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter" id="newsletter">
-      <div class="container newsletter-container">
-        <div class="newsletter-content">
-          <h2 class="newsletter-title">Join Our GLOW Community</h2>
-          <p class="newsletter-description">
-            Subscribe to our newsletter and be the first to know about restocks,
-            new product launches, exclusive offers, and skincare tips.
-          </p>
+    <section id="newsletter" class="py-16 lg:py-24 bg-gradient-to-r from-glow-pink to-glow-purple">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <!-- Newsletter Content -->
+          <div class="text-white">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold mb-6">
+              Join Our GLOW Community
+            </h2>
+            <p class="text-lg lg:text-xl mb-8 text-white/90 leading-relaxed">
+              Subscribe to our newsletter and be the first to know about restocks,
+              new product launches, exclusive offers, and skincare tips.
+            </p>
 
-          <div class="newsletter-perks">
-            <div class="newsletter-perk">
-              <div class="newsletter-perk-icon">
-                <i class="fas fa-tag"></i>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div class="flex items-center space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <i class="fas fa-tag text-white"></i>
+                </div>
+                <div class="text-white/90">Early access to sales</div>
               </div>
-              <div class="newsletter-perk-text">Early access to sales</div>
-            </div>
-            <div class="newsletter-perk">
-              <div class="newsletter-perk-icon">
-                <i class="fas fa-gift"></i>
+              <div class="flex items-center space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <i class="fas fa-gift text-white"></i>
+                </div>
+                <div class="text-white/90">Exclusive offers</div>
               </div>
-              <div class="newsletter-perk-text">Exclusive offers</div>
             </div>
           </div>
-        </div>
 
-        <div class="newsletter-form">
-          <h3 class="newsletter-form-title">Subscribe to Our Newsletter</h3>
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-input" placeholder="Your Name" />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                class="form-input"
-                placeholder="Your Email Address"
-              />
-            </div>
-            <button type="submit" class="subscribe-btn">Subscribe Now</button>
-            <p class="form-disclaimer">
-              By subscribing, you agree to our Privacy Policy. You can
-              unsubscribe at any time.
-            </p>
-          </form>
+          <!-- Newsletter Form -->
+          <div class="bg-white rounded-3xl p-8 shadow-2xl">
+            <h3 class="text-2xl font-display font-bold text-gray-900 mb-6 text-center">
+              Subscribe to Our Newsletter
+            </h3>
+            <form class="space-y-4">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Your Email Address"
+                  class="w-full px-4 py-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200 text-gray-900 placeholder-gray-500"
+                />
+              </div>
+              <button
+                type="submit"
+                class="w-full py-4 bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200"
+              >
+                Subscribe Now
+              </button>
+              <p class="text-sm text-gray-600 text-center leading-relaxed">
+                By subscribing, you agree to our Privacy Policy. You can
+                unsubscribe at any time.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-info">
-            <div class="logo">GLOW<span>Beauty</span></div>
-            <p class="footer-description">
+    <footer id="contact" class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <!-- Company Info -->
+          <div class="lg:col-span-1">
+            <div class="text-2xl lg:text-3xl font-display font-bold mb-4">
+              GLOW<span class="text-glow-pink">Beauty</span>
+            </div>
+            <p class="text-gray-300 mb-6 leading-relaxed">
               We create premium skincare products using natural ingredients that
               help you achieve radiant and healthy skin. Our mission is to make
               effective skincare accessible to everyone.
             </p>
-            <div class="footer-social">
-              <a href="#" class="social-link">
+            <div class="flex space-x-4">
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-300 hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-tiktok"></i>
               </a>
             </div>
           </div>
 
-          <div class="footer-column">
-            <h3 class="footer-title">Shop</h3>
-            <ul class="footer-links">
+          <!-- Shop Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6 text-glow-pink">Shop</h3>
+            <ul class="space-y-3">
               <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> All Products</a
-                >
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  All Products
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-chevron-right"></i> Bestsellers</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Bestsellers
+                </a>
               </li>
               <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> New Arrivals</a
-                >
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  New Arrivals
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-chevron-right"></i> Gift Sets</a>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Gift Sets
+                </a>
               </li>
               <li>
-                <a href="#"><i class="fas fa-chevron-right"></i> Sale Items</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3 class="footer-title">Information</h3>
-            <ul class="footer-links">
-              <li>
-                <a href="#about"
-                  ><i class="fas fa-chevron-right"></i> About Us</a
-                >
-              </li>
-              <li>
-                <a href="#shipping"
-                  ><i class="fas fa-chevron-right"></i> Shipping Policy</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> Refund Policy</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> Terms of Service</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> Privacy Policy</a
-                >
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Sale Items
+                </a>
               </li>
             </ul>
           </div>
 
-          <div class="footer-column">
-            <h3 class="footer-title">Contact Us</h3>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
+          <!-- Information Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6 text-glow-pink">Information</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="#about" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#shipping" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Shipping Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Refund Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-glow-pink"></i>
+                  Privacy Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6 text-glow-pink">Contact Us</h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <div class="flex-shrink-0 w-5 h-5 text-glow-pink mt-1">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="text-gray-300">
+                  123 Beauty Street, Los Angeles, CA 90001, USA
+                </div>
               </div>
-              <div class="contact-info">
-                123 Beauty Street, Los Angeles, CA 90001, USA
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0 w-5 h-5 text-glow-pink">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="text-gray-300">support@glowbeauty.com</div>
               </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
+              <div class="flex items-center space-x-3">
+                <div class="flex-shrink-0 w-5 h-5 text-glow-pink">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="text-gray-300">+1 (800) 123-4567</div>
               </div>
-              <div class="contact-info">support@glowbeauty.com</div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="contact-info">+1 (800) 123-4567</div>
             </div>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <div class="copyright">
-            &copy; 2025 GLOW Beauty. All rights reserved.
-          </div>
-          <div class="payment-methods">
-            <div class="payment-method">VISA</div>
-            <div class="payment-method">MC</div>
-            <div class="payment-method">AMEX</div>
-            <div class="payment-method">PP</div>
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 mt-12 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2025 GLOW Beauty. All rights reserved.
+            </div>
+            <div class="flex items-center space-x-4">
+              <span class="text-gray-400 text-sm mr-2">We accept:</span>
+              <div class="flex space-x-2">
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-semibold text-gray-300">VISA</div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-semibold text-gray-300">MC</div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-semibold text-gray-300">AMEX</div>
+                <div class="px-3 py-1 bg-gray-800 rounded text-xs font-semibold text-gray-300">PP</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-glow-pink to-glow-purple text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 z-50 opacity-0 pointer-events-none">
       <i class="fas fa-chevron-up"></i>
     </button>
 

@@ -1,200 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
- 
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - GLOW Beauty | Get in Touch</title>
+  <meta name="description" content="Contact GLOW Beauty for any questions about our natural skincare products. We're here to help with your skincare journey.">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'glow-pink': '#f8b4cb',
+            'glow-rose': '#f1a7c1',
+            'glow-purple': '#d8b4fe',
+            'glow-gold': '#fbbf24',
+          },
+          fontFamily: {
+            'display': ['Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans leading-relaxed">
     <!-- Announcement Bar -->
-    <div class="announcement-bar">
-      <div class="container">
-        RESTOCK DATE: <span>2/11 @7PM PST</span> | New products will be dropping
+    <div class="bg-gradient-to-r from-glow-pink to-glow-purple text-white text-center py-2 px-4 text-sm font-medium">
+      <div class="max-w-7xl mx-auto">
+        RESTOCK DATE: <span class="font-bold text-glow-gold">2/11 @7PM PST</span> | New products will be dropping
       </div>
     </div>
 
     <!-- Header -->
-    <header id="header">
-      <div class="container header-container">
-        <div class="logo">GLOW<span>Beauty</span></div>
-        <nav class="desktop-nav">
-          <ul>
-            <li><a href="https://coldglowcosmetics.com">Home</a></li>
-            <li><a href="https://coldglowcosmetics.com/products/">Products</a></li>
-            <li><a href="https://coldglowcosmetics.com/our-story/">Our Story</a></li>
-            <li><a href="https://coldglowcosmetics.com/shipping-policy/">Shipping Policy</a></li>
-            <li><a href="https://coldglowcosmetics.com/contact/">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="header-actions">
-          <button class="action-btn" id="search-btn" aria-label="Search">
-            <i class="fas fa-search"></i>
-          </button>
-          <button class="action-btn" id="wishlist-btn" aria-label="Wishlist">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button class="action-btn" id="cart-btn" aria-label="Cart">
-            <i class="fas fa-shopping-bag"></i>
-            <span class="cart-count">3</span>
-          </button>
-          <div class="hamburger-menu" id="hamburger-menu">
-            <i class="fas fa-bars"></i>
+    <header id="header" class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-20">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <div class="text-2xl lg:text-3xl font-display font-bold text-gray-900">
+              GLOW<span class="text-glow-pink">Beauty</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <nav class="hidden lg:flex space-x-8">
+            <a href="https://coldglowcosmetics.com" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Home</a>
+            <a href="https://coldglowcosmetics.com/products/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Products</a>
+            <a href="https://coldglowcosmetics.com/our-story/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Our Story</a>
+            <a href="https://coldglowcosmetics.com/shipping-policy/" class="text-gray-700 hover:text-glow-pink transition-colors duration-200 font-medium">Shipping Policy</a>
+            <a href="https://coldglowcosmetics.com/contact/" class="text-glow-pink font-medium">Contact</a>
+          </nav>
+
+          <!-- Header Actions -->
+          <div class="flex items-center space-x-4">
+            <button class="hidden lg:flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200" id="search-btn" aria-label="Search">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="hidden lg:flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200" id="wishlist-btn" aria-label="Wishlist">
+              <i class="fas fa-heart"></i>
+            </button>
+            <button class="hidden lg:flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200 relative" id="cart-btn" aria-label="Cart">
+              <i class="fas fa-shopping-bag"></i>
+              <span class="absolute -top-2 -right-2 bg-glow-pink text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-medium">3</span>
+            </button>
+            <button class="lg:hidden flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200" id="hamburger-menu">
+              <i class="fas fa-bars"></i>
+            </button>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Mobile Navigation -->
-    <div class="mobile-nav" id="mobile-nav">
-      <button class="close-btn" id="close-nav">
-        <i class="fas fa-times"></i>
-      </button>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="our-story.html">Our Story</a></li>
-        <li><a href="shipping.html">Shipping Policy</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="mobile-nav-footer">
-        <div class="mobile-nav-actions">
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-search"></i>
-          </button>
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-heart"></i>
-          </button>
-          <button class="btn-icon btn-secondary">
-            <i class="fas fa-user"></i>
+    <div class="fixed inset-y-0 right-0 z-50 w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden" id="mobile-nav">
+      <div class="flex flex-col h-full">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <div class="text-xl font-display font-bold text-gray-900">
+            GLOW<span class="text-glow-pink">Beauty</span>
+          </div>
+          <button class="flex items-center justify-center w-8 h-8 text-gray-600 hover:text-glow-pink transition-colors duration-200" id="close-nav">
+            <i class="fas fa-times"></i>
           </button>
         </div>
-        <div class="mobile-nav-social">
-          <a href="#" class="social-link">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" class="social-link">
-            <i class="fab fa-tiktok"></i>
-          </a>
+
+        <nav class="flex-1 px-6 py-8">
+          <ul class="space-y-6">
+            <li><a href="index.html" class="block text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200">Home</a></li>
+            <li><a href="products.html" class="block text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200">Products</a></li>
+            <li><a href="our-story.html" class="block text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200">Our Story</a></li>
+            <li><a href="shipping.html" class="block text-lg font-medium text-gray-700 hover:text-glow-pink transition-colors duration-200">Shipping Policy</a></li>
+            <li><a href="contact.html" class="block text-lg font-medium text-glow-pink">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="p-6 border-t border-gray-200">
+          <div class="flex items-center justify-center space-x-4 mb-6">
+            <button class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+              <i class="fas fa-search"></i>
+            </button>
+            <button class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+              <i class="fas fa-heart"></i>
+            </button>
+            <button class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
+              <i class="fas fa-user"></i>
+            </button>
+          </div>
+          <div class="flex items-center justify-center space-x-4">
+            <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="flex items-center justify-center w-10 h-10 text-gray-600 hover:text-glow-pink transition-colors duration-200">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="overlay" id="overlay"></div>
+    <div class="fixed inset-0 bg-black bg-opacity-50 z-40 opacity-0 pointer-events-none transition-opacity duration-300 ease-in-out lg:hidden" id="overlay"></div>
 
     <!-- Page Banner -->
-    <section class="page-banner">
-      <div class="container page-banner-content">
-        <h1 class="page-title">Contact Us</h1>
-        <div class="breadcrumbs">
-          <a href="home.html">Home</a>
-          <i class="fas fa-chevron-right"></i>
-          <span>Contact</span>
+    <section class="bg-gradient-to-r from-glow-pink to-glow-purple py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl lg:text-5xl font-display font-bold text-white mb-4">Contact Us</h1>
+        <div class="flex items-center justify-center space-x-2 text-white/90">
+          <a href="index.html" class="hover:text-white transition-colors duration-200">Home</a>
+          <i class="fas fa-chevron-right text-sm"></i>
+          <span class="text-glow-gold font-medium">Contact</span>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="contact-section">
-      <div class="container contact-container">
-        <div class="contact-form-container">
-          <div class="contact-form-header">
-            <h2 class="contact-form-title">Have A Question? Let Us Know</h2>
-            <p class="contact-form-subtitle">
-              We're here to help and answer any question you might have. We look
-              forward to hearing from you.
-            </p>
+    <section class="py-16 lg:py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+          <!-- Contact Form -->
+          <div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+            <div class="mb-8">
+              <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">Have A Question? Let Us Know</h2>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                We're here to help and answer any question you might have. We look
+                forward to hearing from you.
+              </p>
+            </div>
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200" required />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200" required />
+              </div>
+              <div>
+                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200" />
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200 resize-none" required></textarea>
+              </div>
+              <button type="submit" class="w-full bg-gradient-to-r from-glow-pink to-glow-purple text-white font-semibold py-4 px-8 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-200">
+                Send message
+              </button>
+              <p class="text-sm text-gray-500 text-center">
+                Protected by reCAPTCHA. Google's Privacy Policy and Terms apply.
+              </p>
+            </form>
           </div>
-          <form id="contact-form">
-            <div class="form-group">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" id="name" class="form-input" required />
+          <!-- Contact Info -->
+          <div class="space-y-8">
+            <div class="mb-8">
+              <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">Get In Touch</h2>
+              <p class="text-gray-600 text-lg leading-relaxed">
+                If you have any questions about our products or services, please
+                don't hesitate to contact us using any of the methods below.
+              </p>
             </div>
-            <div class="form-group">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" class="form-input" required />
-            </div>
-            <div class="form-group">
-              <label for="subject" class="form-label">Subject</label>
-              <input type="text" id="subject" class="form-input" />
-            </div>
-            <div class="form-group">
-              <label for="message" class="form-label">Message</label>
-              <textarea id="message" class="form-input" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send message</button>
-            <p class="form-disclaimer">
-              Protected by reCAPTCHA. Google's Privacy Policy and Terms apply.
-            </p>
-          </form>
-        </div>
-        <div class="contact-info-container">
-          <div class="contact-info-header">
-            <h2 class="contact-info-title">Get In Touch</h2>
-            <p class="contact-info-subtitle">
-              If you have any questions about our products or services, please
-              don't hesitate to contact us using any of the methods below.
-            </p>
-          </div>
-          <div class="contact-info-items">
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fas fa-map-marker-alt"></i>
+
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-glow-pink to-glow-purple rounded-full flex items-center justify-center text-white">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Our Location</h3>
+                  <p class="text-gray-600">
+                    123 Beauty Street, Los Angeles, CA 90001, USA
+                  </p>
+                </div>
               </div>
-              <div class="contact-info-content">
-                <h3 class="contact-info-label">Our Location</h3>
-                <p class="contact-info-value">
-                  123 Beauty Street, Los Angeles, CA 90001, USA
-                </p>
+
+              <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-glow-pink to-glow-purple rounded-full flex items-center justify-center text-white">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Email Us</h3>
+                  <p class="text-gray-600">support@glowbeauty.com</p>
+                </div>
               </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fas fa-envelope"></i>
+
+              <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-glow-pink to-glow-purple rounded-full flex items-center justify-center text-white">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Call Us</h3>
+                  <p class="text-gray-600">+1 (800) 123-4567</p>
+                </div>
               </div>
-              <div class="contact-info-content">
-                <h3 class="contact-info-label">Email Us</h3>
-                <p class="contact-info-value">support@glowbeauty.com</p>
-              </div>
-            </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="contact-info-content">
-                <h3 class="contact-info-label">Call Us</h3>
-                <p class="contact-info-value">+1 (800) 123-4567</p>
+
+              <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl">
+                <div class="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-glow-pink to-glow-purple rounded-full flex items-center justify-center text-white">
+                  <i class="fas fa-clock"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-900 mb-2">Working Hours</h3>
+                  <div class="text-gray-600 space-y-1">
+                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                    <p>Saturday: 10:00 AM - 4:00 PM</p>
+                    <p>Sunday: Closed</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <i class="fas fa-clock"></i>
+
+            <div class="pt-8 border-t border-gray-200">
+              <h3 class="text-xl font-semibold text-gray-900 mb-4">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-gradient-to-r hover:from-glow-pink hover:to-glow-purple hover:text-white transition-all duration-200">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-gradient-to-r hover:from-glow-pink hover:to-glow-purple hover:text-white transition-all duration-200">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-gradient-to-r hover:from-glow-pink hover:to-glow-purple hover:text-white transition-all duration-200">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="flex items-center justify-center w-12 h-12 bg-gray-100 text-gray-600 rounded-full hover:bg-gradient-to-r hover:from-glow-pink hover:to-glow-purple hover:text-white transition-all duration-200">
+                  <i class="fab fa-tiktok"></i>
+                </a>
               </div>
-              <div class="contact-info-content">
-                <h3 class="contact-info-label">Working Hours</h3>
-                <p class="contact-info-value">
-                  Monday - Friday: 9:00 AM - 6:00 PM<br />
-                  Saturday: 10:00 AM - 4:00 PM<br />
-                  Sunday: Closed
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="contact-info-social">
-            <h3 class="social-title">Follow Us</h3>
-            <div class="social-links">
-              <a href="#" class="social-link">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-link">
-                <i class="fab fa-tiktok"></i>
-              </a>
             </div>
           </div>
         </div>
@@ -202,11 +263,12 @@
     </section>
 
     <!-- Map Section -->
-    <section class="map-section">
-      <div class="container">
-        <div class="map-container">
+    <section class="py-16 lg:py-24 bg-gray-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27405770525!2d-118.69192047471653!3d34.02016130390376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1650236524996!5m2!1sen!2s"
+            class="w-full h-96 lg:h-[500px]"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -216,22 +278,22 @@
     </section>
 
     <!-- FAQs Section -->
-    <section class="faq-section">
-      <div class="container">
-        <div class="faq-header">
-          <h2 class="faq-title">Frequently Asked Questions</h2>
-          <p class="faq-subtitle">
+    <section class="py-16 lg:py-24">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl lg:text-4xl font-display font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          <p class="text-gray-600 text-lg leading-relaxed">
             Find answers to the most common questions about our products and
             services.
           </p>
         </div>
-        <div class="faq-container">
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>How long does shipping take?</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
+        <div class="space-y-4">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-toggle">
+              <h3 class="text-lg font-semibold text-gray-900">How long does shipping take?</h3>
+              <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+            </button>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed faq-content">
               <p>
                 Please allow 7-14 business days for us to process your order.
                 After that, shipping time depends on the shipping method you
@@ -241,12 +303,12 @@
               </p>
             </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Do you offer international shipping?</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-toggle">
+              <h3 class="text-lg font-semibold text-gray-900">Do you offer international shipping?</h3>
+              <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+            </button>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed faq-content hidden">
               <p>
                 Yes, we ship internationally. Please note that international
                 customers are responsible for any customs fees and import duties
@@ -255,12 +317,12 @@
               </p>
             </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>What is your return policy?</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-toggle">
+              <h3 class="text-lg font-semibold text-gray-900">What is your return policy?</h3>
+              <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+            </button>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed faq-content hidden">
               <p>
                 Due to the nature of our products, all sales are final. We do
                 not accept returns or exchanges. Prior to making your purchase,
@@ -269,12 +331,12 @@
               </p>
             </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Are your products cruelty-free?</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-toggle">
+              <h3 class="text-lg font-semibold text-gray-900">Are your products cruelty-free?</h3>
+              <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+            </button>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed faq-content hidden">
               <p>
                 Yes, all our products are cruelty-free. We do not test on
                 animals, and we do not use ingredients that have been tested on
@@ -283,12 +345,12 @@
               </p>
             </div>
           </div>
-          <div class="faq-item">
-            <div class="faq-question">
-              <h3>Do you offer sample sizes?</h3>
-              <i class="fas fa-chevron-down"></i>
-            </div>
-            <div class="faq-answer">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+            <button class="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200 faq-toggle">
+              <h3 class="text-lg font-semibold text-gray-900">Do you offer sample sizes?</h3>
+              <i class="fas fa-chevron-down text-gray-400 transform transition-transform duration-200"></i>
+            </button>
+            <div class="px-6 pb-6 text-gray-600 leading-relaxed faq-content hidden">
               <p>
                 Currently, we do not offer sample sizes of our products.
                 However, we do occasionally include free samples with orders
@@ -302,186 +364,249 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="newsletter" id="newsletter">
-      <div class="container newsletter-container">
-        <div class="newsletter-content">
-          <h2 class="newsletter-title">Join Our GLOW Community</h2>
-          <p class="newsletter-description">
-            Subscribe to our newsletter and be the first to know about restocks,
-            new product launches, exclusive offers, and skincare tips.
-          </p>
+    <section class="bg-gradient-to-r from-glow-pink to-glow-purple py-16 lg:py-24" id="newsletter">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div class="text-white">
+            <h2 class="text-3xl lg:text-4xl font-display font-bold mb-6">Join Our GLOW Community</h2>
+            <p class="text-white/90 text-lg leading-relaxed mb-8">
+              Subscribe to our newsletter and be the first to know about restocks,
+              new product launches, exclusive offers, and skincare tips.
+            </p>
 
-          <div class="newsletter-perks">
-            <div class="newsletter-perk">
-              <div class="newsletter-perk-icon">
-                <i class="fas fa-tag"></i>
+            <div class="space-y-4">
+              <div class="flex items-center space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <i class="fas fa-tag text-white"></i>
+                </div>
+                <div class="text-white font-medium">Early access to sales</div>
               </div>
-              <div class="newsletter-perk-text">Early access to sales</div>
-            </div>
-            <div class="newsletter-perk">
-              <div class="newsletter-perk-icon">
-                <i class="fas fa-gift"></i>
+              <div class="flex items-center space-x-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                  <i class="fas fa-gift text-white"></i>
+                </div>
+                <div class="text-white font-medium">Exclusive offers</div>
               </div>
-              <div class="newsletter-perk-text">Exclusive offers</div>
             </div>
           </div>
-        </div>
 
-        <div class="newsletter-form">
-          <h3 class="newsletter-form-title">Subscribe to Our Newsletter</h3>
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-input" placeholder="Your Name" />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                class="form-input"
-                placeholder="Your Email Address"
-              />
-            </div>
-            <button type="submit" class="subscribe-btn">Subscribe Now</button>
-            <p class="form-disclaimer">
-              By subscribing, you agree to our Privacy Policy. You can
-              unsubscribe at any time.
-            </p>
-          </form>
+          <div class="bg-white rounded-2xl shadow-2xl p-8">
+            <h3 class="text-2xl font-display font-bold text-gray-900 mb-6">Subscribe to Our Newsletter</h3>
+            <form class="space-y-4">
+              <div>
+                <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200" placeholder="Your Name" />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-glow-pink focus:border-transparent transition-all duration-200"
+                  placeholder="Your Email Address"
+                />
+              </div>
+              <button type="submit" class="w-full bg-gray-900 text-white font-semibold py-4 px-8 rounded-lg hover:bg-gray-800 transform hover:-translate-y-1 transition-all duration-200">
+                Subscribe Now
+              </button>
+              <p class="text-sm text-gray-500 text-center">
+                By subscribing, you agree to our Privacy Policy. You can
+                unsubscribe at any time.
+              </p>
+            </form>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-info">
-            <div class="logo">GLOW<span>Beauty</span></div>
-            <p class="footer-description">
+    <footer class="bg-gray-900 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+          <!-- Company Info -->
+          <div class="lg:col-span-1">
+            <div class="text-2xl font-display font-bold mb-4">
+              GLOW<span class="text-glow-pink">Beauty</span>
+            </div>
+            <p class="text-gray-300 leading-relaxed mb-6">
               We create premium skincare products using natural ingredients that
               help you achieve radiant and healthy skin. Our mission is to make
               effective skincare accessible to everyone.
             </p>
-            <div class="footer-social">
-              <a href="#" class="social-link">
+            <div class="flex space-x-4">
+              <a href="#" class="flex items-center justify-center w-10 h-10 bg-gray-800 text-gray-300 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-facebook-f"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="#" class="flex items-center justify-center w-10 h-10 bg-gray-800 text-gray-300 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-instagram"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="#" class="flex items-center justify-center w-10 h-10 bg-gray-800 text-gray-300 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#" class="social-link">
+              <a href="#" class="flex items-center justify-center w-10 h-10 bg-gray-800 text-gray-300 rounded-full hover:bg-glow-pink hover:text-white transition-all duration-200">
                 <i class="fab fa-tiktok"></i>
               </a>
             </div>
           </div>
 
-          <div class="footer-column">
-            <h3 class="footer-title">Shop</h3>
-            <ul class="footer-links">
+          <!-- Shop Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Shop</h3>
+            <ul class="space-y-3">
               <li>
-                <a href="products.html"
-                  ><i class="fas fa-chevron-right"></i> All Products</a
-                >
+                <a href="products.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> All Products
+                </a>
               </li>
               <li>
-                <a href="products.html"
-                  ><i class="fas fa-chevron-right"></i> Bestsellers</a
-                >
+                <a href="products.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> Bestsellers
+                </a>
               </li>
               <li>
-                <a href="products.html"
-                  ><i class="fas fa-chevron-right"></i> New Arrivals</a
-                >
+                <a href="products.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> New Arrivals
+                </a>
               </li>
               <li>
-                <a href="products.html"
-                  ><i class="fas fa-chevron-right"></i> Gift Sets</a
-                >
+                <a href="products.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> Gift Sets
+                </a>
               </li>
               <li>
-                <a href="products.html"
-                  ><i class="fas fa-chevron-right"></i> Sale Items</a
-                >
-              </li>
-            </ul>
-          </div>
-
-          <div class="footer-column">
-            <h3 class="footer-title">Information</h3>
-            <ul class="footer-links">
-              <li>
-                <a href="our-story.html"
-                  ><i class="fas fa-chevron-right"></i> About Us</a
-                >
-              </li>
-              <li>
-                <a href="shipping.html"
-                  ><i class="fas fa-chevron-right"></i> Shipping Policy</a
-                >
-              </li>
-              <li>
-                <a href="shipping.html"
-                  ><i class="fas fa-chevron-right"></i> Refund Policy</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> Terms of Service</a
-                >
-              </li>
-              <li>
-                <a href="#"
-                  ><i class="fas fa-chevron-right"></i> Privacy Policy</a
-                >
+                <a href="products.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> Sale Items
+                </a>
               </li>
             </ul>
           </div>
 
-          <div class="footer-column">
-            <h3 class="footer-title">Contact Us</h3>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
+          <!-- Information Links -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Information</h3>
+            <ul class="space-y-3">
+              <li>
+                <a href="our-story.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> About Us
+                </a>
+              </li>
+              <li>
+                <a href="shipping.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> Shipping Policy
+                </a>
+              </li>
+              <li>
+                <a href="shipping.html" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> Refund Policy
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> Terms of Service
+                </a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-300 hover:text-glow-pink transition-colors duration-200 flex items-center">
+                  <i class="fas fa-chevron-right text-xs mr-2"></i> Privacy Policy
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-semibold mb-6">Contact Us</h3>
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <div class="flex-shrink-0 w-5 h-5 text-glow-pink mt-1">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="text-gray-300 text-sm">
+                  123 Beauty Street, Los Angeles, CA 90001, USA
+                </div>
               </div>
-              <div class="contact-info">
-                123 Beauty Street, Los Angeles, CA 90001, USA
+              <div class="flex items-start space-x-3">
+                <div class="flex-shrink-0 w-5 h-5 text-glow-pink mt-1">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="text-gray-300 text-sm">support@glowbeauty.com</div>
               </div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
+              <div class="flex items-start space-x-3">
+                <div class="flex-shrink-0 w-5 h-5 text-glow-pink mt-1">
+                  <i class="fas fa-phone-alt"></i>
+                </div>
+                <div class="text-gray-300 text-sm">+1 (800) 123-4567</div>
               </div>
-              <div class="contact-info">support@glowbeauty.com</div>
-            </div>
-            <div class="footer-contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone-alt"></i>
-              </div>
-              <div class="contact-info">+1 (800) 123-4567</div>
             </div>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <div class="copyright">
+        <!-- Footer Bottom -->
+        <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
+          <div class="text-gray-400 text-sm mb-4 md:mb-0">
             &copy; 2025 GLOW Beauty. All rights reserved.
           </div>
-          <div class="payment-methods">
-            <div class="payment-method">VISA</div>
-            <div class="payment-method">MC</div>
-            <div class="payment-method">AMEX</div>
-            <div class="payment-method">PP</div>
+          <div class="flex items-center space-x-4">
+            <div class="text-gray-400 text-sm font-medium px-3 py-1 bg-gray-800 rounded">VISA</div>
+            <div class="text-gray-400 text-sm font-medium px-3 py-1 bg-gray-800 rounded">MC</div>
+            <div class="text-gray-400 text-sm font-medium px-3 py-1 bg-gray-800 rounded">AMEX</div>
+            <div class="text-gray-400 text-sm font-medium px-3 py-1 bg-gray-800 rounded">PP</div>
           </div>
         </div>
       </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop">
+    <button id="backToTop" class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-glow-pink to-glow-purple text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 z-50 opacity-0 pointer-events-none">
       <i class="fas fa-chevron-up"></i>
     </button>
+
+    <!-- JavaScript for mobile menu and FAQ toggles -->
+    <script>
+      // Mobile menu toggle
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+      const mobileNav = document.getElementById('mobile-nav');
+      const closeNav = document.getElementById('close-nav');
+      const overlay = document.getElementById('overlay');
+
+      hamburgerMenu.addEventListener('click', () => {
+        mobileNav.classList.remove('translate-x-full');
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+      });
+
+      closeNav.addEventListener('click', () => {
+        mobileNav.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+      });
+
+      overlay.addEventListener('click', () => {
+        mobileNav.classList.add('translate-x-full');
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+      });
+
+      // FAQ toggles
+      document.querySelectorAll('.faq-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+          const content = button.nextElementSibling;
+          const icon = button.querySelector('i');
+
+          content.classList.toggle('hidden');
+          icon.classList.toggle('rotate-180');
+        });
+      });
+
+      // Back to top button
+      const backToTop = document.getElementById('backToTop');
+
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          backToTop.classList.remove('opacity-0', 'pointer-events-none');
+        } else {
+          backToTop.classList.add('opacity-0', 'pointer-events-none');
+        }
+      });
+
+      backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
 
   </body>
 </html>
